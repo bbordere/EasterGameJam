@@ -1,8 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://bur43nicmr273"]
+[gd_scene load_steps=8 format=3 uid="uid://bur43nicmr273"]
 
 [ext_resource type="PackedScene" uid="uid://dsug45yib05j4" path="res://Scenes/Player.tscn" id="1_a7t0e"]
 [ext_resource type="Script" path="res://Scripts/main.gd" id="1_awjpl"]
-[ext_resource type="PackedScene" uid="uid://iusk221uwkve" path="res://Scenes/Hud.tscn" id="2_lt5vw"]
 [ext_resource type="PackedScene" uid="uid://dh7u8fkosls11" path="res://Scenes/AmmoBox.tscn" id="2_y1o2f"]
 [ext_resource type="PackedScene" uid="uid://bijwsd848sp4n" path="res://Scenes/Ennemy/Dummy.tscn" id="5_7wdko"]
 
@@ -21,8 +20,6 @@ glow_enabled = true
 
 [node name="World" type="Node3D"]
 script = ExtResource("1_awjpl")
-
-[node name="Hud" parent="." instance=ExtResource("2_lt5vw")]
 
 [node name="Level" type="Node3D" parent="."]
 
