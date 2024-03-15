@@ -4,13 +4,14 @@ var ammo = 0;
 var health = 100;
 
 signal giveAmmo(number);
+signal updateAmmoLabel;
 
 func _ready():
 	giveAmmo.connect(giveAmmoFunc);
 
 func giveAmmoFunc(number: int):
 	ammo += number;
-	print("Current Ammo: ", ammo);
+	Globals.updateAmmoLabel.emit()
 
 func _process(_delta):
 	pass

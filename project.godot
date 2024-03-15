@@ -61,6 +61,11 @@ dash={
 ]
 }
 
+[layer_names]
+
+3d_render/layer_1="World"
+3d_render/layer_2="Weapon"
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"

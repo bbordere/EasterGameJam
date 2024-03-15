@@ -15,7 +15,7 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED);
-
+	$Head/Camera3D.make_current();
 
 func _input(event):
 	if event is InputEventMouseMotion:

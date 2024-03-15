@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://dycfh0f12a74f"]
+
+[ext_resource type="Script" path="res://Scripts/Bullet.gd" id="1_bnj41"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_y1ae6"]
+radius = 1.0
+height = 2.0
+is_hemisphere = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_duipj"]
+albedo_color = Color(0.780392, 0.611765, 0.427451, 1)
+emission = Color(0.407843, 0.521569, 0.603922, 1)
+emission_energy_multiplier = 0.67
+
+[node name="Bullet" type="Node3D"]
+script = ExtResource("1_bnj41")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.1, 0, 0, 0, 4.5482e-09, -0.1, 0, -0.104051, -4.37114e-09, 0, 0, 0)
+mesh = SubResource("SphereMesh_y1ae6")
+surface_material_override/0 = SubResource("StandardMaterial3D_duipj")
+
+[node name="RayCast3D" type="RayCast3D" parent="."]
+target_position = Vector3(0, 0, -60)
+hit_back_faces = false
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

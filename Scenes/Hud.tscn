@@ -1,0 +1,27 @@
+[gd_scene load_steps=2 format=3 uid="uid://iusk221uwkve"]
+
+[ext_resource type="Script" path="res://Scripts/Hud.gd" id="1_ccm71"]
+
+[node name="Hud" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ccm71")
+
+[node name="TopContainer" type="HFlowContainer" parent="."]
+layout_mode = 1
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 71.0
+offset_bottom = 70.0
+
+[node name="Health" type="Label" parent="TopContainer"]
+layout_mode = 2
+text = "Health"
+
+[node name="Ammo" type="Label" parent="TopContainer"]
+layout_mode = 2
+text = "Ammo: 0"

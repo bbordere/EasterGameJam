@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://bijwsd848sp4n"]
+
+[ext_resource type="Script" path="res://Scripts/Ennemy/Dummy.gd" id="1_du8uq"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ocwxf"]
+albedo_color = Color(0.654902, 0.854902, 0.960784, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m4s7y"]
+albedo_color = Color(0, 0, 0, 1)
+
+[node name="Dummy" type="Node3D"]
+script = ExtResource("1_du8uq")
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="."]
+material_override = SubResource("StandardMaterial3D_ocwxf")
+use_collision = true
+sides = 10
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(0.345371, 0, 0, 0, 0.313836, 0, 0, 0, 1.17847, -0.212707, 0.658705, 0.248731)
+material_override = SubResource("StandardMaterial3D_m4s7y")
+size = Vector3(1, 1, 0.402832)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="."]
+transform = Transform3D(0.345371, 0, 0, 0, 0.313836, 0, 0, 0, 1.17847, 0.205632, 0.658705, 0.248731)
+material_override = SubResource("StandardMaterial3D_m4s7y")
+size = Vector3(1, 1, 0.402832)
+
+[node name="Hp" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.64598, 0)
+text = "Hp: "
+font_size = 50
