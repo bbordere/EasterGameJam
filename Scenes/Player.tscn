@@ -21,4 +21,5 @@ fov = 90.0
 
 [node name="CSGBox3D" type="CSGBox3D" parent="Head"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.413346, -0.262944, -0.826)
+cast_shadow = 0
 size = Vector3(0.113403, 0.208862, 1)

@@ -15,10 +15,18 @@ run/main_scene="res://Scenes/test.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Globals="*res://Scripts/Globals.gd"
+
 [display]
 
 window/size/viewport_width=1280
 window/size/viewport_height=720
+
+[filesystem]
+
+import/fbx/enabled=false
 
 [input]
 

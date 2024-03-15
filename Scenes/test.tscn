@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://bur43nicmr273"]
+[gd_scene load_steps=7 format=3 uid="uid://bur43nicmr273"]
 
 [ext_resource type="PackedScene" uid="uid://dsug45yib05j4" path="res://Scenes/Player.tscn" id="1_a7t0e"]
 [ext_resource type="Script" path="res://Scripts/main.gd" id="1_awjpl"]
+[ext_resource type="PackedScene" uid="uid://dh7u8fkosls11" path="res://Scenes/AmmoBox.tscn" id="2_y1o2f"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_4d41j"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -21,9 +22,26 @@ script = ExtResource("1_awjpl")
 [node name="Level" type="Node3D" parent="."]
 
 [node name="CSGBox3D" type="CSGBox3D" parent="Level"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.407471, 0)
+transform = Transform3D(2.50277, 0, 0, 0, 1, 0, 0, 0, 3.65662, 7.09022, -0.407471, 0)
 use_collision = true
-size = Vector3(20, 1, 20)
+size = Vector3(25.6659, 1, 20)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Level"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.0129604, 1.44562, 9.2979)
+use_collision = true
+size = Vector3(20, 2.66797, 1.10657)
+
+[node name="AmmoBox" parent="Level" instance=ExtResource("2_y1o2f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.93366, 1.26815, -1.58612)
+
+[node name="AmmoBox2" parent="Level" instance=ExtResource("2_y1o2f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.3901, 1.26815, -4.94715)
+
+[node name="AmmoBox3" parent="Level" instance=ExtResource("2_y1o2f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.31539, 1.26815, 5.39427)
+
+[node name="AmmoBox4" parent="Level" instance=ExtResource("2_y1o2f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.9314, 1.26815, 3.76662)
 
 [node name="Env" type="Node3D" parent="."]
 
