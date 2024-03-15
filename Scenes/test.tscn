@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=3 uid="uid://bur43nicmr273"]
+
+[ext_resource type="PackedScene" uid="uid://dsug45yib05j4" path="res://Scenes/Player.tscn" id="1_a7t0e"]
+[ext_resource type="Script" path="res://Scripts/main.gd" id="1_awjpl"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_4d41j"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_w0hy8"]
+sky_material = SubResource("ProceduralSkyMaterial_4d41j")
+
+[sub_resource type="Environment" id="Environment_g62dl"]
+background_mode = 2
+sky = SubResource("Sky_w0hy8")
+tonemap_mode = 2
+
+[node name="World" type="Node3D"]
+script = ExtResource("1_awjpl")
+
+[node name="Level" type="Node3D" parent="."]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Level"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.407471, 0)
+use_collision = true
+size = Vector3(20, 1, 20)
+
+[node name="Env" type="Node3D" parent="."]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Env"]
+environment = SubResource("Environment_g62dl")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Env"]
+transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
+shadow_enabled = true
+directional_shadow_blend_splits = true
+directional_shadow_fade_start = 1.0
+
+[node name="Player" parent="." instance=ExtResource("1_a7t0e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.87268, 0)
