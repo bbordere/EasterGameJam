@@ -232,3 +232,8 @@ target_position = Vector3(0, 0, -1)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("CapsuleShape3D_rfnln")
+
+[node name="DashCooldown" type="Timer" parent="."]
+wait_time = 2.0
+
+[connection signal="timeout" from="DashCooldown" to="." method="_on_timer_timeout"]

@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://Scripts/main.gd" id="1_awjpl"]
 [ext_resource type="PackedScene" uid="uid://iusk221uwkve" path="res://Scenes/Hud.tscn" id="2_lt5vw"]
 [ext_resource type="PackedScene" uid="uid://dh7u8fkosls11" path="res://Scenes/AmmoBox.tscn" id="2_y1o2f"]
-[ext_resource type="PackedScene" uid="uid://bijwsd848sp4n" path="res://Scenes/Ennemy/Dummy.tscn" id="5_7wdko"]
+[ext_resource type="PackedScene" uid="uid://quc5qhdjutnm" path="res://Scenes/Ennemy/Bunny.tscn" id="4_skggp"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_4d41j"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -17,7 +17,6 @@ sky_material = SubResource("ProceduralSkyMaterial_4d41j")
 background_mode = 2
 sky = SubResource("Sky_w0hy8")
 tonemap_mode = 2
-glow_enabled = true
 
 [node name="World" type="Node3D"]
 script = ExtResource("1_awjpl")
@@ -53,8 +52,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.31539, 1.26815, 5.39427)
 [node name="AmmoBox4" parent="Level" instance=ExtResource("2_y1o2f")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.9314, 1.26815, 3.76662)
 
-[node name="Dummy" parent="Level" instance=ExtResource("5_7wdko")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.82989, 1.21878, 0)
+[node name="Bunny" parent="Level" instance=ExtResource("4_skggp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.28271, 6.82055, 0)
 
 [node name="Player" parent="." instance=ExtResource("1_a7t0e")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.9351, 0)

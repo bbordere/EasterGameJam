@@ -11,9 +11,9 @@ func _ready():
 func _process(delta):
 	position += transform.basis * Vector3(0, 0, -SPEED) * delta;
 	if $RayCast3D.is_colliding():
-		var collider = $RayCast3D.get_collider().get_parent();
-		if collider is Ennemy:
-			collider.takeDamage(2);
+		var collider = $RayCast3D.get_collider();
+		if collider.is_in_group("ennemies"):
+			collider.takeDamage(2 * Globals.dmgMultiplier);
 		queue_free()
 
 

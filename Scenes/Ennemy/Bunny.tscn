@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3 uid="uid://quc5qhdjutnm"]
+
+[ext_resource type="PackedScene" uid="uid://bijwsd848sp4n" path="res://Scenes/Ennemy/Dummy.tscn" id="1_sp3kb"]
+[ext_resource type="PackedScene" uid="uid://dmtu7oqrgxvbw" path="res://Assets/Models/Easter rabbit.glb" id="2_4u7c3"]
+[ext_resource type="Script" path="res://Scripts/Ennemy/Bunny.gd" id="2_skdby"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0qupk"]
+size = Vector3(1.00989, 1.87561, 1.20648)
+
+[node name="Bunny" instance=ExtResource("1_sp3kb")]
+script = ExtResource("2_skdby")
+
+[node name="CollisionShape3D" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0282593, 0.240043, -0.216339)
+shape = SubResource("BoxShape3D_0qupk")
+
+[node name="Easter rabbit" parent="." index="2" instance=ExtResource("2_4u7c3")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
