@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bxiopdmcvppek"
+path="res://.godot/imported/Escarpment_Terrain_Hill_Crest_Top.obj-7e7a259adc3527c8dd9d2f587f8421d9.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Escarpment_Terrain_Hill_Crest_Top.obj-7e7a259adc3527c8dd9d2f587f8421d9.mesh"]
+
+source_file="res://Assets/modular_terrain_collection/Escarpment_Terrain_Hill_Crest_Top.obj"
+dest_files=["res://.godot/imported/Escarpment_Terrain_Hill_Crest_Top.obj-7e7a259adc3527c8dd9d2f587f8421d9.mesh", "res://.godot/imported/Escarpment_Terrain_Hill_Crest_Top.obj-7e7a259adc3527c8dd9d2f587f8421d9.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://ddgq2lym6w16x"]
+
+[ext_resource type="ArrayMesh" uid="uid://dyvuo3uql1pv8" path="res://Assets/modular_terrain_collection/Hilly_Terrain_Path_Hill_Sharp_Plain_Center.obj" id="1_bcdag"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_gc0l3"]
+data = PackedVector3Array(0.5, 0.15, 0, 0.5, 0.85, 1, -0.5, 0.85, 1, -0.5, 0.15, 0, 0.5, 0.15, 0, -0.5, 0.85, 1, 0.5, 0.85, 1, 0.5, 1, 1.5, -0.5, 1, 1.5, -0.5, 0.85, 1, 0.5, 0.85, 1, -0.5, 1, 1.5, 0.5, 0, -0.5, 0.5, 0.15, 0, -0.5, 0.15, 0, -0.5, 0, -0.5, 0.5, 0, -0.5, -0.5, 0.15, 0)
+
+[node name="chemein diagonale droit 3" type="StaticBody3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_bcdag")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("ConcavePolygonShape3D_gc0l3")

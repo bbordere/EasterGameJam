@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://hysch75a4omb"]
+
+[ext_resource type="ArrayMesh" uid="uid://cvtfk3jvnc3bi" path="res://Assets/modular_terrain_collection/Hilly_Terrain_Grass_Floor.obj" id="1_2uob6"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_n6iqd"]
+size = Vector3(1, 0.01, 1)
+
+[node name="StaticBody3D" type="StaticBody3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_2uob6")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.194765, 0)
+shape = SubResource("BoxShape3D_n6iqd")

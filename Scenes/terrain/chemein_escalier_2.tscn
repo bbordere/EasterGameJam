@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://bda4e463iiq8q"]
+
+[ext_resource type="ArrayMesh" uid="uid://dur5byxqw2q2x" path="res://Assets/modular_terrain_collection/Hilly_Terrain_Path_Hill_Sharp_Steps_Side.obj" id="1_uu4n5"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_6uyil"]
+points = PackedVector3Array(-9.78708e-05, 0, -0.5, 0.499902, 0, -0.5, -9.78708e-05, 0.033242, -0.388998, -0.150059, 0.0499217, -0.5, -0.400059, 0.199922, -0.5, 0.5, 0.146359, -0.388998, 0.5, 0.116641, -0.111198, 0.499902, 0.033242, -0.388998, -0.0894675, 0.146359, -0.111198, -9.78708e-05, 0.149883, -0.000195771, -0.5, 0.199922, -0.5, -0.150059, 0.198982, -0.00313234, 0.5, 0.358966, -0.0138998, -0.400059, 1.04988, 0.999804, 0.5, 0.571457, 0.361002, 0.5, 0.149883, -0.000195771, -0.142228, 0.197338, -0.000195771, -9.78708e-05, 0.999961, 1.5, -0.150059, 1.04988, 1.5, -0.5, 0.349922, -0.000195771, -0.5, 1.04988, 0.999804, -0.400059, 1.2, 1.5, 0.5, 1.01558, 1.14565, 0.499902, 0.996437, 1.111, 0.5, 0.999961, 1.5, -0.5, 1.2, 1.5, 0.5, 1.01558, 1.35415)
+
+[node name="chemein escalier 2" type="StaticBody3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_uu4n5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("ConvexPolygonShape3D_6uyil")

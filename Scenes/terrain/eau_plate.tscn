@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://ciicetwuu60xs"]
+
+[ext_resource type="ArrayMesh" uid="uid://d203172f1j7kr" path="res://Assets/modular_terrain_collection/Hilly_Terrain_Water_Flat.obj" id="1_kwdel"]
+
+[node name="eau plate" type="MeshInstance3D"]
+mesh = ExtResource("1_kwdel")

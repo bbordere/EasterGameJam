@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://x3qbmnev33fs"]
+
+[ext_resource type="ArrayMesh" uid="uid://dd78mvly6vk4s" path="res://Assets/modular_terrain_collection/Hilly_Terrain_Hill_Side_Gentle.obj" id="1_vkril"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_ppiqp"]
+data = PackedVector3Array(0.5, 1.05, 2.5, 0.5, 1.2, 3.5, -0.5, 1.2, 3.5, -0.5, 1.05, 2.5, 0.5, 1.05, 2.5, -0.5, 1.2, 3.5, 0.5, 0.35, 0.5, 0.5, 1.05, 2.5, -0.5, 1.05, 2.5, -0.5, 0.35, 0.5, 0.5, 0.35, 0.5, -0.5, 1.05, 2.5, 0.5, 0.2, -0.5, 0.5, 0.35, 0.5, -0.5, 0.35, 0.5, -0.5, 0.2, -0.5, 0.5, 0.2, -0.5, -0.5, 0.35, 0.5)
+
+[node name="herbe droit pente 1" type="StaticBody3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_vkril")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("ConcavePolygonShape3D_ppiqp")
