@@ -1,6 +1,7 @@
-[gd_scene load_steps=13 format=3 uid="uid://dsug45yib05j4"]
+[gd_scene load_steps=14 format=3 uid="uid://dsug45yib05j4"]
 
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="1_4as02"]
+[ext_resource type="Script" path="res://Scripts/PlayerCamera.gd" id="2_2votu"]
 [ext_resource type="Script" path="res://Scripts/Shotgun.gd" id="2_kar17"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ir0ku"]
@@ -198,14 +199,16 @@ height = 2.48858
 script = ExtResource("1_4as02")
 
 [node name="Head" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.467466, -0.240912)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.767389, -0.240912)
 
 [node name="Camera3D" type="Camera3D" parent="Head"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.279758)
+cull_mask = 1048573
 fov = 90.0
+script = ExtResource("2_2votu")
 
 [node name="Shotgun" type="Node3D" parent="Head"]
-transform = Transform3D(0.196962, 0.0520945, 0, -0.033698, 0.286666, 0.0725766, 0.00840186, -0.071474, 0.291089, 0.298527, -0.281, -0.461)
+transform = Transform3D(0.196962, 0.0520944, 0, -0.0347297, 0.295442, 0, 0, 0, 0.3, 0.298527, -0.281, -0.461)
 script = ExtResource("2_kar17")
 
 [node name="ShotgunModel" type="Node3D" parent="Head/Shotgun"]
@@ -235,5 +238,18 @@ shape = SubResource("CapsuleShape3D_rfnln")
 
 [node name="DashCooldown" type="Timer" parent="."]
 wait_time = 2.0
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(1280, 720)
+render_target_update_mode = 4
+
+[node name="Camera3D" type="Camera3D" parent="SubViewportContainer/SubViewport"]
+cull_mask = 1048574
 
 [connection signal="timeout" from="DashCooldown" to="." method="_on_timer_timeout"]

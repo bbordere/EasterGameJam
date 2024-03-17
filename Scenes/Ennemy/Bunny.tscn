@@ -1,18 +1,150 @@
-[gd_scene load_steps=5 format=3 uid="uid://quc5qhdjutnm"]
+[gd_scene load_steps=14 format=3 uid="uid://quc5qhdjutnm"]
 
 [ext_resource type="PackedScene" uid="uid://bijwsd848sp4n" path="res://Scenes/Ennemy/Dummy.tscn" id="1_sp3kb"]
 [ext_resource type="PackedScene" uid="uid://dmtu7oqrgxvbw" path="res://Assets/Models/Easter rabbit.glb" id="2_4u7c3"]
 [ext_resource type="Script" path="res://Scripts/Ennemy/Bunny.gd" id="2_skdby"]
+[ext_resource type="Script" path="res://Scripts/StateMachine/States/Idle.gd" id="4_ci8a2"]
+[ext_resource type="Script" path="res://Scripts/StateMachine/States/Chasing.gd" id="5_0euw4"]
+[ext_resource type="Script" path="res://Scripts/StateMachine/States/Melee.gd" id="6_uuxwy"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_0qupk"]
 size = Vector3(1.00989, 1.87561, 1.20648)
 
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_6b68e"]
+height = 7.90959
+radius = 11.88
+
+[sub_resource type="Animation" id="Animation_gpe0y"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Easter rabbit:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 2.75738, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Easter rabbit:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(3, 3, 3)]
+}
+
+[sub_resource type="Animation" id="Animation_31sn5"]
+resource_name = "death"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Easter rabbit:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(3, 3, 3), Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_c50p2"]
+resource_name = "melee"
+length = 0.4
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Easter rabbit:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 2.75762, 0), Vector3(0.349066, 2.75762, 0), Vector3(0, 2.75762, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_r3hb3"]
+resource_name = "walk"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Easter rabbit:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 2.75738, 0), Vector3(0, 2.75762, 0.0523599), Vector3(0, 2.75762, -0.0523599), Vector3(0, 2.75762, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8byi7"]
+_data = {
+"RESET": SubResource("Animation_gpe0y"),
+"death": SubResource("Animation_31sn5"),
+"melee": SubResource("Animation_c50p2"),
+"walk": SubResource("Animation_r3hb3")
+}
+
 [node name="Bunny" instance=ExtResource("1_sp3kb")]
 script = ExtResource("2_skdby")
 
-[node name="CollisionShape3D" parent="." index="1"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0282593, 0.240043, -0.216339)
-shape = SubResource("BoxShape3D_0qupk")
+[node name="State" parent="." index="0"]
+billboard = 1
+font_size = 64
+
+[node name="Hp" parent="." index="1"]
+billboard = 1
 
 [node name="Easter rabbit" parent="." index="2" instance=ExtResource("2_4u7c3")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
+transform = Transform3D(-2.78128, 0, 1.12449, 0, 3, 0, -1.12449, 0, -2.78128, 0.0145698, 0, -0.00711933)
+
+[node name="CollisionShape3D" parent="." index="3"]
+transform = Transform3D(0.933461, 0, -0.358678, 0, 1, 0, 0.358678, 0, 0.933461, -0.0370575, 0.240043, 0.208722)
+shape = SubResource("BoxShape3D_0qupk")
+
+[node name="StateMachine" parent="." index="4"]
+initial_state = NodePath("Idle")
+
+[node name="Idle" type="Node" parent="StateMachine" index="0"]
+script = ExtResource("4_ci8a2")
+
+[node name="Chasing" type="Node" parent="StateMachine" index="1"]
+script = ExtResource("5_0euw4")
+
+[node name="Melee" type="Node" parent="StateMachine" index="2"]
+script = ExtResource("6_uuxwy")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" index="0"]
+shape = SubResource("CylinderShape3D_6b68e")
+
+[node name="NavigationAgent3D" parent="." index="7"]
+avoidance_enabled = true
+use_3d_avoidance = true
+
+[node name="FaceDirection" parent="." index="8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.697047, 0)
+
+[node name="AnimationPlayer" parent="." index="9"]
+libraries = {
+"": SubResource("AnimationLibrary_8byi7")
+}
+
+[node name="RayCast3D" type="RayCast3D" parent="." index="10"]
+target_position = Vector3(0, 0, -1)
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="body_exited" from="Area3D" to="." method="_on_area_3d_body_exited"]

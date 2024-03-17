@@ -21,7 +21,7 @@ mesh = SubResource("SphereMesh_y1ae6")
 surface_material_override/0 = SubResource("StandardMaterial3D_duipj")
 
 [node name="RayCast3D" type="RayCast3D" parent="."]
-target_position = Vector3(0, 0, -60)
+target_position = Vector3(0, 0, -1)
 hit_back_faces = false
 
 [node name="Timer" type="Timer" parent="."]

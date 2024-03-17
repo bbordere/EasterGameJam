@@ -16,8 +16,9 @@ var canDash = true;
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
 func _ready():
+	$SubViewportContainer/SubViewport.size = get_window().size
+	Globals.playerReference = self;
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED);
-	$Head/Camera3D.make_current();
 
 func _input(event):
 	if event is InputEventMouseMotion:
@@ -37,6 +38,9 @@ func dash(direction):
 	var tween = get_tree().create_tween()
 	tween.tween_property($Head/Camera3D, "fov", 95, 0.1);
 	$DashCooldown.start();
+
+func _process(_delta):
+	$SubViewportContainer/SubViewport/Camera3D.global_transform = $Head/Camera3D.global_transform;
 
 func _physics_process(delta):
 	if not is_on_floor():
@@ -72,6 +76,16 @@ func _physics_process(delta):
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 	move_and_slide()
 
+func takeDmg(amount):
+	$Head/Camera3D.shake();
+	Globals.updateHealthLabel.emit();
+	Globals.health -= 4;
+
+func knock(pos, strength):
+	var dir = pos.direction_to(global_position);
+	dir *= strength;
+	extraVel.x += dir.x;
+	extraVel.z += dir.z;
 
 func _on_timer_timeout():
 	canDash = true;

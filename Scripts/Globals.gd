@@ -6,8 +6,11 @@ var dmgMultiplier = 1.0;
 
 var skills = {"dash": true, "double_jump": true, "super_dmg": true, "": false};
 
+var playerReference = null;
+
 signal giveAmmo(number);
 signal updateAmmoLabel;
+signal updateHealthLabel;
 signal setMultiplier(value);
 
 func _ready():
