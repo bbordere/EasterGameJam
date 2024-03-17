@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cvrldrr1e0ars"
+path="res://.godot/imported/Hilly_Terrain_Water_Slope.obj-8265829b4f3022ae28ffc14008746591.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Hilly_Terrain_Water_Slope.obj-8265829b4f3022ae28ffc14008746591.mesh"]
+
+source_file="res://Assets/modular_terrain_collection/Hilly_Terrain_Water_Slope.obj"
+dest_files=["res://.godot/imported/Hilly_Terrain_Water_Slope.obj-8265829b4f3022ae28ffc14008746591.mesh", "res://.godot/imported/Hilly_Terrain_Water_Slope.obj-8265829b4f3022ae28ffc14008746591.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

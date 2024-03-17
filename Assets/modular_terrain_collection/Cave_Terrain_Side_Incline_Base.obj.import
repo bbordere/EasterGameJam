@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bg6eloimlayo7"
+path="res://.godot/imported/Cave_Terrain_Side_Incline_Base.obj-498ba05d9cbf54d60b7bae3fe1186465.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Cave_Terrain_Side_Incline_Base.obj-498ba05d9cbf54d60b7bae3fe1186465.mesh"]
+
+source_file="res://Assets/modular_terrain_collection/Cave_Terrain_Side_Incline_Base.obj"
+dest_files=["res://.godot/imported/Cave_Terrain_Side_Incline_Base.obj-498ba05d9cbf54d60b7bae3fe1186465.mesh", "res://.godot/imported/Cave_Terrain_Side_Incline_Base.obj-498ba05d9cbf54d60b7bae3fe1186465.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
