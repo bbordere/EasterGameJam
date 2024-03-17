@@ -1,54 +1,36 @@
-[gd_scene load_steps=11 format=3 uid="uid://b0kqwfn6r7enw"]
+[gd_scene load_steps=13 format=3 uid="uid://b0kqwfn6r7enw"]
 
 [ext_resource type="PackedScene" uid="uid://bijwsd848sp4n" path="res://Scenes/Ennemy/Dummy.tscn" id="1_pohho"]
 [ext_resource type="Script" path="res://Scripts/Ennemy/Bell.gd" id="2_af5nd"]
-[ext_resource type="PackedScene" uid="uid://cjrjxvjj2humm" path="res://Assets/Models/Bell.glb" id="2_qq3qb"]
 [ext_resource type="Script" path="res://Scripts/StateMachine/States/Idle.gd" id="3_bbd1s"]
 [ext_resource type="Script" path="res://Scripts/StateMachine/States/Chasing.gd" id="4_3hgw5"]
+[ext_resource type="Script" path="res://Scripts/StateMachine/States/Fireball.gd" id="6_8j3fn"]
+[ext_resource type="PackedScene" uid="uid://besqdc1vsmepq" path="res://Assets/Models/Bell.glb" id="6_dffwg"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_x52de"]
 radius = 1.38187
-height = 3.77367
+height = 3.1811
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_22yvi"]
-size = Vector3(19.8838, 9.51917, 23.6348)
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_i4yby"]
+height = 10.3676
+radius = 25.5598
+
+[sub_resource type="Animation" id="Animation_272e7"]
+length = 0.001
 
 [sub_resource type="Animation" id="Animation_x1c70"]
 resource_name = "death"
 length = 0.1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Bell:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector3(0, 0, 0), Vector3(0, 0, -1.62316)]
-}
-
-[sub_resource type="Animation" id="Animation_272e7"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Bell:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0, 0, 0)]
-}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_dccyk"]
 _data = {
 "RESET": SubResource("Animation_272e7"),
 "death": SubResource("Animation_x1c70")
 }
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_hev68"]
+height = 13.8653
+radius = 19.0292
 
 [node name="Bell" instance=ExtResource("1_pohho")]
 transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 2.37225, 0)
@@ -57,10 +39,17 @@ floor_stop_on_slope = false
 floor_block_on_wall = false
 script = ExtResource("2_af5nd")
 
-[node name="Bell" parent="." index="0" instance=ExtResource("2_qq3qb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.744267, 0)
+[node name="State" parent="." index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.72385, 0)
+
+[node name="Hp" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.46879, 0)
+
+[node name="Bell" parent="." index="2" instance=ExtResource("6_dffwg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="CollisionShape3D" parent="." index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.577684, 0)
 shape = SubResource("CapsuleShape3D_x52de")
 
 [node name="StateMachine" parent="." index="4"]
@@ -72,9 +61,12 @@ script = ExtResource("3_bbd1s")
 [node name="Chasing" type="Node" parent="StateMachine" index="1"]
 script = ExtResource("4_3hgw5")
 
+[node name="Fireball" type="Node" parent="StateMachine" index="2"]
+script = ExtResource("6_8j3fn")
+
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.33746, 0)
-shape = SubResource("BoxShape3D_22yvi")
+shape = SubResource("CylinderShape3D_i4yby")
 
 [node name="NavigationAgent3D" parent="." index="7"]
 path_height_offset = -2.0
@@ -85,5 +77,19 @@ libraries = {
 "": SubResource("AnimationLibrary_dccyk")
 }
 
+[node name="ShootingRange" type="Area3D" parent="." index="10"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ShootingRange" index="0"]
+shape = SubResource("CylinderShape3D_hev68")
+
+[node name="FireCooldown" type="Timer" parent="." index="11"]
+
+[node name="FireBallShooter" type="RayCast3D" parent="." index="12"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.808105)
+target_position = Vector3(0, 0, -1)
+
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
 [connection signal="body_exited" from="Area3D" to="." method="_on_area_3d_body_exited"]
+[connection signal="body_entered" from="ShootingRange" to="." method="_on_shooting_range_body_entered"]
+[connection signal="body_exited" from="ShootingRange" to="." method="_on_shooting_range_body_exited"]
+[connection signal="timeout" from="FireCooldown" to="." method="_on_fire_cooldown_timeout"]

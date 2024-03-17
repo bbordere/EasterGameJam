@@ -29,19 +29,11 @@ func update(delta: float) -> void:
 	SafeLookAt.safe_look_at(owner.get_node("FaceDirection"), next);
 	owner.rotation.y = lerp_angle(owner.rotation.y, owner.get_node("FaceDirection").global_rotation.y, 5 * delta)
 
-	#if owner is Bell:
-		#print(owner.global_position, " ", target);
-		#next = Vector3(next.x, 3, next.z);
-		#var vel = (next - owner.global_transform.origin).normalized() * owner.SPEED;
-		#owner.velocity = Vector3(vel.x, 0, vel.z);
-		#owner.velocity = vel;
-		#owner.position.y = 1;
-	#else:
 	var vel = (next - owner.global_transform.origin).normalized() * owner.SPEED;
 	owner.velocity = vel;
 
 	
 	if owner.playerDetected:
 		owner.get_node("Timer").stop();
-		state_machine.transition_to("Chasing");
+		state_machine.transition_to("Chasing", {"Attack": "Fireball" if owner is Bell else "Melee"});
 	

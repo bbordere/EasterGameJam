@@ -4,8 +4,8 @@
 [ext_resource type="Script" path="res://Scripts/main.gd" id="1_awjpl"]
 [ext_resource type="PackedScene" uid="uid://iusk221uwkve" path="res://Scenes/Hud.tscn" id="2_lt5vw"]
 [ext_resource type="PackedScene" uid="uid://dh7u8fkosls11" path="res://Scenes/AmmoBox.tscn" id="2_y1o2f"]
-[ext_resource type="PackedScene" uid="uid://quc5qhdjutnm" path="res://Scenes/Ennemy/Bunny.tscn" id="4_skggp"]
 [ext_resource type="PackedScene" uid="uid://b0kqwfn6r7enw" path="res://Scenes/Ennemy/Bell.tscn" id="6_x6nog"]
+[ext_resource type="PackedScene" uid="uid://quc5qhdjutnm" path="res://Scenes/Ennemy/Bunny.tscn" id="6_ytaxt"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ps8ey"]
 
@@ -88,8 +88,18 @@ polygon = PackedVector2Array(0, 0, -2.44139, 2.73521, 14.1281, -1.78771, 0.66963
 depth = 10.0
 
 [node name="Bell5" parent="." instance=ExtResource("6_x6nog")]
-transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 4.57532, 4.25495, -0.369113)
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 8.33338, 4.25495, -14.2538)
 platform_on_leave = 2
 
-[node name="Bunny" parent="." instance=ExtResource("4_skggp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.7403, 0.09253, -9.45652)
+[node name="Bell6" parent="." instance=ExtResource("6_x6nog")]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 5.08542, 4.25495, 20.3904)
+platform_on_leave = 2
+
+[node name="Bunny" parent="." instance=ExtResource("6_ytaxt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.20318, 2.79473, -4.98388)
+
+[node name="Bunny2" parent="." instance=ExtResource("6_ytaxt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.6631, 0.675861, 5.02836)
+
+[node name="Bunny3" parent="." instance=ExtResource("6_ytaxt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.61589, 1.44334, 11.4518)

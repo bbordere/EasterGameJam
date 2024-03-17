@@ -109,7 +109,7 @@ func _physics_process(delta):
 func takeDmg(amount):
 	$Head/Camera3D.shake();
 	Globals.updateHealthLabel.emit();
-	Globals.health -= 4;
+	Globals.health -= amount;
 
 func knock(pos, strength):
 	var dir = pos.direction_to(global_position);

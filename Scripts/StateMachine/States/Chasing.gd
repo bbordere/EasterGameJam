@@ -2,8 +2,11 @@ extends State
 
 @export var CHASE_SPEED = 2;
 
-func enter(_msg := {}) -> void:
-	pass
+var attackName = ""
+
+func enter(_msg:={}) -> void:
+	if (_msg != {}):
+		attackName = _msg["Attack"];
 
 func physics_update(delta: float) -> void:
 	if !owner.playerDetected:
@@ -15,5 +18,5 @@ func physics_update(delta: float) -> void:
 	var vel = (owner.get_node("NavigationAgent3D").get_next_path_position() - owner.transform.origin).normalized() * CHASE_SPEED;
 	owner.velocity = vel;
 	if owner.canAttack:
-		state_machine.transition_to("Melee");
+		state_machine.transition_to(attackName);
 		return
