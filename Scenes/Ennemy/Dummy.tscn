@@ -8,11 +8,13 @@ script = ExtResource("1_du8uq")
 
 [node name="State" type="Label3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.90104, 0)
+billboard = 1
 text = "State:
 "
 
 [node name="Hp" type="Label3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.64598, 0)
+billboard = 1
 text = "Hp: "
 font_size = 50
 

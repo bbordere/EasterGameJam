@@ -103,11 +103,7 @@ _data = {
 script = ExtResource("2_skdby")
 
 [node name="State" parent="." index="0"]
-billboard = 1
 font_size = 64
-
-[node name="Hp" parent="." index="1"]
-billboard = 1
 
 [node name="Easter rabbit" parent="." index="2" instance=ExtResource("2_4u7c3")]
 transform = Transform3D(-2.78128, 0, 1.12449, 0, 3, 0, -1.12449, 0, -2.78128, 0.0145698, 0, -0.00711933)

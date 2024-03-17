@@ -1,4 +1,4 @@
-extends Node3D
+extends Camera3D
 
 @export var period = 0.1
 @export var magnitude = 0.01

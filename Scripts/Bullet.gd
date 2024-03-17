@@ -14,7 +14,7 @@ func _physics_process(delta):
 	position += transform.basis * Vector3(0, 0, -SPEED) * delta;
 	if $RayCast3D.is_colliding():
 		var collider = $RayCast3D.get_collider();
-		if collider.is_in_group("ennemies"):
+		if collider and collider.is_in_group("ennemies"):
 			collider.takeDamage(2 * Globals.dmgMultiplier);
 		else:
 			var instance = vfxScene.instantiate();
