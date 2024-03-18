@@ -1,13 +1,39 @@
-[gd_scene load_steps=2 format=3 uid="uid://bijwsd848sp4n"]
+[gd_scene load_steps=3 format=3 uid="uid://bijwsd848sp4n"]
 
 [ext_resource type="Script" path="res://Scripts/Ennemy/Dummy.gd" id="1_du8uq"]
+[ext_resource type="Script" path="res://Scripts/StateMachine/StateMachine.gd" id="2_ackph"]
 
 [node name="Dummy" type="CharacterBody3D"]
 script = ExtResource("1_du8uq")
 
+[node name="State" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.90104, 0)
+billboard = 1
+text = "State:
+"
+
 [node name="Hp" type="Label3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.64598, 0)
+billboard = 1
 text = "Hp: "
 font_size = 50
 
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+
+[node name="StateMachine" type="Node" parent="."]
+script = ExtResource("2_ackph")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+
+[node name="FaceDirection" type="Node3D" parent="."]
+
+[node name="Hurt" type="AnimationPlayer" parent="."]
+
+[connection signal="velocity_computed" from="NavigationAgent3D" to="." method="_on_navigation_agent_3d_velocity_computed"]

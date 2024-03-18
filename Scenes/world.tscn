@@ -1,0 +1,66 @@
+[gd_scene load_steps=13 format=3 uid="uid://dl5te123v1p6a"]
+
+[ext_resource type="Script" path="res://Scripts/main.gd" id="1_hp8ds"]
+[ext_resource type="PackedScene" uid="uid://dsug45yib05j4" path="res://Scenes/Player.tscn" id="1_xg4db"]
+[ext_resource type="PackedScene" uid="uid://d3o0nw1v3et3s" path="res://Assets/Modular Dungeons Pack-glb/Floor Tile.glb" id="4_ic8kc"]
+[ext_resource type="PackedScene" uid="uid://dm7tpq32j0jnf" path="res://Assets/Modular Dungeons Pack-glb/Wall Modular.glb" id="5_6kuir"]
+[ext_resource type="Texture2D" uid="uid://1nhb2uu5ngy3" path="res://Assets/Grass004_2K-PNG/Grass004_2K-PNG_Color.png" id="5_w5kpg"]
+[ext_resource type="Texture2D" uid="uid://geiquy7v1gpn" path="res://Assets/Grass004_2K-PNG/Grass004_2K-PNG_Roughness.png" id="6_2ax1e"]
+[ext_resource type="PackedScene" uid="uid://hyiuvbhh1xqg" path="res://Assets/free_low_poly_forest.glb" id="7_6ko4f"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_cp0ek"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_w0hy8"]
+sky_material = SubResource("ProceduralSkyMaterial_cp0ek")
+
+[sub_resource type="Environment" id="Environment_tie0w"]
+background_mode = 2
+sky = SubResource("Sky_w0hy8")
+tonemap_mode = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kttsx"]
+albedo_texture = ExtResource("5_w5kpg")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_46kpw"]
+albedo_texture = ExtResource("6_2ax1e")
+
+[node name="World" type="Node3D"]
+script = ExtResource("1_hp8ds")
+
+[node name="Player" parent="." instance=ExtResource("1_xg4db")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.87268, 0)
+
+[node name="Tiles" type="Node3D" parent="."]
+
+[node name="Floor" parent="Tiles" instance=ExtResource("4_ic8kc")]
+
+[node name="Floor2" parent="Tiles" instance=ExtResource("4_ic8kc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.98952, 0, 0)
+
+[node name="Wall" parent="Tiles" instance=ExtResource("5_6kuir")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1)
+
+[node name="Wall2" parent="Tiles" instance=ExtResource("5_6kuir")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.97383, 1, 1)
+
+[node name="Env" type="Node3D" parent="."]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Env"]
+environment = SubResource("Environment_tie0w")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Env"]
+transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
+shadow_enabled = true
+directional_shadow_blend_splits = true
+directional_shadow_fade_start = 1.0
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(2.50277, 0, 0, 0, 1, 0, 0, 0, 3.65662, 4.48954, -0.407471, 0)
+material_override = SubResource("StandardMaterial3D_kttsx")
+material_overlay = SubResource("StandardMaterial3D_46kpw")
+use_collision = true
+
+[node name="Sketchfab_Scene" parent="." instance=ExtResource("7_6ko4f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.7369, 0, -1.96161)

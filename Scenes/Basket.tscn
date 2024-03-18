@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://wgcwgmmul2kt"]
+
+[ext_resource type="Script" path="res://Scripts/Basket.gd" id="1_0v8dg"]
+
+[node name="Basket" type="Node3D"]
+script = ExtResource("1_0v8dg")
+
+[node name="CSGTorus3D" type="CSGTorus3D" parent="."]

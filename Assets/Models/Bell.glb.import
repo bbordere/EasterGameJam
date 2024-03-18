@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://suqd6nr87leq"
-path="res://.godot/imported/Shotgun.glb-dfe859c68994f319d3fc7c8d7fd432de.scn"
+uid="uid://besqdc1vsmepq"
+path="res://.godot/imported/Bell.glb-7b0764777acaf26a7ab16ca12f1d9187.scn"
 
 [deps]
 
-source_file="res://Assets/Models/Shotgun.glb"
-dest_files=["res://.godot/imported/Shotgun.glb-dfe859c68994f319d3fc7c8d7fd432de.scn"]
+source_file="res://Assets/Models/Bell.glb"
+dest_files=["res://.godot/imported/Bell.glb-7b0764777acaf26a7ab16ca12f1d9187.scn"]
 
 [params]
 
