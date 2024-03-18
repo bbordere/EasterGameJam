@@ -1,8 +1,7 @@
-[gd_scene load_steps=13 format=3 uid="uid://bur43nicmr273"]
+[gd_scene load_steps=12 format=3 uid="uid://bur43nicmr273"]
 
 [ext_resource type="PackedScene" uid="uid://dsug45yib05j4" path="res://Scenes/Player.tscn" id="1_a7t0e"]
 [ext_resource type="Script" path="res://Scripts/main.gd" id="1_awjpl"]
-[ext_resource type="PackedScene" uid="uid://iusk221uwkve" path="res://Scenes/Hud.tscn" id="2_lt5vw"]
 [ext_resource type="PackedScene" uid="uid://dh7u8fkosls11" path="res://Scenes/AmmoBox.tscn" id="2_y1o2f"]
 [ext_resource type="PackedScene" uid="uid://b0kqwfn6r7enw" path="res://Scenes/Ennemy/Bell.tscn" id="6_x6nog"]
 [ext_resource type="PackedScene" uid="uid://quc5qhdjutnm" path="res://Scenes/Ennemy/Bunny.tscn" id="6_ytaxt"]
@@ -29,8 +28,6 @@ filter_ledge_spans = true
 
 [node name="World" type="Node3D"]
 script = ExtResource("1_awjpl")
-
-[node name="Hud" parent="." instance=ExtResource("2_lt5vw")]
 
 [node name="Player" parent="." instance=ExtResource("1_a7t0e")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.9351, 0)
