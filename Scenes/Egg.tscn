@@ -118,6 +118,7 @@ height = 1.09191
 
 [node name="Egg" type="CharacterBody3D"]
 script = ExtResource("2_a07li")
+type = null
 
 [node name="Sphère" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0, 0)

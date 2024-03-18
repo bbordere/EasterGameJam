@@ -21,11 +21,12 @@ grow_vertical = 2
 
 [node name="SubViewport" type="SubViewport" parent="Background/SubViewportContainer"]
 handle_input_locally = false
-size = Vector2i(1280, 512)
+size = Vector2i(1280, 720)
 render_target_update_mode = 4
 
 [node name="Camera3D" type="Camera3D" parent="Background/SubViewportContainer/SubViewport"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.192517, 2.64455)
+transform = Transform3D(1, 0, 0, 0, 0.957883, 0.28716, 0, -0.28716, 0.957883, 4.76837e-07, 2.53207, 7.50732)
+fov = 90.0
 
 [node name="Menu" type="Control" parent="."]
 layout_mode = 3
@@ -34,6 +35,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(0.998823, 1)
 
 [node name="MarginContainer" type="MarginContainer" parent="Menu"]
 layout_mode = 1

@@ -5,12 +5,19 @@ extends Control
 func _ready():
 	Globals.updateAmmoLabel.connect(updateAmmo);
 	Globals.updateHealthLabel.connect(updateHealth);
+	Globals.updateEggTextureRect.connect(updateEgg);
 
 func updateAmmo():
-	$TopContainer/Ammo.text = "Ammo: " + str(Globals.ammo);
+	$Hud/Panel/Ammo.text = str(Globals.ammo);
 
 func updateHealth():
-	$TopContainer/Health.text = "Health " + str(Globals.health);
+	$Hud/Panel/Health.text = "Health " + str(Globals.health);
+
+func updateEgg():
+	if (Globals.egg < 1):
+		$Hud/Panel/TextureRect3.hide();
+	else:
+		$Hud/Panel/TextureRect3.show();
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

@@ -724,7 +724,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.0967, 0, 23.729)
 transform = Transform3D(5, 0, 0, 0, 1, 0, 0, 0, 6, -6, 0, 0)
 
 [node name="StaticBody3D" parent="interrieur map" instance=ExtResource("1_ojs6p")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="herbe droit pente 1" parent="interrieur map" instance=ExtResource("7_ke8ag")]
 transform = Transform3D(0.2, 0, 0, 0, 1, 0, 0, 0, 0.166667, 0.846274, -1, -1)
