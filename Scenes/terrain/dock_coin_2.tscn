@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://dqofmvpqcw3xo"]
+
+[ext_resource type="ArrayMesh" uid="uid://bjfutbvjlhj1q" path="res://Assets/modular_terrain_collection/Beach_Prop_Docks_Corner_Supports.obj" id="1_rmblg"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ehahe"]
+points = PackedVector3Array(-0.300084, 0, -0.608239, -0.300084, 0.999995, -0.608239, -0.22347, 0, -0.576599, -0.376599, 0, -0.576599, -0.22347, 0.999995, -0.576599, -0.376599, 0.999995, -0.576599, 0.296709, 0, -0.296809, -0.408239, 0, -0.500085, 0.296709, 0.999995, -0.296809, -0.408239, 0.999995, -0.500085, 0.576499, 0, 0.223368, -0.376599, 0, -0.423471, 0.576499, 0.999995, 0.223368, -0.376599, 0.999995, -0.423471, 0.60814, 0, 0.299982, 0.423371, 0, 0.376496, 0.60814, 0.999995, 0.299982, 0.423371, 0.999995, 0.376496, 0.576499, 0, 0.376496, 0.499985, 0, 0.408236, 0.576499, 0.999995, 0.376496, 0.499985, 0.999995, 0.408236)
+
+[node name="dock coin 2" type="StaticBody3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_rmblg")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("ConvexPolygonShape3D_ehahe")
