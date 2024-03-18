@@ -4,7 +4,7 @@ var ammo = 0;
 var health = 100;
 var dmgMultiplier = 1.0;
 
-var skills = {"dash": true, "double_jump": true, "super_dmg": true, "": false};
+var skills = {"dash": false, "double_jump": true, "super_dmg": true, "": false};
 
 var playerReference = null;
 

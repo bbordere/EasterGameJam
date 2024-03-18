@@ -18,6 +18,8 @@ billboard = 1
 text = "Hp: "
 font_size = 50
 
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 
 [node name="StateMachine" type="Node" parent="."]
@@ -32,4 +34,4 @@ wait_time = 3.0
 
 [node name="FaceDirection" type="Node3D" parent="."]
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="Hurt" type="AnimationPlayer" parent="."]

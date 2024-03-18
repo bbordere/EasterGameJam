@@ -7,6 +7,7 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 var collider = null;
 
 func init():
+	SPEED = 3;
 	randomize()
 	await get_tree().create_timer(randf_range(0.2, 0.8)).timeout;
 	$AnimationPlayer.play("walk");

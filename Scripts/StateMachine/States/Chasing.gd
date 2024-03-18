@@ -1,10 +1,12 @@
 extends State
 
-@export var CHASE_SPEED = 2;
+@export var CHASE_SPEED = 4;
 
 var attackName = ""
 
 func enter(_msg:={}) -> void:
+	if owner is Bell:
+		CHASE_SPEED = 3;
 	if (_msg != {}):
 		attackName = _msg["Attack"];
 

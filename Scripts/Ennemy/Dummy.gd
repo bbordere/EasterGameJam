@@ -4,8 +4,7 @@ class_name Dummy
 
 var hp = 100;
 
-const SPEED = 3.0
-const JUMP_VELOCITY = 4.5
+var SPEED = 3.0
 
 var playerDetected = false;
 var canAttack = false;
@@ -27,6 +26,7 @@ func takeDamage(dmg):
 	hp -= dmg;
 	hp = max(hp, 0);
 	$Hp.text = "HP: " + str(hp);
+	$Hurt.play("hit");
 
 func moveRight():
 	velocity = Vector3.RIGHT * SPEED;
