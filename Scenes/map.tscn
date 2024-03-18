@@ -1,0 +1,2314 @@
+[gd_scene load_steps=35 format=3 uid="uid://bh4nypdpojopx"]
+
+[ext_resource type="PackedScene" uid="uid://hysch75a4omb" path="res://Scenes/terrain/herbe_plate.tscn" id="1_ojs6p"]
+[ext_resource type="PackedScene" uid="uid://ciicetwuu60xs" path="res://Scenes/terrain/eau_plate.tscn" id="2_wg8uv"]
+[ext_resource type="PackedScene" uid="uid://bymd55knslo3p" path="res://Scenes/terrain/herbe_droit_pente_2.tscn" id="3_pjir0"]
+[ext_resource type="PackedScene" uid="uid://bdokk46e1r7yo" path="res://Scenes/terrain/herbe_coin_pente_1.tscn" id="4_mlrt6"]
+[ext_resource type="PackedScene" uid="uid://dwklwd1oup1er" path="res://Scenes/terrain/herbe_coin_pente_2.tscn" id="4_oeyho"]
+[ext_resource type="PackedScene" uid="uid://b4uqbgqj25iu6" path="res://Scenes/terrain/herbe_coin_pente_3.tscn" id="6_3y6il"]
+[ext_resource type="PackedScene" uid="uid://x3qbmnev33fs" path="res://Scenes/terrain/herbe_droit_pente_1.tscn" id="7_ke8ag"]
+[ext_resource type="PackedScene" uid="uid://d34ink04fxd8b" path="res://Scenes/terrain/herbe_diagonale_pente_1.tscn" id="8_xdo8h"]
+[ext_resource type="PackedScene" uid="uid://41d803xbuliu" path="res://Scenes/terrain/herbe_diagonale_pente_2.tscn" id="9_027ph"]
+[ext_resource type="PackedScene" uid="uid://celyu3lgubt1m" path="res://Scenes/terrain/herbe_diagonale_pente_3.tscn" id="10_y1o2v"]
+[ext_resource type="PackedScene" uid="uid://c3srsdkrq3h28" path="res://Scenes/terrain/herbe_diagonale_pente_4.tscn" id="11_wrmsh"]
+[ext_resource type="PackedScene" uid="uid://f3rvjlojoqrf" path="res://Scenes/terrain/herbe_diagonale_pente_5.tscn" id="12_pd5ql"]
+[ext_resource type="PackedScene" uid="uid://diioaptivpok0" path="res://Scenes/terrain/herbe_diagonale_pente_6.tscn" id="13_23ror"]
+[ext_resource type="PackedScene" uid="uid://c21o1e6jmrm7k" path="res://Scenes/terrain/herbe_coin_creux_1.tscn" id="14_3gji6"]
+[ext_resource type="PackedScene" uid="uid://cde3mhum6isvo" path="res://Scenes/terrain/herbe_coin_creux_2.tscn" id="15_sl6kr"]
+[ext_resource type="PackedScene" uid="uid://csavr5j3p1f7d" path="res://Scenes/terrain/herbe_coin_creux_3.tscn" id="16_uw35u"]
+[ext_resource type="PackedScene" uid="uid://0lr3g2l2p5yi" path="res://Scenes/terrain/chemein_plat.tscn" id="17_dcwv7"]
+[ext_resource type="PackedScene" uid="uid://o8q8crr4h08j" path="res://Scenes/terrain/chemein_droit.tscn" id="18_ynm8c"]
+[ext_resource type="PackedScene" uid="uid://mpsv3t7fc0bq" path="res://Scenes/terrain/chemein_escalier_1.tscn" id="19_eec21"]
+[ext_resource type="PackedScene" uid="uid://bda4e463iiq8q" path="res://Scenes/terrain/chemein_escalier_2.tscn" id="20_t0n2l"]
+[ext_resource type="PackedScene" uid="uid://bv8hbqk0t13o4" path="res://Scenes/terrain/chemein_coin_pente_2.tscn" id="21_xips2"]
+[ext_resource type="PackedScene" uid="uid://biipcmvkglrmd" path="res://Scenes/terrain/chemein_coin_pente_3.tscn" id="22_3brtk"]
+[ext_resource type="PackedScene" uid="uid://0xb2l6n7j2yv" path="res://Scenes/terrain/chemein_coin_creux_1.tscn" id="23_734gd"]
+[ext_resource type="PackedScene" uid="uid://0ioqelb5fuyv" path="res://Scenes/terrain/chemein_coin_creux_2.tscn" id="24_bpynu"]
+[ext_resource type="PackedScene" uid="uid://bl772q0qvaave" path="res://Scenes/terrain/chemein_coin_creux_3.tscn" id="25_u2y44"]
+[ext_resource type="PackedScene" uid="uid://c1bunf45be2cy" path="res://Scenes/terrain/chemein_coin_creux_4.tscn" id="26_41icu"]
+[ext_resource type="PackedScene" uid="uid://oe88es5h647q" path="res://Scenes/terrain/chemein_diagonale_droit_1.tscn" id="27_st50t"]
+[ext_resource type="PackedScene" uid="uid://q72ta0vi4e7x" path="res://Scenes/terrain/chemein_diagonale_droit_2.tscn" id="28_ghduw"]
+[ext_resource type="PackedScene" uid="uid://ddgq2lym6w16x" path="res://Scenes/terrain/chemein_diagonale_droit_3.tscn" id="29_r3d55"]
+[ext_resource type="PackedScene" uid="uid://c8rpjhgekpts6" path="res://Scenes/terrain/chemein_diagonale_droit_4.tscn" id="30_k64mg"]
+[ext_resource type="PackedScene" uid="uid://ckqtyd12nfcyr" path="res://Scenes/terrain/chemein_droit_1.tscn" id="31_btipt"]
+[ext_resource type="PackedScene" uid="uid://bu7yeeik2jyag" path="res://Scenes/terrain/chemein_coin_droit_1.tscn" id="32_ii43d"]
+[ext_resource type="PackedScene" uid="uid://b0c45ci7f47ay" path="res://Scenes/terrain/chemein_coin_droit_2.tscn" id="33_3hvle"]
+[ext_resource type="PackedScene" uid="uid://d1iwf6faqfvj1" path="res://Scenes/terrain/chemein_coin_pente_1.tscn" id="33_uxlnq"]
+
+[node name="map" type="Node3D"]
+
+[node name="route" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 12)
+
+[node name="route droite" type="Node3D" parent="route"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
+
+[node name="chemein plat" parent="route/route droite" instance=ExtResource("17_dcwv7")]
+transform = Transform3D(3, 0, 0, 0, 1, 0, 0, 0, 10, 9.0683, -1, 0.328999)
+
+[node name="chemein droit" parent="route/route droite" instance=ExtResource("18_ynm8c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 10, 7.9702, -1, 0.310398)
+
+[node name="chemein droit2" parent="route/route droite" instance=ExtResource("18_ynm8c")]
+transform = Transform3D(-1, 0, -8.74228e-07, 0, 1, 0, 8.74228e-08, 0, -10, 9.9702, -1, 0.310398)
+
+[node name="route droite2" type="Node3D" parent="route"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.5, 0.986227, 0, 9.52621)
+
+[node name="chemein plat" parent="route/route droite2" instance=ExtResource("17_dcwv7")]
+transform = Transform3D(3, 0, 0, 0, 1, 0, 0, 0, 10, 9.0683, -1, 0.328999)
+
+[node name="chemein droit" parent="route/route droite2" instance=ExtResource("18_ynm8c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 10, 7.9702, -1, 0.310398)
+
+[node name="chemein droit2" parent="route/route droite2" instance=ExtResource("18_ynm8c")]
+transform = Transform3D(-1, 0, -8.74228e-07, 0, 1, 0, 8.74228e-08, 0, -10, 9.9702, -1, 0.310398)
+
+[node name="route droite3" type="Node3D" parent="route"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.97668, 0, 24.7301)
+
+[node name="chemein plat" parent="route/route droite3" instance=ExtResource("17_dcwv7")]
+transform = Transform3D(3, 0, 0, 0, 1, 0, 0, 0, 10, 9.0683, -1, 0.328999)
+
+[node name="chemein droit" parent="route/route droite3" instance=ExtResource("18_ynm8c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 10, 7.9702, -1, 0.310398)
+
+[node name="chemein droit2" parent="route/route droite3" instance=ExtResource("18_ynm8c")]
+transform = Transform3D(-1, 0, -8.74228e-07, 0, 1, 0, 8.74228e-08, 0, -10, 9.9702, -1, 0.310398)
+
+[node name="chemein plat 2" type="Node3D" parent="route"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.96704, -0.997958, 5.78513)
+
+[node name="chemein droit 1" parent="route/chemein plat 2" instance=ExtResource("31_btipt")]
+
+[node name="chemein droit 2" parent="route/chemein plat 2" instance=ExtResource("31_btipt")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 3, 0, 0)
+
+[node name="chemein plat2" parent="route/chemein plat 2" instance=ExtResource("17_dcwv7")]
+transform = Transform3D(4, 0, 0, 0, 1, 0, 0, 0, 3, 1.59465, 0, -0.000759125)
+
+[node name="route droite4" type="Node3D" parent="route"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.5, 1.97455, 0, 17.4369)
+
+[node name="chemein plat" parent="route/route droite4" instance=ExtResource("17_dcwv7")]
+transform = Transform3D(3, 0, 0, 0, 1, 0, 0, 0, 10, 9.0683, -1, 0.328999)
+
+[node name="chemein droit" parent="route/route droite4" instance=ExtResource("18_ynm8c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 10, 7.9702, -1, 0.310398)
+
+[node name="chemein droit2" parent="route/route droite4" instance=ExtResource("18_ynm8c")]
+transform = Transform3D(-1, 0, -8.74228e-07, 0, 1, 0, 8.74228e-08, 0, -10, 9.9702, -1, 0.310398)
+
+[node name="chemein plat 3" type="Node3D" parent="route"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.95536, -1.0001, 13.6387)
+
+[node name="chemein droit 1" parent="route/chemein plat 3" instance=ExtResource("31_btipt")]
+
+[node name="chemein droit 2" parent="route/chemein plat 3" instance=ExtResource("31_btipt")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 3, 0, 0)
+
+[node name="chemein plat2" parent="route/chemein plat 3" instance=ExtResource("17_dcwv7")]
+transform = Transform3D(4, 0, 0, 0, 1, 0, 0, 0, 3, 1.59465, 0, -0.000759125)
+
+[node name="virage M" type="Node3D" parent="route"]
+transform = Transform3D(5, 0, 0, 0, 1, 0, 0, 0, 5, 10.1482, -1, 31.0724)
+
+[node name="chemein coin creux 4" parent="route/virage M" instance=ExtResource("26_41icu")]
+transform = Transform3D(-8.74228e-09, 0, 0.2, 0, 1, 0, -0.2, 0, -8.74228e-09, 0.16418, 0, 0.150581)
+
+[node name="chemein plat" parent="route/virage M" instance=ExtResource("17_dcwv7")]
+
+[node name="chemein coin pente 1" parent="route/virage M" instance=ExtResource("33_uxlnq")]
+transform = Transform3D(-8.74228e-09, 0, -0.2, 0, 1, 0, 0.2, 0, -8.74228e-09, -0.040181, -0.000417352, -0.106899)
+
+[node name="chemein plat 4" type="Node3D" parent="route"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 6.97263, -1.0002, 30.8237)
+
+[node name="chemein droit 1" parent="route/chemein plat 4" instance=ExtResource("31_btipt")]
+
+[node name="chemein droit 2" parent="route/chemein plat 4" instance=ExtResource("31_btipt")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 3, 0, 0)
+
+[node name="chemein plat2" parent="route/chemein plat 4" instance=ExtResource("17_dcwv7")]
+transform = Transform3D(4, 0, 0, 0, 1, 0, 0, 0, 3, 1.59465, 0, -0.000759125)
+
+[node name="chemein droit" parent="route" instance=ExtResource("18_ynm8c")]
+transform = Transform3D(0.272549, 0, -1.15457, 0, 1, 0, 0.962142, 0, 0.327059, 9.03763, -1, 30.6608)
+
+[node name="route droite5" type="Node3D" parent="route"]
+transform = Transform3D(0.189764, 0, -0.98183, 0, 1, 0, 0.98183, 0, 0.189764, -0.488328, 0, 24.8439)
+
+[node name="chemein plat" parent="route/route droite5" instance=ExtResource("17_dcwv7")]
+transform = Transform3D(3, 0, 0, 0, 1, 0, 0, 0, 10, 9.0683, -1, 0.328999)
+
+[node name="chemein droit" parent="route/route droite5" instance=ExtResource("18_ynm8c")]
+transform = Transform3D(0.999993, 0, -0.0366518, 0, 1, 0, 0.00366518, 0, 9.99994, 7.9702, -1, 0.310398)
+
+[node name="chemein droit2" parent="route/route droite5" instance=ExtResource("18_ynm8c")]
+transform = Transform3D(-1, 0, -8.34465e-07, 0, 1, 0, 8.9407e-08, 0, -10, 9.9702, -1, 0.310398)
+
+[node name="route droite6" type="Node3D" parent="route"]
+transform = Transform3D(0.595328, 0, -0.803483, 0, 1, 0, 0.803483, 0, 0.595328, -13.5529, 0, 30.4392)
+
+[node name="chemein plat" parent="route/route droite6" instance=ExtResource("17_dcwv7")]
+transform = Transform3D(3, 0, -4.76837e-07, 0, 1, 0, 0, 0, 10, 9.04266, -1, 0.504494)
+
+[node name="chemein droit" parent="route/route droite6" instance=ExtResource("18_ynm8c")]
+transform = Transform3D(0.999994, 0, -0.0366526, 0, 1, 0, 0.00366512, 0, 9.99994, 7.94456, -1, 0.485886)
+
+[node name="chemein droit2" parent="route/route droite6" instance=ExtResource("18_ynm8c")]
+transform = Transform3D(-1, 0, -1.90735e-06, 0, 1, 0, 5.96046e-08, 0, -10, 9.94456, -1, 0.485889)
+
+[node name="route droite7" type="Node3D" parent="route"]
+transform = Transform3D(0.487037, 0, -0.174676, 0, 1, 0, 0.873381, 0, 0.0974073, -8.78048, 0, 26.8749)
+
+[node name="chemein plat" parent="route/route droite7" instance=ExtResource("17_dcwv7")]
+transform = Transform3D(3, 0, 0, 0, 1, 0, 0, 0, 10, 9.22296, -1, -2.57935)
+
+[node name="chemein droit" parent="route/route droite7" instance=ExtResource("18_ynm8c")]
+transform = Transform3D(0.999947, 0, -0.0822405, 0, 1, 0, 0.0102801, 0, 7.99958, 8.13983, -1, -1.09281)
+
+[node name="chemein droit2" parent="route" instance=ExtResource("18_ynm8c")]
+transform = Transform3D(-0.451267, 0, 0.178478, 0, 1, 0, -0.892389, 0, -0.0902534, -3.90882, -1, 35.6936)
+
+[node name="chemein plat 5" type="Node3D" parent="route"]
+transform = Transform3D(0.575476, 0, -0.817818, 0, 1, 0, 0.817818, 0, 0.575476, -14.3338, -1.0002, 40.8323)
+
+[node name="chemein droit 1" parent="route/chemein plat 5" instance=ExtResource("31_btipt")]
+
+[node name="chemein droit 2" parent="route/chemein plat 5" instance=ExtResource("31_btipt")]
+transform = Transform3D(-1, 0, 8.9407e-08, 0, 1, 0, -8.9407e-08, 0, -1, 3.01275, 0, -0.0181198)
+
+[node name="chemein plat2" parent="route/chemein plat 5" instance=ExtResource("17_dcwv7")]
+transform = Transform3D(4, 0, 0, 0, 1, 0, 0, 0, 3, 1.59465, 0, -0.000759125)
+
+[node name="route droite8" type="Node3D" parent="route"]
+transform = Transform3D(0.720212, 0, -0.693754, 0, 1, 0, 0.693754, 0, 0.720212, -23.8767, 0, 40.2355)
+
+[node name="chemein plat" parent="route/route droite8" instance=ExtResource("17_dcwv7")]
+transform = Transform3D(3, 0, 0, 0, 1, 0, 0, 0, 10, 9.0683, -1, 0.328999)
+
+[node name="chemein droit" parent="route/route droite8" instance=ExtResource("18_ynm8c")]
+transform = Transform3D(0.999993, 0, -0.0366518, 0, 1, 0, 0.00366518, 0, 9.99994, 7.9702, -1, 0.310398)
+
+[node name="chemein droit2" parent="route/route droite8" instance=ExtResource("18_ynm8c")]
+transform = Transform3D(-1, 0, -8.34465e-07, 0, 1, 0, 8.9407e-08, 0, -10, 9.9702, -1, 0.310398)
+
+[node name="route droite9" type="Node3D" parent="route"]
+transform = Transform3D(0.949255, 0, -0.314506, 0, 1, 0, 0.314506, 0, 0.949255, -31.3412, 0, 52.3299)
+
+[node name="chemein plat" parent="route/route droite9" instance=ExtResource("17_dcwv7")]
+transform = Transform3D(3, 0, -4.76837e-07, 0, 1, 0, 0, 0, 10, 9.04266, -1, 0.504494)
+
+[node name="chemein droit" parent="route/route droite9" instance=ExtResource("18_ynm8c")]
+transform = Transform3D(0.999994, 0, -0.0366526, 0, 1, 0, 0.00366512, 0, 9.99994, 7.94456, -1, 0.485886)
+
+[node name="chemein droit2" parent="route/route droite9" instance=ExtResource("18_ynm8c")]
+transform = Transform3D(-1, 0, -1.90735e-06, 0, 1, 0, 5.96046e-08, 0, -10, 9.94456, -1, 0.485889)
+
+[node name="route droite10" type="Node3D" parent="route"]
+transform = Transform3D(0.900918, 0, -0.0867979, 0, 1, 0, 0.433989, 0, 0.180184, -29.4894, 0, 46.6684)
+
+[node name="chemein plat" parent="route/route droite10" instance=ExtResource("17_dcwv7")]
+transform = Transform3D(3, 0, 0, 0, 1, 0, 0, 0, 10, 9.22296, -1, -2.57935)
+
+[node name="chemein droit" parent="route/route droite10" instance=ExtResource("18_ynm8c")]
+transform = Transform3D(0.999947, 0, -0.0822405, 0, 1, 0, 0.0102801, 0, 7.99958, 8.13983, -1, -1.09281)
+
+[node name="chemein droit3" parent="route" instance=ExtResource("18_ynm8c")]
+transform = Transform3D(-0.900857, 0, 0.086823, 0, 1, 0, -0.434115, 0, -0.180172, -20.4406, -1, 51.0919)
+
+[node name="virage M2" type="Node3D" parent="route"]
+transform = Transform3D(0.311605, 0, 0.950212, 0, 1, 0, -0.950212, 0, 0.311605, -25.3544, -1, 62.7256)
+
+[node name="chemein coin creux 4" parent="route/virage M2" instance=ExtResource("26_41icu")]
+
+[node name="chemein plat" parent="route/virage M2" instance=ExtResource("17_dcwv7")]
+transform = Transform3D(0.0193381, 0, -3.99995, 0, 1, 0, 3.99995, 0, 0.0193381, 0.494972, 0, -0.678659)
+
+[node name="chemein coin pente 2" parent="route/virage M2" instance=ExtResource("21_xips2")]
+transform = Transform3D(-1, 0, 3.49283e-05, 0, 1, 0, -3.49283e-05, 0, -1, 2.00581, 0, -2.0185)
+
+[node name="route droite11" type="Node3D" parent="route"]
+transform = Transform3D(0.991408, 0, 0.130803, 0, 1, 0, -0.130803, 0, 0.991408, -62.8005, 0, 35.9898)
+
+[node name="chemein plat" parent="route/route droite11" instance=ExtResource("17_dcwv7")]
+transform = Transform3D(3, 0, 0, 0, 1, 0, 0, 0, 10, 9.0683, -1, 0.328999)
+
+[node name="chemein droit" parent="route/route droite11" instance=ExtResource("18_ynm8c")]
+transform = Transform3D(0.999993, 0, -0.0366518, 0, 1, 0, 0.00366518, 0, 9.99994, 7.9702, -1, 0.310398)
+
+[node name="chemein droit2" parent="route/route droite11" instance=ExtResource("18_ynm8c")]
+transform = Transform3D(-1, 0, -8.34465e-07, 0, 1, 0, 8.9407e-08, 0, -10, 9.9702, -1, 0.310398)
+
+[node name="route droite12" type="Node3D" parent="route"]
+transform = Transform3D(0.837595, 0, 0.546292, 0, 1, 0, -0.546292, 0, 0.837595, -57.9952, 0, 49.3651)
+
+[node name="chemein plat" parent="route/route droite12" instance=ExtResource("17_dcwv7")]
+transform = Transform3D(3, 0, -4.76837e-07, 0, 1, 0, 0, 0, 10, 9.04266, -1, 0.504494)
+
+[node name="chemein droit" parent="route/route droite12" instance=ExtResource("18_ynm8c")]
+transform = Transform3D(0.999994, 0, -0.0366526, 0, 1, 0, 0.00366512, 0, 9.99994, 7.94456, -1, 0.485886)
+
+[node name="chemein droit2" parent="route/route droite12" instance=ExtResource("18_ynm8c")]
+transform = Transform3D(-1, 0, -1.90735e-06, 0, 1, 0, 5.96046e-08, 0, -10, 9.94456, -1, 0.485889)
+
+[node name="route droite13" type="Node3D" parent="route"]
+transform = Transform3D(0.900903, 0, 0.0868042, 0, 1, 0, -0.434021, 0, 0.180181, -61.2682, 0, 44.3884)
+
+[node name="chemein plat" parent="route/route droite13" instance=ExtResource("17_dcwv7")]
+transform = Transform3D(3, 0, 0, 0, 1, 0, 0, 0, 10, 9.22296, -1, -2.57935)
+
+[node name="chemein droit" parent="route/route droite13" instance=ExtResource("18_ynm8c")]
+transform = Transform3D(0.999947, 0, -0.0822405, 0, 1, 0, 0.0102801, 0, 7.99958, 8.13983, -1, -1.09281)
+
+[node name="chemein droit4" parent="route" instance=ExtResource("18_ynm8c")]
+transform = Transform3D(-0.917741, 0, -0.079436, 0, 1, 0, 0.39718, 0, -0.183548, -52.1744, -1, 40.0519)
+
+[node name="chemein plat 6" type="Node3D" parent="route"]
+transform = Transform3D(0.85072, 0, 0.52562, 0, 1, 0, -0.52562, 0, 0.85072, -47.6673, -1.0002, 50.7651)
+
+[node name="chemein droit 1" parent="route/chemein plat 6" instance=ExtResource("31_btipt")]
+
+[node name="chemein droit 2" parent="route/chemein plat 6" instance=ExtResource("31_btipt")]
+transform = Transform3D(-1, 0, 8.9407e-08, 0, 1, 0, -8.9407e-08, 0, -1, 3.01275, 0, -0.0181198)
+
+[node name="chemein plat2" parent="route/chemein plat 6" instance=ExtResource("17_dcwv7")]
+transform = Transform3D(4, 0, 0, 0, 1, 0, 0, 0, 3, 1.59465, 0, -0.000759125)
+
+[node name="route droite14" type="Node3D" parent="route"]
+transform = Transform3D(0.735518, 0, 0.677505, 0, 1, 0, -0.677505, 0, 0.735518, -48.8328, 0, 60.2554)
+
+[node name="chemein plat" parent="route/route droite14" instance=ExtResource("17_dcwv7")]
+transform = Transform3D(3, 0, 0, 0, 1, 0, 0, 0, 10, 9.0683, -1, 0.328999)
+
+[node name="chemein droit" parent="route/route droite14" instance=ExtResource("18_ynm8c")]
+transform = Transform3D(0.999993, 0, -0.0366518, 0, 1, 0, 0.00366518, 0, 9.99994, 7.9702, -1, 0.310398)
+
+[node name="chemein droit2" parent="route/route droite14" instance=ExtResource("18_ynm8c")]
+transform = Transform3D(-1, 0, -8.34465e-07, 0, 1, 0, 8.9407e-08, 0, -10, 9.9702, -1, 0.310398)
+
+[node name="route droite15" type="Node3D" parent="route"]
+transform = Transform3D(0.310826, 0, 0.950467, 0, 1, 0, -0.950467, 0, 0.310826, -35.6413, 0, 68.7551)
+
+[node name="chemein plat" parent="route/route droite15" instance=ExtResource("17_dcwv7")]
+transform = Transform3D(3, 0, -4.76837e-07, 0, 1, 0, 0, 0, 10, 9.04266, -1, 0.504494)
+
+[node name="chemein droit" parent="route/route droite15" instance=ExtResource("18_ynm8c")]
+transform = Transform3D(0.999994, 0, -0.0366526, 0, 1, 0, 0.00366512, 0, 9.99994, 7.94456, -1, 0.485886)
+
+[node name="chemein droit2" parent="route/route droite15" instance=ExtResource("18_ynm8c")]
+transform = Transform3D(-1, 0, -1.90735e-06, 0, 1, 0, 5.96046e-08, 0, -10, 9.94456, -1, 0.485889)
+
+[node name="chemein droit5" parent="route" instance=ExtResource("18_ynm8c")]
+transform = Transform3D(-0.4257, 0, -1.08584, 0, 1, 0, 0.904864, 0, -0.51084, -37.3823, -1, 57.6609)
+
+[node name="chemein plat" parent="route" instance=ExtResource("17_dcwv7")]
+transform = Transform3D(2.56436, 0, -5.18982, 0, 1, 0, 1.55695, 0, 8.54785, -39.8496, -1, 61.8774)
+
+[node name="route droite16" type="Node3D" parent="route"]
+transform = Transform3D(-0.991687, 0, -0.128675, 0, 1, 0, 0.128675, 0, -0.991687, -46.1952, 0, 24.479)
+
+[node name="chemein plat" parent="route/route droite16" instance=ExtResource("17_dcwv7")]
+transform = Transform3D(3, 0, 0, 0, 1, 0, 0, 0, 10, 9.0683, -1, 0.328999)
+
+[node name="chemein droit" parent="route/route droite16" instance=ExtResource("18_ynm8c")]
+transform = Transform3D(0.999993, 0, -0.0366518, 0, 1, 0, 0.00366518, 0, 9.99994, 7.9702, -1, 0.310398)
+
+[node name="chemein droit2" parent="route/route droite16" instance=ExtResource("18_ynm8c")]
+transform = Transform3D(-1, 0, -8.34465e-07, 0, 1, 0, 8.9407e-08, 0, -10, 9.9702, -1, 0.310398)
+
+[node name="route droite17" type="Node3D" parent="route"]
+transform = Transform3D(-0.838766, 0, -0.544493, 0, 1, 0, 0.544493, 0, -0.838766, -50.9718, 0, 11.0934)
+
+[node name="chemein plat" parent="route/route droite17" instance=ExtResource("17_dcwv7")]
+transform = Transform3D(3, 0, -4.76837e-07, 0, 1, 0, 0, 0, 10, 9.04266, -1, 0.504494)
+
+[node name="chemein droit" parent="route/route droite17" instance=ExtResource("18_ynm8c")]
+transform = Transform3D(0.999994, 0, -0.0366526, 0, 1, 0, 0.00366512, 0, 9.99994, 7.94456, -1, 0.485886)
+
+[node name="chemein droit2" parent="route/route droite17" instance=ExtResource("18_ynm8c")]
+transform = Transform3D(-1, 0, -1.90735e-06, 0, 1, 0, 5.96046e-08, 0, -10, 9.94456, -1, 0.485889)
+
+[node name="route droite18" type="Node3D" parent="route"]
+transform = Transform3D(-0.901833, 0, -0.0864172, 0, 1, 0, 0.432086, 0, -0.180367, -47.7094, 0, 16.0771)
+
+[node name="chemein plat" parent="route/route droite18" instance=ExtResource("17_dcwv7")]
+transform = Transform3D(3, 0, 0, 0, 1, 0, 0, 0, 10, 9.22296, -1, -2.57935)
+
+[node name="chemein droit" parent="route/route droite18" instance=ExtResource("18_ynm8c")]
+transform = Transform3D(0.999947, 0, -0.0822405, 0, 1, 0, 0.0102801, 0, 7.99958, 8.13983, -1, -1.09281)
+
+[node name="chemein droit6" parent="route" instance=ExtResource("18_ynm8c")]
+transform = Transform3D(0.918591, 0, 0.0790418, 0, 1, 0, -0.395209, 0, 0.183718, -56.8125, -1, 20.3941)
+
+[node name="chemein plat 7" type="Node3D" parent="route"]
+transform = Transform3D(-0.851846, 0, -0.523793, 0, 1, 0, 0.523793, 0, -0.851846, -61.2966, -1.0002, 9.67121)
+
+[node name="chemein droit 1" parent="route/chemein plat 7" instance=ExtResource("31_btipt")]
+
+[node name="chemein droit 2" parent="route/chemein plat 7" instance=ExtResource("31_btipt")]
+transform = Transform3D(-1, 0, 8.9407e-08, 0, 1, 0, -8.9407e-08, 0, -1, 3.01275, 0, -0.0181198)
+
+[node name="chemein plat2" parent="route/chemein plat 7" instance=ExtResource("17_dcwv7")]
+transform = Transform3D(4, 0, 0, 0, 1, 0, 0, 0, 3, 1.59465, 0, -0.000759125)
+
+[node name="route droite19" type="Node3D" parent="route"]
+transform = Transform3D(-0.736971, 0, -0.675925, 0, 1, 0, 0.675925, 0, -0.736971, -60.1108, 0, 0.183436)
+
+[node name="chemein plat" parent="route/route droite19" instance=ExtResource("17_dcwv7")]
+transform = Transform3D(3, 0, 0, 0, 1, 0, 0, 0, 10, 9.0683, -1, 0.328999)
+
+[node name="chemein droit" parent="route/route droite19" instance=ExtResource("18_ynm8c")]
+transform = Transform3D(0.999993, 0, -0.0366518, 0, 1, 0, 0.00366518, 0, 9.99994, 7.9702, -1, 0.310398)
+
+[node name="chemein droit2" parent="route/route droite19" instance=ExtResource("18_ynm8c")]
+transform = Transform3D(-1, 0, -8.34465e-07, 0, 1, 0, 8.9407e-08, 0, -10, 9.9702, -1, 0.310398)
+
+[node name="route droite20" type="Node3D" parent="route"]
+transform = Transform3D(-0.312866, 0, -0.949798, 0, 1, 0, 0.949798, 0, -0.312866, -73.284, 0, -8.34456)
+
+[node name="chemein plat" parent="route/route droite20" instance=ExtResource("17_dcwv7")]
+transform = Transform3D(3, 0, -4.76837e-07, 0, 1, 0, 0, 0, 10, 9.04266, -1, 0.504494)
+
+[node name="chemein droit" parent="route/route droite20" instance=ExtResource("18_ynm8c")]
+transform = Transform3D(0.999994, 0, -0.0366526, 0, 1, 0, 0.00366512, 0, 9.99994, 7.94456, -1, 0.485886)
+
+[node name="chemein droit2" parent="route/route droite20" instance=ExtResource("18_ynm8c")]
+transform = Transform3D(-1, 0, -1.90735e-06, 0, 1, 0, 5.96046e-08, 0, -10, 9.94456, -1, 0.485889)
+
+[node name="chemein droit7" parent="route" instance=ExtResource("18_ynm8c")]
+transform = Transform3D(0.427641, 0, 1.08474, 0, 1, 0, -0.903948, 0, 0.51317, -71.5668, -1, 2.75335)
+
+[node name="route droite21" type="Node3D" parent="route"]
+transform = Transform3D(-0.893748, 0, 0.448571, 0, 1, 0, -0.448571, 0, -0.893748, -60.3849, 0, 0.98584)
+
+[node name="chemein plat" parent="route/route droite21" instance=ExtResource("17_dcwv7")]
+transform = Transform3D(3, 0, -4.76837e-07, 0, 1, 0, 0, 0, 10, 9.04266, -1, 0.504494)
+
+[node name="chemein droit" parent="route/route droite21" instance=ExtResource("18_ynm8c")]
+transform = Transform3D(0.999994, 0, -0.0366526, 0, 1, 0, 0.00366512, 0, 9.99994, 7.94456, -1, 0.485886)
+
+[node name="chemein droit2" parent="route/route droite21" instance=ExtResource("18_ynm8c")]
+transform = Transform3D(-1, 0, -1.90735e-06, 0, 1, 0, 5.96046e-08, 0, -10, 9.94456, -1, 0.485889)
+
+[node name="chemein plat4" parent="route" instance=ExtResource("17_dcwv7")]
+transform = Transform3D(2.57245, 0, -1.54354, 0, 1, 0, 1.54354, 0, 2.57245, -70.5029, -1, 1.7956)
+
+[node name="route droite22" type="Node3D" parent="route"]
+transform = Transform3D(0.130249, 0, 0.991481, 0, 1, 0, -0.991481, 0, 0.130249, -24.0252, 0, -17.6357)
+
+[node name="chemein plat" parent="route/route droite22" instance=ExtResource("17_dcwv7")]
+transform = Transform3D(3, 0, 0, 0, 1, 0, 0, 0, 10, 9.0683, -1, 0.328999)
+
+[node name="chemein droit" parent="route/route droite22" instance=ExtResource("18_ynm8c")]
+transform = Transform3D(0.999993, 0, -0.0366518, 0, 1, 0, 0.00366518, 0, 9.99994, 7.9702, -1, 0.310398)
+
+[node name="chemein droit2" parent="route/route droite22" instance=ExtResource("18_ynm8c")]
+transform = Transform3D(-1, 0, -8.34465e-07, 0, 1, 0, 8.9407e-08, 0, -10, 9.9702, -1, 0.310398)
+
+[node name="route droite23" type="Node3D" parent="route"]
+transform = Transform3D(-0.310892, 0, 0.950445, 0, 1, 0, -0.950445, 0, -0.310892, -9.86194, 0, -18.8155)
+
+[node name="chemein plat" parent="route/route droite23" instance=ExtResource("17_dcwv7")]
+transform = Transform3D(3, 0, -4.76837e-07, 0, 1, 0, 0, 0, 10, 9.04266, -1, 0.504494)
+
+[node name="chemein droit" parent="route/route droite23" instance=ExtResource("18_ynm8c")]
+transform = Transform3D(0.999994, 0, -0.0366526, 0, 1, 0, 0.00366512, 0, 9.99994, 7.94456, -1, 0.485886)
+
+[node name="chemein droit2" parent="route/route droite23" instance=ExtResource("18_ynm8c")]
+transform = Transform3D(-1, 0, -1.90735e-06, 0, 1, 0, 5.96046e-08, 0, -10, 9.94456, -1, 0.485889)
+
+[node name="route droite24" type="Node3D" parent="route"]
+transform = Transform3D(-0.186061, 0, 0.196508, 0, 1, 0, -0.982539, 0, -0.0372121, -15.5162, 0, -16.9421)
+
+[node name="chemein plat" parent="route/route droite24" instance=ExtResource("17_dcwv7")]
+transform = Transform3D(3, 0, 0, 0, 1, 0, 0, 0, 10, 9.22296, -1, -2.57935)
+
+[node name="chemein droit" parent="route/route droite24" instance=ExtResource("18_ynm8c")]
+transform = Transform3D(0.999947, 0, -0.0822405, 0, 1, 0, 0.0102801, 0, 7.99958, 8.13983, -1, -1.09281)
+
+[node name="chemein droit8" parent="route" instance=ExtResource("18_ynm8c")]
+transform = Transform3D(0.146117, 0, -0.197853, 0, 1, 0, 0.989268, 0, 0.0292235, -17.3513, -1, -26.8484)
+
+[node name="route droite25" type="Node3D" parent="route"]
+transform = Transform3D(-0.00289693, 0, 0.999996, 0, 1, 0, -0.999996, 0, -0.00289693, -2.39129, 0, -20.0919)
+
+[node name="chemein plat" parent="route/route droite25" instance=ExtResource("17_dcwv7")]
+transform = Transform3D(3, 0, 0, 0, 1, 0, 0, 0, 10, 9.0683, -1, 0.328999)
+
+[node name="chemein droit" parent="route/route droite25" instance=ExtResource("18_ynm8c")]
+transform = Transform3D(0.999993, 0, -0.0366518, 0, 1, 0, 0.00366518, 0, 9.99994, 7.9702, -1, 0.310398)
+
+[node name="chemein droit2" parent="route/route droite25" instance=ExtResource("18_ynm8c")]
+transform = Transform3D(-1, 0, -8.34465e-07, 0, 1, 0, 8.9407e-08, 0, -10, 9.9702, -1, 0.310398)
+
+[node name="route droite27" type="Node3D" parent="route"]
+transform = Transform3D(-0.132377, 0, -0.991199, 0, 1, 0, 0.991199, 0, -0.132377, -30.846, 0, -36.6544)
+
+[node name="chemein plat" parent="route/route droite27" instance=ExtResource("17_dcwv7")]
+transform = Transform3D(3, 0, 0, 0, 1, 0, 0, 0, 10, 9.0683, -1, 0.328999)
+
+[node name="chemein droit" parent="route/route droite27" instance=ExtResource("18_ynm8c")]
+transform = Transform3D(0.999993, 0, -0.0366518, 0, 1, 0, 0.00366518, 0, 9.99994, 7.9702, -1, 0.310398)
+
+[node name="chemein droit2" parent="route/route droite27" instance=ExtResource("18_ynm8c")]
+transform = Transform3D(-1, 0, -8.34465e-07, 0, 1, 0, 8.9407e-08, 0, -10, 9.9702, -1, 0.310398)
+
+[node name="route droite28" type="Node3D" parent="route"]
+transform = Transform3D(0.308851, 0, -0.95111, 0, 1, 0, 0.95111, 0, 0.308851, -45.0118, 0, -35.5051)
+
+[node name="chemein plat" parent="route/route droite28" instance=ExtResource("17_dcwv7")]
+transform = Transform3D(3, 0, -4.76837e-07, 0, 1, 0, 0, 0, 10, 9.04266, -1, 0.504494)
+
+[node name="chemein droit" parent="route/route droite28" instance=ExtResource("18_ynm8c")]
+transform = Transform3D(0.999994, 0, -0.0366526, 0, 1, 0, 0.00366512, 0, 9.99994, 7.94456, -1, 0.485886)
+
+[node name="chemein droit2" parent="route/route droite28" instance=ExtResource("18_ynm8c")]
+transform = Transform3D(-1, 0, -1.90735e-06, 0, 1, 0, 5.96046e-08, 0, -10, 9.94456, -1, 0.485889)
+
+[node name="route droite29" type="Node3D" parent="route"]
+transform = Transform3D(0.183952, 0, -0.196588, 0, 1, 0, 0.982936, 0, 0.0367902, -39.3535, 0, -37.3663)
+
+[node name="chemein plat" parent="route/route droite29" instance=ExtResource("17_dcwv7")]
+transform = Transform3D(3, 0, 0, 0, 1, 0, 0, 0, 10, 9.22296, -1, -2.57935)
+
+[node name="chemein droit" parent="route/route droite29" instance=ExtResource("18_ynm8c")]
+transform = Transform3D(0.999947, 0, -0.0822405, 0, 1, 0, 0.0102801, 0, 7.99958, 8.13983, -1, -1.09281)
+
+[node name="chemein droit10" parent="route" instance=ExtResource("18_ynm8c")]
+transform = Transform3D(-0.143993, 0, 0.197916, 0, 1, 0, -0.989579, 0, -0.0287987, -37.5397, -1, -27.4561)
+
+[node name="chemein plat 9" type="Node3D" parent="route"]
+transform = Transform3D(0.285471, 0, -0.958388, 0, 1, 0, 0.958388, 0, 0.285471, -49.0578, -1.0002, -25.9001)
+
+[node name="chemein droit 1" parent="route/chemein plat 9" instance=ExtResource("31_btipt")]
+
+[node name="chemein droit 2" parent="route/chemein plat 9" instance=ExtResource("31_btipt")]
+transform = Transform3D(-1, 0, 8.9407e-08, 0, 1, 0, -8.9407e-08, 0, -1, 3.01275, 0, -0.0181198)
+
+[node name="chemein plat2" parent="route/chemein plat 9" instance=ExtResource("17_dcwv7")]
+transform = Transform3D(4, 0, 0, 0, 1, 0, 0, 0, 3, 1.59465, 0, -0.000759125)
+
+[node name="route droite30" type="Node3D" parent="route"]
+transform = Transform3D(0.462151, 0, -0.886801, 0, 1, 0, 0.886801, 0, 0.462151, -57.9153, 0, -29.5012)
+
+[node name="chemein plat" parent="route/route droite30" instance=ExtResource("17_dcwv7")]
+transform = Transform3D(3, 0, 0, 0, 1, 0, 0, 0, 10, 9.0683, -1, 0.328999)
+
+[node name="chemein droit" parent="route/route droite30" instance=ExtResource("18_ynm8c")]
+transform = Transform3D(0.999993, 0, -0.0366518, 0, 1, 0, 0.00366518, 0, 9.99994, 7.9702, -1, 0.310398)
+
+[node name="chemein droit2" parent="route/route droite30" instance=ExtResource("18_ynm8c")]
+transform = Transform3D(-1, 0, -8.34465e-07, 0, 1, 0, 8.9407e-08, 0, -10, 9.9702, -1, 0.310398)
+
+[node name="route droite31" type="Node3D" parent="route"]
+transform = Transform3D(0.836458, 0, -0.548031, 0, 1, 0, 0.548031, 0, 0.836458, -69.5622, 0, -18.984)
+
+[node name="chemein plat" parent="route/route droite31" instance=ExtResource("17_dcwv7")]
+transform = Transform3D(3, 0, -4.76837e-07, 0, 1, 0, 0, 0, 10, 9.04266, -1, 0.504494)
+
+[node name="chemein droit" parent="route/route droite31" instance=ExtResource("18_ynm8c")]
+transform = Transform3D(0.999994, 0, -0.0366526, 0, 1, 0, 0.00366512, 0, 9.99994, 7.94456, -1, 0.485886)
+
+[node name="chemein droit2" parent="route/route droite31" instance=ExtResource("18_ynm8c")]
+transform = Transform3D(-1, 0, -1.90735e-06, 0, 1, 0, 5.96046e-08, 0, -10, 9.94456, -1, 0.485889)
+
+[node name="chemein droit11" parent="route" instance=ExtResource("18_ynm8c")]
+transform = Transform3D(-0.762465, 0, 0.776436, 0, 1, 0, -0.647029, 0, -0.914961, -58.398, -1, -17.7704)
+
+[node name="chemein plat5" parent="route" instance=ExtResource("17_dcwv7")]
+transform = Transform3D(2.15675, 0, 2.08529, 0, 1, 0, -2.08529, 0, 2.15675, -59.0478, -1, -19.0459)
+
+[node name="route droite33" type="Node3D" parent="route"]
+transform = Transform3D(0.889336, 0, -0.0914507, 0, 1, 0, 0.457253, 0, 0.177867, -73.3647, 0, -12.9532)
+
+[node name="chemein plat" parent="route/route droite33" instance=ExtResource("17_dcwv7")]
+transform = Transform3D(3, 0, -4.76837e-07, 0, 1, 0, 0, 0, 10, 9.04266, -1, 0.504494)
+
+[node name="chemein droit" parent="route/route droite33" instance=ExtResource("18_ynm8c")]
+transform = Transform3D(0.999994, 0, -0.0366526, 0, 1, 0, 0.00366512, 0, 9.99994, 7.94456, -1, 0.485886)
+
+[node name="chemein droit2" parent="route/route droite33" instance=ExtResource("18_ynm8c")]
+transform = Transform3D(-1, 0, -1.90735e-06, 0, 1, 0, 5.96046e-08, 0, -10, 9.94456, -1, 0.485889)
+
+[node name="route droite26" type="Node3D" parent="route"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -10.8336)
+
+[node name="chemein plat" parent="route/route droite26" instance=ExtResource("17_dcwv7")]
+transform = Transform3D(3, 0, 0, 0, 1, 0, 0, 0, 10, 9.0683, -1, 0.328999)
+
+[node name="chemein droit" parent="route/route droite26" instance=ExtResource("18_ynm8c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 10, 7.9702, -1, 0.310398)
+
+[node name="chemein droit2" parent="route/route droite26" instance=ExtResource("18_ynm8c")]
+transform = Transform3D(-1, 0, -8.74228e-07, 0, 1, 0, 8.74228e-08, 0, -10, 9.9702, -1, 0.310398)
+
+[node name="route droite34" type="Node3D" parent="route"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -20.7069)
+
+[node name="chemein plat" parent="route/route droite34" instance=ExtResource("17_dcwv7")]
+transform = Transform3D(3, 0, 0, 0, 1, 0, 0, 0, 10, 9.0683, -1, 0.328999)
+
+[node name="chemein droit" parent="route/route droite34" instance=ExtResource("18_ynm8c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 10, 7.9702, -1, 0.310398)
+
+[node name="chemein droit2" parent="route/route droite34" instance=ExtResource("18_ynm8c")]
+transform = Transform3D(-1, 0, -8.74228e-07, 0, 1, 0, 8.74228e-08, 0, -10, 9.9702, -1, 0.310398)
+
+[node name="route droite35" type="Node3D" parent="route"]
+transform = Transform3D(-0.00289693, 0, 0.999996, 0, 1, 0, -0.999996, 0, -0.00289693, -2.39129, 0, -23.4093)
+
+[node name="chemein plat" parent="route/route droite35" instance=ExtResource("17_dcwv7")]
+transform = Transform3D(2.96052, 0, 0.161707, 0, 1, 0, -0.485123, 0, 0.98684, 5.89404, -1, -4.92124)
+
+[node name="chemein droit2" parent="route/route droite35" instance=ExtResource("18_ynm8c")]
+transform = Transform3D(-0.992659, 0, -0.120951, 0, 1, 0, 0.120951, 0, -0.992659, 6.59312, -1, -5.08232)
+
+[node name="virage M3" type="Node3D" parent="route"]
+transform = Transform3D(-2.18557e-07, 0, 5, 0, 1, 0, -5, 0, -2.18557e-07, 8.1482, -1, -28.7326)
+
+[node name="chemein coin creux 4" parent="route/virage M3" instance=ExtResource("26_41icu")]
+transform = Transform3D(-8.74228e-09, 0, 0.2, 0, 1, 0, -0.2, 0, -8.74228e-09, 0.16418, 0, 0.150581)
+
+[node name="chemein plat" parent="route/virage M3" instance=ExtResource("17_dcwv7")]
+
+[node name="chemein coin pente 1" parent="route/virage M3" instance=ExtResource("33_uxlnq")]
+transform = Transform3D(-8.74228e-09, 0, -0.2, 0, 1, 0, 0.2, 0, -8.74228e-09, -0.128754, -0.000417352, -0.0894251)
+
+[node name="route droite36" type="Node3D" parent="route"]
+transform = Transform3D(-0.105101, 0, 0.497231, 0, 1, 0, -0.994462, 0, -0.0525505, 5.36395, 0, -20.3005)
+
+[node name="chemein plat" parent="route/route droite36" instance=ExtResource("17_dcwv7")]
+transform = Transform3D(3, 0, 0, 0, 1, 0, 0, 0, 10, 9.0683, -1, 0.328999)
+
+[node name="chemein droit" parent="route/route droite36" instance=ExtResource("18_ynm8c")]
+transform = Transform3D(0.998726, 0, -0.504535, 0, 1, 0, 0.0504534, 0, 9.98727, 7.79719, -1, 0.273823)
+
+[node name="chemein droit2" parent="route/route droite36" instance=ExtResource("18_ynm8c")]
+transform = Transform3D(-0.999933, 0, -0.0924319, 0, 1, 0, 0.011554, 0, -7.99946, 10.0281, -1, 0.639507)
+
+[node name="route droite37" type="Node3D" parent="route"]
+transform = Transform3D(0.993224, 0, 0.0383525, 0, 1, 0, -0.11622, 0, 0.327764, -0.11604, 0, -25.669)
+
+[node name="chemein plat" parent="route/route droite37" instance=ExtResource("17_dcwv7")]
+transform = Transform3D(3, 0, 0, 0, 1, 0, 0, 0, 10, 9.0683, -1, 0.328999)
+
+[node name="chemein droit" parent="route/route droite37" instance=ExtResource("18_ynm8c")]
+transform = Transform3D(0.999999, 0, 0.0083077, 0, 1, 0, -0.00118682, 0, 7, 7.99056, -1, 0.254616)
+
+[node name="chemein droit2" parent="route/route droite37" instance=ExtResource("18_ynm8c")]
+transform = Transform3D(-0.999849, 0, 0.173476, 0, 1, 0, -0.0173476, 0, -9.9985, 10.0523, -1, 0.339539)
+
+[node name="chemein droit9" parent="route" instance=ExtResource("18_ynm8c")]
+transform = Transform3D(0.731592, 0, -2.04523, 0, 1, 0, 0.681743, 0, 2.19478, -59.6843, -1, -19.1787)
+
+[node name="all" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -120.241, 0, -64.3963)
+
+[node name="StaticBody3D" parent="all" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(8, 0, 0, 0, 1, 0, 0, 0, 5, 119.863, 0, 64.3523)
+
+[node name="herbe coin creux 1" parent="all" instance=ExtResource("4_mlrt6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, 34)
+
+[node name="herbe coin pente 2" parent="all" instance=ExtResource("4_oeyho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 31)
+
+[node name="herbe coin pente 3" parent="all" instance=ExtResource("6_3y6il")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, 27)
+
+[node name="herbe droit pente 1" parent="all" instance=ExtResource("7_ke8ag")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, 10)
+
+[node name="herbe droit pente 2" parent="all" instance=ExtResource("3_pjir0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, 12)
+
+[node name="herbe diagonale pente 1" parent="all" instance=ExtResource("8_xdo8h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.9857, 0, 16)
+
+[node name="herbe diagonale pente 2" parent="all" instance=ExtResource("9_027ph")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 10)
+
+[node name="herbe diagonale pente 3" parent="all" instance=ExtResource("10_y1o2v")]
+transform = Transform3D(0.999997, 0.00129825, 0.00200574, -0.00129458, 0.999997, -0.00181881, -0.00200811, 0.0018162, 0.999996, 17, 0, 12)
+
+[node name="herbe diagonale pente 4" parent="all" instance=ExtResource("11_wrmsh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, 11)
+
+[node name="herbe droit pente 3" parent="all" instance=ExtResource("7_ke8ag")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, 15)
+
+[node name="herbe droit pente 4" parent="all" instance=ExtResource("3_pjir0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0.994169, 16)
+
+[node name="herbe diagonale pente 5" parent="all" instance=ExtResource("12_pd5ql")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, 3)
+
+[node name="herbe droit pente 5" parent="all" instance=ExtResource("7_ke8ag")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, 3)
+
+[node name="herbe droit pente 6" parent="all" instance=ExtResource("3_pjir0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 3)
+
+[node name="herbe diagonale pente 6" parent="all" instance=ExtResource("13_23ror")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, -3)
+
+[node name="herbe droit pente 7" parent="all" instance=ExtResource("7_ke8ag")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, -4)
+
+[node name="herbe droit pente 8" parent="all" instance=ExtResource("3_pjir0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, -2)
+
+[node name="herbe coin creux 2" parent="all" instance=ExtResource("14_3gji6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, 33)
+
+[node name="herbe coin creux 3" parent="all" instance=ExtResource("15_sl6kr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.7175, 0, 28.939)
+
+[node name="herbe coin creux 4" parent="all" instance=ExtResource("16_uw35u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.9045, 0, 24.6917)
+
+[node name="chemein plat" parent="all" instance=ExtResource("17_dcwv7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.0683, 0, 34.329)
+
+[node name="chemein droit" parent="all" instance=ExtResource("18_ynm8c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.9702, 0, 34.3104)
+
+[node name="chemein escalier 1" parent="all" instance=ExtResource("19_eec21")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.1729, 0, 31.1942)
+
+[node name="chemein escalier 2" parent="all" instance=ExtResource("20_t0n2l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.1729, 0, 28.3078)
+
+[node name="chemein coin pente 2" parent="all" instance=ExtResource("21_xips2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, 0, 26)
+
+[node name="chemein coin pente 3" parent="all" instance=ExtResource("22_3brtk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, 0, 23)
+
+[node name="chemein coin creux 1" parent="all" instance=ExtResource("23_734gd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, 0, 20)
+
+[node name="chemein coin creux 2" parent="all" instance=ExtResource("24_bpynu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, 0, 18)
+
+[node name="chemein coin creux 3" parent="all" instance=ExtResource("25_u2y44")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, 0, 15)
+
+[node name="chemein coin creux 4" parent="all" instance=ExtResource("26_41icu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 0, 10)
+
+[node name="chemein diagonale droit 1" parent="all" instance=ExtResource("27_st50t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, 33)
+
+[node name="chemein diagonale droit 2" parent="all" instance=ExtResource("28_ghduw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23, 0, 33)
+
+[node name="chemein diagonale droit 3" parent="all" instance=ExtResource("29_r3d55")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, 30)
+
+[node name="chemein diagonale droit 4" parent="all" instance=ExtResource("30_k64mg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23, 0, 30)
+
+[node name="chemein coin droit 1" parent="all" instance=ExtResource("32_ii43d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.646, 0, 27.033)
+
+[node name="chemein coin droit 2" parent="all" instance=ExtResource("33_3hvle")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.6301, 0, 24.9127)
+
+[node name="chemein coin pente 1" parent="all" instance=ExtResource("33_uxlnq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.0967, 0, 23.729)
+
+[node name="interrieur map" type="Node3D" parent="."]
+transform = Transform3D(5, 0, 0, 0, 1, 0, 0, 0, 6, -6, 0, 0)
+
+[node name="StaticBody3D" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="herbe droit pente 1" parent="interrieur map" instance=ExtResource("7_ke8ag")]
+transform = Transform3D(0.2, 0, 0, 0, 1, 0, 0, 0, 0.166667, 0.846274, -1, -1)
+
+[node name="herbe droit pente 2" parent="interrieur map" instance=ExtResource("3_pjir0")]
+transform = Transform3D(0.2, 0, 0, 0, 1, 0, 0, 0, 0.166667, 1.82496, -1, -0.667403)
+
+[node name="herbe diagonale pente 2" parent="interrieur map" instance=ExtResource("9_027ph")]
+transform = Transform3D(0.2, 0, 0, 0, 1, 0, 0, 0, 0.166667, 0.651194, -1, -1)
+
+[node name="herbe diagonale pente 3" parent="interrieur map" instance=ExtResource("10_y1o2v")]
+transform = Transform3D(0.199999, 0.00025965, 0.000401148, -0.00129458, 0.999997, -0.00181881, -0.000334685, 0.0003027, 0.166666, 1.63565, -1, -0.666667)
+
+[node name="herbe diagonale pente 4" parent="interrieur map" instance=ExtResource("11_wrmsh")]
+transform = Transform3D(0.2, 0, 0, 0, 1, 0, 0, 0, 0.166667, 1.24013, -1, -0.833333)
+
+[node name="herbe diagonale pente 1" parent="interrieur map" instance=ExtResource("8_xdo8h")]
+transform = Transform3D(0.2, 0, 0, 0, 1, 0, 0, 0, 0.166667, 2.21395, -2, -0.668597)
+
+[node name="StaticBody3D2" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(3, 0, 0, 0, 1, 0, 0, 0, 2, 1.2, -1, -1.1262)
+
+[node name="herbe droit pente 4" parent="interrieur map" instance=ExtResource("3_pjir0")]
+transform = Transform3D(-4.28372e-08, 0, -0.2, 0, 1, 0, 0.816667, 0, -7.28523e-09, 2.21589, -1.00583, -0.0133101)
+
+[node name="herbe diagonale pente 5" parent="interrieur map" instance=ExtResource("9_027ph")]
+transform = Transform3D(0.2, 0, 0, 0, 1, 0, 0, 0, 0.166667, 0.651194, -1, -1)
+
+[node name="herbe diagonale pente 6" parent="interrieur map" instance=ExtResource("12_pd5ql")]
+transform = Transform3D(0.2, 0, 0, 0, 1, 0, 0, 0, 0.166667, 0.196096, -1, -1.16667)
+
+[node name="herbe droit pente 3" parent="interrieur map" instance=ExtResource("7_ke8ag")]
+transform = Transform3D(0.2, 0, 0, 0, 1, 0, 0, 0, 0.166667, 0.29146, -1, -1.16667)
+
+[node name="herbe coin pente 3" parent="interrieur map" instance=ExtResource("6_3y6il")]
+transform = Transform3D(-8.74228e-09, 0, 0.2, 0, 1, 0, -0.166667, 0, -7.28523e-09, -0.194124, -1, -0.666667)
+
+[node name="StaticBody3D3" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(0.2, 0, 0, 0, 1, 0, 0, 0, 0.166667, 0, 0, -0.666667)
+
+[node name="StaticBody3D4" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(0.852, 0, 0, 0, 1, 0, 0, 0, 0.166667, -0.0736361, 0, -0.5)
+
+[node name="herbe droit pente 5" parent="interrieur map" instance=ExtResource("3_pjir0")]
+transform = Transform3D(-3.49692e-08, 0, 0.2, 0, 1, 0, -0.666667, 0, -7.28523e-09, -0.791738, -0.992285, -0.252397)
+
+[node name="herbe coin creux 4" parent="interrieur map" instance=ExtResource("16_uw35u")]
+transform = Transform3D(-8.74228e-09, 0, 0.2, 0, 1, 0, -0.166667, 0, -7.28523e-09, -1.19162, -0.993721, 0.162564)
+
+[node name="herbe droit pente 6" parent="interrieur map" instance=ExtResource("7_ke8ag")]
+transform = Transform3D(0.2, 0, 0, 0, 1, 0, 0, 0, 0.166667, -2.36302, -1, 0.162365)
+
+[node name="herbe droit pente 7" parent="interrieur map" instance=ExtResource("3_pjir0")]
+transform = Transform3D(0.2, 0, 0, 0, 1, 0, 0, 0, 0.166667, -1.38432, -1, 0.494962)
+
+[node name="herbe diagonale pente 7" parent="interrieur map" instance=ExtResource("10_y1o2v")]
+transform = Transform3D(0.199999, 0.00025965, 0.000401148, -0.00129458, 0.999997, -0.00181881, -0.000334685, 0.0003027, 0.166666, -1.57364, -1, 0.495698)
+
+[node name="herbe diagonale pente 8" parent="interrieur map" instance=ExtResource("11_wrmsh")]
+transform = Transform3D(0.2, 0, 0, 0, 1, 0, 0, 0, 0.166667, -1.96916, -1, 0.329032)
+
+[node name="herbe diagonale pente 9" parent="interrieur map" instance=ExtResource("9_027ph")]
+transform = Transform3D(0.2, 0, 0, 0, 1, 0, 0, 0, 0.166667, -2.5581, -1, 0.162365)
+
+[node name="herbe diagonale pente 10" parent="interrieur map" instance=ExtResource("12_pd5ql")]
+transform = Transform3D(0.2, 0, 0, 0, 1, 0, 0, 0, 0.166667, -3.0132, -1, -0.00430225)
+
+[node name="herbe droit pente 8" parent="interrieur map" instance=ExtResource("7_ke8ag")]
+transform = Transform3D(0.2, 0, 0, 0, 1, 0, 0, 0, 0.166667, -2.91782, -1, -0.00430225)
+
+[node name="StaticBody3D5" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(3, 0, 0, 0, 1, 0, 0, 0, 2.5, -2.2, -1, 0.809002)
+
+[node name="herbe droit pente 9" parent="interrieur map" instance=ExtResource("7_ke8ag")]
+transform = Transform3D(-0.198273, 0, 0.0262298, 0, 1, 0, -0.0218582, 0, -0.165227, -2.43936, -2, -1.63666)
+
+[node name="herbe diagonale pente 11" parent="interrieur map" instance=ExtResource("10_y1o2v")]
+transform = Transform3D(-0.198325, -0.000209768, 0.025832, -0.00129458, 0.999997, -0.00181881, -0.0215263, -0.000328463, -0.16527, -3.16946, -2, -2.05338)
+
+[node name="herbe diagonale pente 12" parent="interrieur map" instance=ExtResource("11_wrmsh")]
+transform = Transform3D(-0.198273, 0, 0.0262298, 0, 1, 0, -0.0218582, 0, -0.165227, -2.80358, -2, -1.84493)
+
+[node name="herbe diagonale pente 13" parent="interrieur map" instance=ExtResource("9_027ph")]
+transform = Transform3D(-0.198273, 0, 0.0262298, 0, 1, 0, -0.0218582, 0, -0.165227, -2.24596, -2, -1.61534)
+
+[node name="herbe diagonale pente 14" parent="interrieur map" instance=ExtResource("12_pd5ql")]
+transform = Transform3D(-0.198273, 0, 0.0262298, 0, 1, 0, -0.0218582, 0, -0.165227, -1.82102, -2, -1.40038)
+
+[node name="herbe droit pente 10" parent="interrieur map" instance=ExtResource("7_ke8ag")]
+transform = Transform3D(-0.198273, 0, 0.0262298, 0, 1, 0, -0.0218582, 0, -0.165227, -1.91556, -2, -1.4108)
+
+[node name="herbe diagonale pente 15" parent="interrieur map" instance=ExtResource("13_23ror")]
+transform = Transform3D(0.2, 0, 0, 0, 1, 0, 0, 0, 0.166667, -2.8, -2, -0.842003)
+
+[node name="herbe droit pente 11" parent="interrieur map" instance=ExtResource("7_ke8ag")]
+transform = Transform3D(0.6, 0, 0, 0, 1, 0, 0, 0, 0.166667, -3.4, -2, -1.00867)
+
+[node name="herbe droit pente 12" parent="interrieur map" instance=ExtResource("3_pjir0")]
+transform = Transform3D(1.6, 0, 0, 0, 1, 0, 0, 0, 0.166667, -2.2, -2, -0.675337)
+
+[node name="herbe coin creux 2" parent="interrieur map" instance=ExtResource("14_3gji6")]
+transform = Transform3D(-8.74228e-09, 0, 0.2, 0, 1, 0, -0.166667, 0, -7.28523e-09, -1.4, -2, -0.666667)
+
+[node name="herbe coin creux 3" parent="interrieur map" instance=ExtResource("14_3gji6")]
+transform = Transform3D(-0.2, 0, -1.74846e-08, 0, 1, 0, 1.45705e-08, 0, -0.166667, -1.4467, -2, -1.38197)
+
+[node name="herbe droit pente 13" parent="interrieur map" instance=ExtResource("3_pjir0")]
+transform = Transform3D(-0.062146, 0, 0.199849, 0, 1, 0, -1.33233, 0, -0.00647353, -1.4157, -2, -0.675337)
+
+[node name="StaticBody3D6" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(3, 0, 0, 0, 1, 0, 0, 0, 2.5, -2.89676, -2, -1.191)
+
+[node name="StaticBody3D7" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(0.99943, 0, 0.0675662, 0, 1, 0, -0.0281525, 0, 1.66572, -0.648512, -1, -1.28289)
+
+[node name="StaticBody3D8" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(0.399832, 0, -0.0162516, 0, 1, 0, 0.00967358, 0, 0.46647, -1.2783, -1, -1.8532)
+
+[node name="StaticBody3D9" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(0.198048, 0, -0.0278726, 0, 1, 0, 0.0232272, 0, 0.16504, -1.54444, -1, -1.87338)
+
+[node name="StaticBody3D10" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(0.633754, 0, -0.0278726, 0, 1, 0, 0.074327, 0, 0.16504, -1.55548, -1, -2.04122)
+
+[node name="herbe droit pente 14" parent="interrieur map" instance=ExtResource("3_pjir0")]
+transform = Transform3D(-1.98243, 0, 0.0264548, 0, 1, 0, -0.220457, 0, -0.165202, -3.9756, -2.00583, -2.14293)
+
+[node name="herbe droit pente 15" parent="interrieur map" instance=ExtResource("3_pjir0")]
+transform = Transform3D(-1.90263, 0, -0.061644, 0, 1, 0, 0.5137, 0, -0.158552, -5.77598, -2.00583, -1.99665)
+
+[node name="herbe coin creux 5" parent="interrieur map" instance=ExtResource("15_sl6kr")]
+transform = Transform3D(0.0677476, 0, -0.188176, 0, 1, 0, 0.156814, 0, 0.0564563, -6.21562, -2, -1.71462)
+
+[node name="StaticBody3D11" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(3, 0, 0, 0, 1, 0, 0, 0, 2.5, -5.89676, -2, -1.191)
+
+[node name="herbe diagonale pente 16" parent="interrieur map" instance=ExtResource("12_pd5ql")]
+transform = Transform3D(0.2, 0, 0, 0, 1, 0, 0, 0, 0.166667, -3.8, -2, -1.00871)
+
+[node name="herbe coin pente 2" parent="interrieur map" instance=ExtResource("4_oeyho")]
+transform = Transform3D(-8.74228e-09, 0, 0.2, 0, 1, 0, -0.166667, 0, -7.28523e-09, -4.1994, -2, -0.675645)
+
+[node name="herbe droit pente 16" parent="interrieur map" instance=ExtResource("7_ke8ag")]
+transform = Transform3D(0.0517638, 0, 0.193185, 0, 1, 0, -0.160988, 0, 0.0431365, -5.24744, -2, 0.111513)
+
+[node name="herbe droit pente 17" parent="interrieur map" instance=ExtResource("3_pjir0")]
+transform = Transform3D(0.0517638, 0, 0.193185, 0, 1, 0, -0.160988, 0, 0.0431365, -4.60862, -2, -0.59019)
+
+[node name="herbe diagonale pente 17" parent="interrieur map" instance=ExtResource("10_y1o2v")]
+transform = Transform3D(0.0513758, 0.000418066, 0.193288, -0.00129458, 0.999997, -0.00181881, -0.161074, -0.000130658, 0.0428135, -4.65676, -2, -0.437612)
+
+[node name="herbe diagonale pente 18" parent="interrieur map" instance=ExtResource("11_wrmsh")]
+transform = Transform3D(0.0517638, 0, 0.193185, 0, 1, 0, -0.160988, 0, 0.0431365, -4.9523, -2, -0.162377)
+
+[node name="herbe diagonale pente 19" parent="interrieur map" instance=ExtResource("9_027ph")]
+transform = Transform3D(0.0517638, 0, 0.193185, 0, 1, 0, -0.160988, 0, 0.0431365, -5.29792, -2, 0.26854)
+
+[node name="herbe diagonale pente 20" parent="interrieur map" instance=ExtResource("12_pd5ql")]
+transform = Transform3D(0.0517638, 0, 0.193185, 0, 1, 0, -0.160988, 0, 0.0431365, -5.6089, -2, 0.59173)
+
+[node name="herbe droit pente 18" parent="interrieur map" instance=ExtResource("7_ke8ag")]
+transform = Transform3D(0.0517638, 0, 0.193185, 0, 1, 0, -0.160988, 0, 0.0431365, -5.58422, -2, 0.514968)
+
+[node name="herbe diagonale pente 21" parent="interrieur map" instance=ExtResource("13_23ror")]
+transform = Transform3D(0.0517638, 0, -0.193185, 0, 1, 0, 0.160988, 0, 0.0431365, -6.29864, -2, -0.72156)
+
+[node name="herbe droit pente 19" parent="interrieur map" instance=ExtResource("7_ke8ag")]
+transform = Transform3D(0.0517638, 0, -0.193185, 0, 1, 0, 0.160988, 0, 0.0431365, -6.20898, -2, -1.08667)
+
+[node name="herbe droit pente 20" parent="interrieur map" instance=ExtResource("3_pjir0")]
+transform = Transform3D(0.0517638, 0, -0.193185, 0, 1, 0, 0.160988, 0, 0.0431365, -6.44006, -2, -0.517437)
+
+[node name="herbe diagonale pente 22" parent="interrieur map" instance=ExtResource("12_pd5ql")]
+transform = Transform3D(0.0517638, 0, -0.193185, 0, 1, 0, 0.160988, 0, 0.0431365, -6.26074, -2, -1.24766)
+
+[node name="herbe droit pente 21" parent="interrieur map" instance=ExtResource("3_pjir0")]
+transform = Transform3D(0.0517638, 0, -0.193185, 0, 1, 0, 0.160988, 0, 0.0431365, -6.36428, -2, -1.56964)
+
+[node name="herbe coin creux 6" parent="interrieur map" instance=ExtResource("14_3gji6")]
+transform = Transform3D(0.0517638, 0, 0.193185, 0, 1, 0, -0.160988, 0, 0.0431365, -5.70482, -2, 0.90324)
+
+[node name="herbe coin creux 7" parent="interrieur map" instance=ExtResource("16_uw35u")]
+transform = Transform3D(0.193185, 0, -0.0517638, 0, 1, 0, 0.0431365, 0, 0.160988, -5.788, -2, 0.542848)
+
+[node name="herbe droit pente 22" parent="interrieur map" instance=ExtResource("3_pjir0")]
+transform = Transform3D(0.00926788, 0, -0.199785, 0, 1, 0, 0.166488, 0, 0.00772323, -6.15302, -2, 0.31944)
+
+[node name="herbe droit pente 23" parent="interrieur map" instance=ExtResource("3_pjir0")]
+transform = Transform3D(0.046448, 0, -0.194532, 0, 1, 0, 0.16211, 0, 0.0387067, -6.17366, -2, 0.185928)
+
+[node name="herbe droit pente 24" parent="interrieur map" instance=ExtResource("3_pjir0")]
+transform = Transform3D(0.31709, 0, -0.189679, 0, 1, 0, 0.79033, 0, 0.0528482, -6.34682, -2, -0.262723)
+
+[node name="StaticBody3D12" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(3, 0, 0, 0, 1, 0, 0, 0, 2.5, -5.89676, -2, 1.00625)
+
+[node name="eau plate2" parent="interrieur map" instance=ExtResource("2_wg8uv")]
+transform = Transform3D(6, 0, 0, 0, 1, 0, 0, 0, 3.66667, -3.56784, -2.0182, -0.613678)
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D13" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 2.5, -3.84664, -1, 0.809002)
+
+[node name="StaticBody3D14" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(0.4, 0, 0, 0, 1, 0, 0, 0, 0.166667, -4.0994, -1, -0.510795)
+
+[node name="StaticBody3D15" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(0.38639, 0, -0.672448, 0, 1, 0, 0.0862112, 0, 2.09295, -4.44532, -1, 0.485317)
+
+[node name="StaticBody3D16" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(0.38639, 0, -0.258634, 0, 1, 0, 0.0862112, 0, 0.80498, -5.08844, -1, 1.22453)
+
+[node name="StaticBody3D17" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(0.38639, 0, -0.258634, 0, 1, 0, 0.0862112, 0, 0.80498, -4.83114, -1, 1.06215)
+
+[node name="StaticBody3D18" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(0.38639, 0, -0.15518, 0, 1, 0, 0.0862112, 0, 0.482988, -5.2787, -1, 1.183)
+
+[node name="StaticBody3D19" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(-0.147712, 0, 0.382146, 0, 1, 0, -0.39807, 0, -0.0984748, -6.88788, -1, -1.57529)
+
+[node name="StaticBody3D20" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(1.5912, 0, 0.373986, 0, 1, 0, -0.701223, 0, 0.589335, -7.81852, -1, -1.08057)
+
+[node name="StaticBody3D21" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(0.36751, 0, 0.276344, 0, 1, 0, -0.131592, 0, 0.535953, -7.10244, -1, -1.42825)
+
+[node name="StaticBody3D22" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(0.194556, 0, 0.0463462, 0, 1, 0, -0.0386218, 0, 0.16213, -6.88932, -1, -1.28043)
+
+[node name="herbe droit pente 25" parent="interrieur map" instance=ExtResource("7_ke8ag")]
+transform = Transform3D(-8.74228e-09, 0, 0.2, 0, 1, 0, -0.166667, 0, -7.28523e-09, -4.00952, -1, 1.13383)
+
+[node name="herbe droit pente 26" parent="interrieur map" instance=ExtResource("3_pjir0")]
+transform = Transform3D(-8.74228e-09, 0, 0.2, 0, 1, 0, -0.166667, 0, -7.28523e-09, -3.61042, -1, 0.318257)
+
+[node name="herbe diagonale pente 23" parent="interrieur map" instance=ExtResource("10_y1o2v")]
+transform = Transform3D(-0.00040163, 0.00036324, 0.199999, -0.00129458, 0.999997, -0.00181881, -0.166666, -0.000216375, -0.000334297, -3.60954, -1, 0.47602)
+
+[node name="herbe diagonale pente 24" parent="interrieur map" instance=ExtResource("11_wrmsh")]
+transform = Transform3D(-8.74228e-09, 0, 0.2, 0, 1, 0, -0.166667, 0, -7.28523e-09, -3.80954, -1, 0.805622)
+
+[node name="herbe diagonale pente 25" parent="interrieur map" instance=ExtResource("8_xdo8h")]
+transform = Transform3D(-8.74228e-09, 0, 0.2, 0, 1, 0, -0.166667, 0, -7.28523e-09, -3.61184, -2, -0.00589927)
+
+[node name="herbe diagonale pente 26" parent="interrieur map" instance=ExtResource("9_027ph")]
+transform = Transform3D(-8.74228e-09, 0, 0.2, 0, 1, 0, -0.166667, 0, -7.28523e-09, -4.00952, -1, 1.2964)
+
+[node name="herbe diagonale pente 27" parent="interrieur map" instance=ExtResource("12_pd5ql")]
+transform = Transform3D(-8.74228e-09, 0, 0.2, 0, 1, 0, -0.166667, 0, -7.28523e-09, -4.20952, -1, 1.67565)
+
+[node name="herbe droit pente 27" parent="interrieur map" instance=ExtResource("7_ke8ag")]
+transform = Transform3D(-8.74228e-09, 0, 0.2, 0, 1, 0, -0.166667, 0, -7.28523e-09, -4.20952, -1, 1.59618)
+
+[node name="herbe coin pente 4" parent="interrieur map" instance=ExtResource("6_3y6il")]
+transform = Transform3D(-0.2, 0, -1.74846e-08, 0, 1, 0, 1.45705e-08, 0, -0.166667, -3.60952, -1, 2.00083)
+
+[node name="StaticBody3D23" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(2.6, 0, 0, 0, 1, 0, 0, 0, 1.16667, -3.4, -1, 1.309)
+
+[node name="StaticBody3D24" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(3, 0, 0, 0, 1, 0, 0, 0, 1.33333, -1.80946, 0, 1.41215)
+
+[node name="StaticBody3D25" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(0.5, 0, 0, 0, 1, 0, 0, 0, 0.166667, -3.0674, 0, 0.662035)
+
+[node name="StaticBody3D26" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(0.2, 0, 0, 0, 1, 0, 0, 0, 0.166667, -3.21106, 0, 0.49564)
+
+[node name="StaticBody3D27" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(0.2, 0, 0, 0, 1, 0, 0, 0, 0.166667, -3.60968, 0, 1.8415)
+
+[node name="StaticBody3D28" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(0.22, 0, 0, 0, 1, 0, 0, 0, 0.533333, -3.40232, 0, 1.81287)
+
+[node name="StaticBody3D29" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(2.1, 0, 0, 0, 1, 0, 0, 0, 1.66667, 0.47515, -0.0126828, 1.23844)
+
+[node name="StaticBody3D30" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.833333, 2.6, -1, -1.691)
+
+[node name="StaticBody3D31" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(2.9, 0, 0, 0, 1, 0, 0, 0, 0.5, 2.6, -1, -2.35767)
+
+[node name="StaticBody3D32" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(1.90698, 0, 0.180853, 0, 1, 0, -0.502368, 0, 0.476745, 0.365858, -1, -2.1151)
+
+[node name="herbe diagonale pente 28" parent="interrieur map" instance=ExtResource("8_xdo8h")]
+transform = Transform3D(0.2, 0, 0, 0, 1, 0, 0, 0, 0.166667, 2.21395, -2, -0.668597)
+
+[node name="herbe coin creux 8" parent="interrieur map" instance=ExtResource("14_3gji6")]
+transform = Transform3D(2.62268e-08, 0, -0.2, 0, 1, 0, 0.166667, 0, 2.18557e-08, 3, -2, -1.0301)
+
+[node name="herbe coin creux 9" parent="interrieur map" instance=ExtResource("14_3gji6")]
+transform = Transform3D(2.62268e-08, 0, -0.2, 0, 1, 0, 0.166667, 0, 2.18557e-08, 3.4001, -2, -1.85935)
+
+[node name="herbe coin creux 10" parent="interrieur map" instance=ExtResource("14_3gji6")]
+transform = Transform3D(-0.2, 0, -1.74846e-08, 0, 1, 0, 1.45705e-08, 0, -0.166667, 3.59872, -2, -1.85935)
+
+[node name="herbe droit pente 28" parent="interrieur map" instance=ExtResource("3_pjir0")]
+transform = Transform3D(-4.37114e-08, 0, -0.2, 0, 1, 0, 0.833333, 0, -7.28523e-09, 2.99937, -1.99913, -0.543342)
+
+[node name="herbe diagonale pente 29" parent="interrieur map" instance=ExtResource("8_xdo8h")]
+transform = Transform3D(-8.74228e-09, 0, -0.2, 0, 1, 0, 0.166667, 0, -7.28523e-09, 3.3993, -3, -1.0303)
+
+[node name="herbe droit pente 29" parent="interrieur map" instance=ExtResource("3_pjir0")]
+transform = Transform3D(-4.37114e-08, 0, -0.2, 0, 1, 0, 0.833333, 0, -7.28523e-09, 3.39724, -2.00583, -1.69187)
+
+[node name="StaticBody3D33" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(3, 0, 0, 0, 1, 0, 0, 0, 2.5, 2.6022, -2, -1.15986)
+
+[node name="herbe droit pente 30" parent="interrieur map" instance=ExtResource("3_pjir0")]
+transform = Transform3D(0.00356704, 0, 0.2, 0, 1, 0, -2.33333, 0, 0.000212325, 3.60696, -2.00583, -0.646627)
+
+[node name="StaticBody3D34" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(-0.0574136, 0, 0.199082, 0, 1, 0, -0.497705, 0, -0.0159482, 3.98508, -1, -2.295)
+
+[node name="StaticBody3D35" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(0.2, 0, 0, 0, 1, 0, 0, 0, 0.5, 3.99822, -1, -2.03652)
+
+[node name="StaticBody3D36" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(2.9, 0, 0, 0, 1, 0, 0, 0, 0.5, 2.6, -1, -2.35767)
+
+[node name="StaticBody3D37" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(0.2, 0, 0, 0, 1, 0, 0, 0, 2.5, 3.99822, -1, -0.538863)
+
+[node name="herbe diagonale pente 30" parent="interrieur map" instance=ExtResource("8_xdo8h")]
+transform = Transform3D(-8.74228e-09, 0, -0.2, 0, 1, 0, 0.166667, 0, -7.28523e-09, 2.9993, -3, 0.122983)
+
+[node name="herbe coin creux 11" parent="interrieur map" instance=ExtResource("14_3gji6")]
+transform = Transform3D(2.62268e-08, 0, -0.2, 0, 1, 0, 0.166667, 0, 2.18557e-08, 2.6, -2, 0.122581)
+
+[node name="StaticBody3D38" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(3, 0, 0, 0, 1, 0, 0, 0, 2.5, 2.6022, -2, 1.17347)
+
+[node name="herbe diagonale pente 31" parent="interrieur map" instance=ExtResource("13_23ror")]
+transform = Transform3D(-8.74228e-09, 0, -0.2, 0, 1, 0, 0.166667, 0, -7.28523e-09, 2.41462, -2, 1.28658)
+
+[node name="herbe droit pente 31" parent="interrieur map" instance=ExtResource("7_ke8ag")]
+transform = Transform3D(-8.74228e-09, 0, -0.2, 0, 1, 0, 0.166667, 0, -7.28523e-09, 2.61462, -2, 0.953242)
+
+[node name="herbe droit pente 32" parent="interrieur map" instance=ExtResource("3_pjir0")]
+transform = Transform3D(-8.74228e-09, 0, -0.2, 0, 1, 0, 0.166667, 0, -7.28523e-09, 2.21462, -2, 1.45324)
+
+[node name="herbe diagonale pente 32" parent="interrieur map" instance=ExtResource("12_pd5ql")]
+transform = Transform3D(-8.74228e-09, 0, -0.2, 0, 1, 0, 0.166667, 0, -7.28523e-09, 2.61462, -2, 0.619908)
+
+[node name="herbe droit pente 33" parent="interrieur map" instance=ExtResource("7_ke8ag")]
+transform = Transform3D(-8.74228e-09, 0, -0.2, 0, 1, 0, 0.166667, 0, -7.28523e-09, 2.61462, -2, 0.786575)
+
+[node name="herbe droit pente 34" parent="interrieur map" instance=ExtResource("3_pjir0")]
+transform = Transform3D(-1.04907e-08, 0, -0.2, 0, 1, 0, 0.2, 0, -7.28523e-09, 2.61278, -2, 0.27315)
+
+[node name="herbe diagonale pente 33" parent="interrieur map" instance=ExtResource("8_xdo8h")]
+transform = Transform3D(-8.74228e-09, 0, -0.2, 0, 1, 0, 0.166667, 0, -7.28523e-09, 2.21395, -2, 0.643955)
+
+[node name="herbe coin creux 12" parent="interrieur map" instance=ExtResource("14_3gji6")]
+transform = Transform3D(2.62268e-08, 0, -0.2, 0, 1, 0, 0.166667, 0, 2.18557e-08, 1.81727, -1, 0.643838)
+
+[node name="herbe droit pente 35" parent="interrieur map" instance=ExtResource("3_pjir0")]
+transform = Transform3D(-8.74228e-08, 0, -0.2, 0, 1, 0, 1.66667, 0, -7.28523e-09, 1.81661, -1.00583, 1.49459)
+
+[node name="herbe coin creux 13" parent="interrieur map" instance=ExtResource("14_3gji6")]
+transform = Transform3D(0.2, 0, 3.49692e-08, 0, 1, 0, -2.9141e-08, 0, 0.166667, 2.21143, -2, 1.61911)
+
+[node name="herbe droit pente 36" parent="interrieur map" instance=ExtResource("3_pjir0")]
+transform = Transform3D(0.946608, 0, 0.0517638, 0, 1, 0, -0.211368, 0, 0.160988, 2.68569, -2.00583, 1.53262)
+
+[node name="herbe droit pente 37" parent="interrieur map" instance=ExtResource("3_pjir0")]
+transform = Transform3D(0.692964, 0, 0.141421, 0, 1, 0, -0.57747, 0, 0.117851, 3.08569, -2.00583, 1.36595)
+
+[node name="herbe droit pente 38" parent="interrieur map" instance=ExtResource("3_pjir0")]
+transform = Transform3D(0.35389, 0, 0.191105, 0, 1, 0, -0.955525, 0, 0.0491513, 3.46704, -2.00583, 0.865953)
+
+[node name="StaticBody3D39" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(0.2, 0, 0, 0, 1, 0, 0, 0, 2.5, 3.99822, -1, 1.95765)
+
+[node name="StaticBody3D40" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(0.191205, 0, -0.29329, 0, 1, 0, 0.0488817, 0, 0.796687, 3.84028, -1, 0.967313)
+
+[node name="StaticBody3D41" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(0.199367, 0, -0.0794682, 0, 1, 0, 0.0132447, 0, 0.830698, 3.84028, -1, 1.45983)
+
+[node name="StaticBody3D42" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(0.14137, 0, -0.707366, 0, 1, 0, 0.117894, 0, 0.58904, 3.435, -1, 1.53798)
+
+[node name="StaticBody3D43" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(0.052256, 0, -0.965264, 0, 1, 0, 0.160877, 0, 0.217733, 2.78877, -1, 1.84645)
+
+[node name="StaticBody3D44" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(0.5, 0, -0.00148338, 0, 1, 0, 0.000618077, 0, 0.833332, 3.7682, -1, 1.8123)
+
+[node name="StaticBody3D45" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(0.424108, 0, -0.707366, 0, 1, 0, 0.353683, 0, 0.58904, 3.435, -1, 1.83783)
+
+[node name="StaticBody3D46" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(3, 0, -0.000366402, 0, 1, 0, 0.000916005, 0, 0.833333, 2.43501, -1, 2.2838)
+
+[node name="herbe droit pente 39" parent="interrieur map" instance=ExtResource("7_ke8ag")]
+transform = Transform3D(-2, 0, -3.01992e-08, 0, 1, 0, 2.5166e-07, 0, -0.166667, -1.53232, -1, 2.83305)
+
+[node name="herbe droit pente 40" parent="interrieur map" instance=ExtResource("3_pjir0")]
+transform = Transform3D(-0.2, 0, -1.74846e-08, 0, 1, 0, 1.45705e-08, 0, -0.166667, -3.41442, -1, 2.50045)
+
+[node name="herbe diagonale pente 34" parent="interrieur map" instance=ExtResource("10_y1o2v")]
+transform = Transform3D(-0.199999, -0.00025965, -0.000401166, -0.00129458, 0.999997, -0.00181881, 0.0003347, -0.0003027, -0.166666, -3.22512, -1, 2.49972)
+
+[node name="herbe diagonale pente 35" parent="interrieur map" instance=ExtResource("11_wrmsh")]
+transform = Transform3D(-0.2, 0, -1.74846e-08, 0, 1, 0, 1.45705e-08, 0, -0.166667, -2.8296, -1, 2.66638)
+
+[node name="herbe diagonale pente 36" parent="interrieur map" instance=ExtResource("12_pd5ql")]
+transform = Transform3D(-0.2, 0, 1.74846e-08, 0, 1, 0, -1.45705e-08, 0, -0.166667, -0.437648, -1, 2.83333)
+
+[node name="herbe droit pente 41" parent="interrieur map" instance=ExtResource("3_pjir0")]
+transform = Transform3D(-0.2, 0, 1.74846e-08, 0, 1, 0, -1.45705e-08, 0, -0.166667, -0.0376481, -1, 2.83333)
+
+[node name="herbe coin creux 14" parent="interrieur map" instance=ExtResource("14_3gji6")]
+transform = Transform3D(-0.2, 0, -1.74846e-08, 0, 1, 0, 1.45705e-08, 0, -0.166667, 0.155642, -1, 2.83513)
+
+[node name="herbe droit pente 42" parent="interrieur map" instance=ExtResource("3_pjir0")]
+transform = Transform3D(-2.62268e-08, 0, 0.2, 0, 1, 0, -0.5, 0, -7.28523e-09, 0.151908, -1.00583, 3.1555)
+
+[node name="herbe coin creux 15" parent="interrieur map" instance=ExtResource("14_3gji6")]
+transform = Transform3D(-0.2, 0, -1.74846e-08, 0, 1, 0, 1.45705e-08, 0, -0.166667, 0.155642, -1, 2.83513)
+
+[node name="herbe coin pente 5" parent="interrieur map" instance=ExtResource("4_oeyho")]
+transform = Transform3D(-0.2, 0, -1.74846e-08, 0, 1, 0, 1.45705e-08, 0, -0.166667, 0.551746, -1, 3.48452)
+
+[node name="herbe coin pente 6" parent="interrieur map" instance=ExtResource("6_3y6il")]
+transform = Transform3D(-8.74228e-09, 0, -0.2, 0, 1, 0, 0.166667, 0, -7.28523e-09, 1.2, -1, 3.32065)
+
+[node name="herbe droit pente 43" parent="interrieur map" instance=ExtResource("3_pjir0")]
+transform = Transform3D(-0.46, 0, 3.01992e-08, 0, 1, 0, -5.78817e-08, 0, -0.166667, 0.87807, -0.997135, 3.819)
+
+[node name="herbe diagonale pente 37" parent="interrieur map" instance=ExtResource("12_pd5ql")]
+transform = Transform3D(-8.74228e-09, 0, -0.2, 0, 1, 0, 0.166667, 0, -7.28523e-09, 2.19825, -1, 2.82293)
+
+[node name="herbe diagonale pente 38" parent="interrieur map" instance=ExtResource("13_23ror")]
+transform = Transform3D(-8.74228e-09, 0, -0.2, 0, 1, 0, 0.166667, 0, -7.28523e-09, 1.99825, -1, 3.15627)
+
+[node name="herbe diagonale pente 39" parent="interrieur map" instance=ExtResource("8_xdo8h")]
+transform = Transform3D(0.2, 0, 0, 0, 1, 0, 0, 0, 0.166667, 2.19714, -2, 2.33333)
+
+[node name="herbe coin creux 16" parent="interrieur map" instance=ExtResource("14_3gji6")]
+transform = Transform3D(0.2, 0, 3.49692e-08, 0, 1, 0, -2.9141e-08, 0, 0.166667, 1.79982, -1, 2.33605)
+
+[node name="herbe coin creux 17" parent="interrieur map" instance=ExtResource("14_3gji6")]
+transform = Transform3D(2.62268e-08, 0, -0.2, 0, 1, 0, 0.166667, 0, 2.18557e-08, 1.81727, -1, 0.643838)
+
+[node name="StaticBody3D47" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(-0.000586389, 0, -3.8, 0, 1, 0, 1.33333, 0, -0.00116056, 2.03501, -1, 3.33282)
+
+[node name="StaticBody3D48" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(5.03, 0, -8.79364e-05, 0, 1, 0, 0.00153583, 0, 0.2, -0.9981, 0, 2.15093)
+
+[node name="StaticBody3D49" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(1.056, 0, 0, 0, 1, 0, 0, 0, 1.33333, 0.976616, -0.0126828, 2.57642)
+
+[node name="StaticBody3D50" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(0.6, 0, 0, 0, 1, 0, 0, 0, 0.5, 0.157506, -0.005611, 2.3385)
+
+[node name="StaticBody3D51" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(0.22, 0, 0, 0, 1, 0, 0, 0, 0.183333, -0.233712, -0.000642896, 2.32615)
+
+[node name="StaticBody3D52" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(0.2, 0, 0, 0, 1, 0, 0, 0, 0.166667, 1.41507, -0.0126828, 2.25363)
+
+[node name="StaticBody3D53" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(0.2, 0, 0, 0, 1, 0, 0, 0, 0.166667, 1.60155, -0.0126828, 2.66132)
+
+[node name="StaticBody3D54" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(0.2, 0, 0, 0, 1, 0, 0, 0, 0.166667, 1.4222, -0.0126828, 2.15165)
+
+[node name="StaticBody3D55" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(0.7, 0, 0, 0, 1, 0, 0, 0, 0.166667, 0.79808, -0.0126828, 3.32328)
+
+[node name="StaticBody3D56" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(0.5, 0, 0, 0, 1, 0, 0, 0, 0.166667, 0.890962, -0.0126828, 3.48688)
+
+[node name="herbe coin pente 7" parent="interrieur map" instance=ExtResource("6_3y6il")]
+transform = Transform3D(-0.2, 0, -1.74846e-08, 0, 1, 0, 1.45705e-08, 0, -0.166667, -6.80952, -1, 8.33417)
+
+[node name="herbe diagonale pente 40" parent="interrieur map" instance=ExtResource("11_wrmsh")]
+transform = Transform3D(-0.2, 0, -1.74846e-08, 0, 1, 0, 1.45705e-08, 0, -0.166667, -6.62958, -1, 8.83305)
+
+[node name="herbe diagonale pente 41" parent="interrieur map" instance=ExtResource("12_pd5ql")]
+transform = Transform3D(-0.2, 0, 1.74846e-08, 0, 1, 0, -1.45705e-08, 0, -0.166667, -6.23764, -1, 9)
+
+[node name="herbe coin creux 18" parent="interrieur map" instance=ExtResource("14_3gji6")]
+transform = Transform3D(-0.2, 0, -1.74846e-08, 0, 1, 0, 1.45705e-08, 0, -0.166667, -5.8377, -1, 8.99923)
+
+[node name="herbe diagonale pente 42" parent="interrieur map" instance=ExtResource("11_wrmsh")]
+transform = Transform3D(-8.74228e-09, 0, 0.2, 0, 1, 0, -0.166667, 0, -7.28523e-09, -5.83796, -1, 9.1659)
+
+[node name="herbe diagonale pente 43" parent="interrieur map" instance=ExtResource("12_pd5ql")]
+transform = Transform3D(2.62268e-08, 0, 0.2, 0, 1, 0, -0.166667, 0, 2.18557e-08, -6.0383, -1, 9.76557)
+
+[node name="herbe droit pente 44" parent="interrieur map" instance=ExtResource("7_ke8ag")]
+transform = Transform3D(-6.51682e-08, 0, 0.2, 0, 1, 0, -0.333333, 0, -2.71535e-08, -6.03774, -1, 9.58005)
+
+[node name="herbe diagonale pente 44" parent="interrieur map" instance=ExtResource("8_xdo8h")]
+transform = Transform3D(-0.2, 0, -1.78814e-08, 0, 1, 0, 1.49012e-08, 0, -0.166667, -6.03762, -2, 10.264)
+
+[node name="herbe diagonale pente 45" parent="interrieur map" instance=ExtResource("10_y1o2v")]
+transform = Transform3D(-0.199999, -0.00025965, -0.000401166, -0.00129458, 0.999997, -0.00181881, 0.0003347, -0.0003027, -0.166666, -5.6378, -1, 10.2638)
+
+[node name="herbe diagonale pente 46" parent="interrieur map" instance=ExtResource("11_wrmsh")]
+transform = Transform3D(-0.2, 0, -1.74846e-08, 0, 1, 0, 1.45705e-08, 0, -0.166667, -5.24228, -1, 10.4304)
+
+[node name="herbe diagonale pente 47" parent="interrieur map" instance=ExtResource("12_pd5ql")]
+transform = Transform3D(-0.2, 0, 1.74846e-08, 0, 1, 0, -1.45705e-08, 0, -0.166667, -4.85032, -1, 10.5974)
+
+[node name="herbe coin pente 9" parent="interrieur map" instance=ExtResource("4_oeyho")]
+transform = Transform3D(-8.74228e-09, 0, -0.2, 0, 1, 0, 0.166667, 0, -7.28523e-09, -2.87176, -1, 10.5971)
+
+[node name="herbe coin creux 19" parent="interrieur map" instance=ExtResource("16_uw35u")]
+transform = Transform3D(-8.74228e-09, 0, -0.2, 0, 1, 0, 0.166667, 0, -7.28523e-09, -2.07668, -1, 9.94777)
+
+[node name="herbe diagonale pente 48" parent="interrieur map" instance=ExtResource("11_wrmsh")]
+transform = Transform3D(-0.2, 0, -1.74846e-08, 0, 1, 0, 1.45705e-08, 0, -0.166667, -4.4511, -1, 10.597)
+
+[node name="herbe diagonale pente 49" parent="interrieur map" instance=ExtResource("12_pd5ql")]
+transform = Transform3D(-0.2, 0, 1.74846e-08, 0, 1, 0, -1.45705e-08, 0, -0.166667, -4.05916, -1, 10.764)
+
+[node name="herbe diagonale pente 50" parent="interrieur map" instance=ExtResource("11_wrmsh")]
+transform = Transform3D(-0.2, 0, -1.74846e-08, 0, 1, 0, 1.45705e-08, 0, -0.166667, -3.66156, -1, 10.7628)
+
+[node name="herbe diagonale pente 51" parent="interrieur map" instance=ExtResource("12_pd5ql")]
+transform = Transform3D(-0.2, 0, 1.74846e-08, 0, 1, 0, -1.45705e-08, 0, -0.166667, -3.26962, -1, 10.9298)
+
+[node name="herbe diagonale pente 52" parent="interrieur map" instance=ExtResource("8_xdo8h")]
+transform = Transform3D(-8.74228e-09, 0, -0.2, 0, 1, 0, 0.166667, 0, -7.28523e-09, -1.6779, -2, 9.61527)
+
+[node name="herbe droit pente 45" parent="interrieur map" instance=ExtResource("7_ke8ag")]
+transform = Transform3D(-8.74228e-09, 0, -0.2, 0, 1, 0, 0.166667, 0, -7.28523e-09, -1.27912, -1, 8.46932)
+
+[node name="herbe droit pente 46" parent="interrieur map" instance=ExtResource("3_pjir0")]
+transform = Transform3D(-8.74228e-09, 0, -0.2, 0, 1, 0, 0.166667, 0, -7.28523e-09, -1.67824, -1, 9.28488)
+
+[node name="herbe diagonale pente 53" parent="interrieur map" instance=ExtResource("9_027ph")]
+transform = Transform3D(-8.74228e-09, 0, -0.2, 0, 1, 0, 0.166667, 0, -7.28523e-09, -1.27912, -1, 8.30675)
+
+[node name="herbe diagonale pente 54" parent="interrieur map" instance=ExtResource("10_y1o2v")]
+transform = Transform3D(0.000401614, -0.00036324, -0.199999, -0.00129458, 0.999997, -0.00181881, 0.166666, 0.000216375, 0.000334283, -1.67912, -1, 9.12713)
+
+[node name="herbe diagonale pente 55" parent="interrieur map" instance=ExtResource("11_wrmsh")]
+transform = Transform3D(-8.74228e-09, 0, -0.2, 0, 1, 0, 0.166667, 0, -7.28523e-09, -1.47912, -1, 8.79752)
+
+[node name="herbe diagonale pente 56" parent="interrieur map" instance=ExtResource("12_pd5ql")]
+transform = Transform3D(-8.74228e-09, 0, -0.2, 0, 1, 0, 0.166667, 0, -7.28523e-09, -1.07912, -1, 7.9275)
+
+[node name="herbe droit pente 47" parent="interrieur map" instance=ExtResource("7_ke8ag")]
+transform = Transform3D(-8.74228e-09, 0, -0.2, 0, 1, 0, 0.166667, 0, -7.28523e-09, -1.07912, -1, 8.00697)
+
+[node name="herbe droit pente 48" parent="interrieur map" instance=ExtResource("3_pjir0")]
+transform = Transform3D(-2.62268e-08, 0, -0.2, 0, 1, 0, 0.5, 0, -7.28523e-09, -2.47156, -1, 10.2658)
+
+[node name="StaticBody3D57" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(2.08616, 0, -0.635006, 0, 1, 0, 0.58209, 0, 1.58043, -3.56152, -1, 11.0214)
+
+[node name="StaticBody3D58" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(1.13799, 0, -0.951864, 0, 1, 0, 0.317288, 0, 2.37082, -2.68832, -1, 10.6522)
+
+[node name="herbe coin creux 20" parent="interrieur map" instance=ExtResource("14_3gji6")]
+transform = Transform3D(2.62268e-08, 0, -0.2, 0, 1, 0, 0.166667, 0, 2.18557e-08, -1.07938, -1, 7.59427)
+
+[node name="herbe droit pente 49" parent="interrieur map" instance=ExtResource("7_ke8ag")]
+transform = Transform3D(-0.177829, 0, -0.0915252, 0, 1, 0, 0.076271, 0, -0.148191, -0.0113161, -1, 7.54662)
+
+[node name="herbe droit pente 50" parent="interrieur map" instance=ExtResource("3_pjir0")]
+transform = Transform3D(-0.177829, 0, -0.0915252, 0, 1, 0, 0.076271, 0, -0.148191, -1.06416, -1, 7.62412)
+
+[node name="herbe diagonale pente 57" parent="interrieur map" instance=ExtResource("9_027ph")]
+transform = Transform3D(-0.177829, 0, -0.0915252, 0, 1, 0, 0.076271, 0, -0.148191, 0.162138, -1, 7.47222)
+
+[node name="herbe diagonale pente 58" parent="interrieur map" instance=ExtResource("10_y1o2v")]
+transform = Transform3D(-0.177645, -0.000397094, -0.0918814, -0.00129458, 0.999997, -0.00181881, 0.0765683, -0.000170125, -0.148037, -0.89624, -1, 7.55127)
+
+[node name="herbe diagonale pente 59" parent="interrieur map" instance=ExtResource("11_wrmsh")]
+transform = Transform3D(-0.177829, 0, -0.0915252, 0, 1, 0, 0.076271, 0, -0.148191, -0.453032, -1, 7.54862)
+
+[node name="herbe diagonale pente 60" parent="interrieur map" instance=ExtResource("12_pd5ql")]
+transform = Transform3D(-0.177829, 0, -0.0915252, 0, 1, 0, 0.076271, 0, -0.148191, 0.658312, -1, 7.44685)
+
+[node name="herbe droit pente 51" parent="interrieur map" instance=ExtResource("7_ke8ag")]
+transform = Transform3D(-0.177829, 0, -0.0915252, 0, 1, 0, 0.076271, 0, -0.148191, 0.57352, -1, 7.48322)
+
+[node name="herbe droit pente 52" parent="interrieur map" instance=ExtResource("3_pjir0")]
+transform = Transform3D(-0.853206, 0, -0.104315, 0, 1, 0, 0.434647, 0, -0.142201, 1.34094, -1, 7.11265)
+
+[node name="herbe droit pente 53" parent="interrieur map" instance=ExtResource("3_pjir0")]
+transform = Transform3D(0.0100381, 0, -0.199937, 0, 1, 0, 0.333228, 0, 0.00418255, 1.96719, -1, 6.43203)
+
+[node name="herbe coin pente 10" parent="interrieur map" instance=ExtResource("4_oeyho")]
+transform = Transform3D(-8.74228e-09, 0, -0.2, 0, 1, 0, 0.166667, 0, -7.28523e-09, 1.57155, -1, 6.67833)
+
+[node name="herbe diagonale pente 61" parent="interrieur map" instance=ExtResource("8_xdo8h")]
+transform = Transform3D(0.2, 0, 0, 0, 1, 0, 0, 0, 0.166667, 1.96306, -2, 6.02328)
+
+[node name="herbe droit pente 54" parent="interrieur map" instance=ExtResource("7_ke8ag")]
+transform = Transform3D(0.2, 0, 0, 0, 1, 0, 0, 0, 0.166667, 0.585304, -1, 5.6915)
+
+[node name="herbe droit pente 55" parent="interrieur map" instance=ExtResource("3_pjir0")]
+transform = Transform3D(0.2, 0, 0, 0, 1, 0, 0, 0, 0.166667, 1.564, -1, 6.0241)
+
+[node name="herbe diagonale pente 62" parent="interrieur map" instance=ExtResource("10_y1o2v")]
+transform = Transform3D(0.199999, 0.00025965, 0.000401148, -0.00129458, 0.999997, -0.00181881, -0.000334685, 0.0003027, 0.166666, 1.37468, -1, 6.02483)
+
+[node name="herbe diagonale pente 63" parent="interrieur map" instance=ExtResource("11_wrmsh")]
+transform = Transform3D(0.2, 0, 0, 0, 1, 0, 0, 0, 0.166667, 0.979164, -1, 5.85817)
+
+[node name="herbe diagonale pente 64" parent="interrieur map" instance=ExtResource("9_027ph")]
+transform = Transform3D(0.2, 0, 0, 0, 1, 0, 0, 0, 0.166667, 0.390224, -1, 5.6915)
+
+[node name="herbe diagonale pente 65" parent="interrieur map" instance=ExtResource("12_pd5ql")]
+transform = Transform3D(0.2, 0, 0, 0, 1, 0, 0, 0, 0.166667, -0.0648761, -1, 5.52483)
+
+[node name="herbe droit pente 56" parent="interrieur map" instance=ExtResource("7_ke8ag")]
+transform = Transform3D(0.2, 0, 0, 0, 1, 0, 0, 0, 0.166667, 0.030504, -1, 5.52483)
+
+[node name="herbe coin creux 21" parent="interrieur map" instance=ExtResource("16_uw35u")]
+transform = Transform3D(0.2, 0, 0, 0, 1, 0, 0, 0, 0.166667, -0.464442, -1, 5.19173)
+
+[node name="herbe coin pente 8" parent="interrieur map" instance=ExtResource("6_3y6il")]
+transform = Transform3D(0.2, 0, 2.13162e-15, 0, 1, 0, -1.77635e-15, 0, 0.166667, -1.4644, -1, 5.02627)
+
+[node name="herbe droit pente 57" parent="interrieur map" instance=ExtResource("7_ke8ag")]
+transform = Transform3D(1.2, 0, 0, 0, 1, 0, 0, 0, 0.166667, -3.14114, -1, 4.19413)
+
+[node name="herbe droit pente 58" parent="interrieur map" instance=ExtResource("3_pjir0")]
+transform = Transform3D(0.2, 0, 0, 0, 1, 0, 0, 0, 0.166667, -1.66212, -1, 4.52673)
+
+[node name="herbe diagonale pente 66" parent="interrieur map" instance=ExtResource("10_y1o2v")]
+transform = Transform3D(0.199999, 0.00025965, 0.000401148, -0.00129458, 0.999997, -0.00181881, -0.000334685, 0.0003027, 0.166666, -1.85144, -1, 4.52747)
+
+[node name="herbe diagonale pente 67" parent="interrieur map" instance=ExtResource("11_wrmsh")]
+transform = Transform3D(0.2, 0, 0, 0, 1, 0, 0, 0, 0.166667, -2.24696, -1, 4.3608)
+
+[node name="herbe diagonale pente 68" parent="interrieur map" instance=ExtResource("9_027ph")]
+transform = Transform3D(0.2, 0, 0, 0, 1, 0, 0, 0, 0.166667, -3.77586, -1, 4.19413)
+
+[node name="herbe diagonale pente 69" parent="interrieur map" instance=ExtResource("12_pd5ql")]
+transform = Transform3D(0.2, 0, 0, 0, 1, 0, 0, 0, 0.166667, -4.23096, -1, 4.02747)
+
+[node name="herbe droit pente 59" parent="interrieur map" instance=ExtResource("7_ke8ag")]
+transform = Transform3D(0.2, 0, 0, 0, 1, 0, 0, 0, 0.166667, -4.13558, -1, 4.02747)
+
+[node name="herbe droit pente 60" parent="interrieur map" instance=ExtResource("7_ke8ag")]
+transform = Transform3D(0.2, 0, 0, 0, 1, 0, 0, 0, 0.166667, -5.60242, -1, 3.6947)
+
+[node name="herbe droit pente 61" parent="interrieur map" instance=ExtResource("3_pjir0")]
+transform = Transform3D(0.2, 0, 0, 0, 1, 0, 0, 0, 0.166667, -4.62372, -1, 4.02728)
+
+[node name="herbe diagonale pente 70" parent="interrieur map" instance=ExtResource("10_y1o2v")]
+transform = Transform3D(0.199999, 0.00025965, 0.000401148, -0.00129458, 0.999997, -0.00181881, -0.000334685, 0.0003027, 0.166666, -4.81304, -1, 4.02803)
+
+[node name="herbe diagonale pente 71" parent="interrieur map" instance=ExtResource("11_wrmsh")]
+transform = Transform3D(0.2, 0, 0, 0, 1, 0, 0, 0, 0.166667, -5.20856, -1, 3.86137)
+
+[node name="herbe diagonale pente 72" parent="interrieur map" instance=ExtResource("9_027ph")]
+transform = Transform3D(0.2, 0, 0, 0, 1, 0, 0, 0, 0.166667, -5.7975, -1, 3.6947)
+
+[node name="herbe diagonale pente 73" parent="interrieur map" instance=ExtResource("12_pd5ql")]
+transform = Transform3D(0.2, 0, 0, 0, 1, 0, 0, 0, 0.166667, -6.2526, -1, 3.52803)
+
+[node name="herbe droit pente 62" parent="interrieur map" instance=ExtResource("7_ke8ag")]
+transform = Transform3D(0.2, 0, 0, 0, 1, 0, 0, 0, 0.166667, -6.15722, -1, 3.52803)
+
+[node name="herbe coin creux 1" parent="interrieur map" instance=ExtResource("4_mlrt6")]
+transform = Transform3D(-8.74228e-09, 0, 0.2, 0, 1, 0, -0.166667, 0, -7.28523e-09, -6.65046, -1, 3.69427)
+
+[node name="herbe diagonale pente 74" parent="interrieur map" instance=ExtResource("12_pd5ql")]
+transform = Transform3D(-8.74228e-09, 0, 0.2, 0, 1, 0, -0.166667, 0, -7.28523e-09, -7.2497, -1, 4.69225)
+
+[node name="herbe droit pente 63" parent="interrieur map" instance=ExtResource("7_ke8ag")]
+transform = Transform3D(-8.74228e-09, 0, 0.2, 0, 1, 0, -0.166667, 0, -7.28523e-09, -7.2497, -1, 4.52558)
+
+[node name="herbe droit pente 64" parent="interrieur map" instance=ExtResource("3_pjir0")]
+transform = Transform3D(-6.99382e-08, 0, 0.2, 0, 1, 0, -1.33333, 0, -7.28523e-09, -7.2497, -1, 5.60167)
+
+[node name="herbe diagonale pente 75" parent="interrieur map" instance=ExtResource("13_23ror")]
+transform = Transform3D(-8.74228e-09, 0, 0.2, 0, 1, 0, -0.166667, 0, -7.28523e-09, -7.0497, -1, 4.02558)
+
+[node name="herbe droit pente 65" parent="interrieur map" instance=ExtResource("7_ke8ag")]
+transform = Transform3D(-8.74228e-09, 0, 0.2, 0, 1, 0, -0.166667, 0, -7.28523e-09, -7.2497, -1, 4.35892)
+
+[node name="herbe droit pente 66" parent="interrieur map" instance=ExtResource("3_pjir0")]
+transform = Transform3D(-8.74228e-09, 0, 0.2, 0, 1, 0, -0.166667, 0, -7.28523e-09, -6.8497, -1, 3.85892)
+
+[node name="herbe diagonale pente 76" parent="interrieur map" instance=ExtResource("12_pd5ql")]
+transform = Transform3D(-8.74228e-09, 0, 0.2, 0, 1, 0, -0.166667, 0, -7.28523e-09, -7.65012, -1, 7.1783)
+
+[node name="herbe droit pente 67" parent="interrieur map" instance=ExtResource("7_ke8ag")]
+transform = Transform3D(-8.74228e-09, 0, 0.2, 0, 1, 0, -0.166667, 0, -7.28523e-09, -7.65012, -1, 7.01163)
+
+[node name="herbe diagonale pente 77" parent="interrieur map" instance=ExtResource("13_23ror")]
+transform = Transform3D(-8.74228e-09, 0, 0.2, 0, 1, 0, -0.166667, 0, -7.28523e-09, -7.45012, -1, 6.51163)
+
+[node name="herbe droit pente 68" parent="interrieur map" instance=ExtResource("7_ke8ag")]
+transform = Transform3D(-8.74228e-09, 0, 0.2, 0, 1, 0, -0.166667, 0, -7.28523e-09, -7.65012, -1, 6.84497)
+
+[node name="herbe droit pente 69" parent="interrieur map" instance=ExtResource("3_pjir0")]
+transform = Transform3D(-8.74228e-09, 0, 0.2, 0, 1, 0, -0.166667, 0, -7.28523e-09, -7.25012, -1, 6.34497)
+
+[node name="herbe coin pente 11" parent="interrieur map" instance=ExtResource("6_3y6il")]
+transform = Transform3D(-8.74228e-09, 0, 0.2, 0, 1, 0, -0.166667, 0, -7.28523e-09, -6.80952, -1, 8.16775)
+
+[node name="herbe coin pente 12" parent="interrieur map" instance=ExtResource("6_3y6il")]
+transform = Transform3D(-0.2, 0, -1.74846e-08, 0, 1, 0, 1.45705e-08, 0, -0.166667, -7.05014, -1, 7.50998)
+
+[node name="herbe droit pente 70" parent="interrieur map" instance=ExtResource("3_pjir0")]
+transform = Transform3D(-6.99382e-08, 0, 0.2, 0, 1, 0, -1.33333, 0, -7.28523e-09, -7.2497, -1, 7.75147)
+
+[node name="StaticBody3D59" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(-0.000732986, 0, -3.96, 0, 1, 0, 1.66667, 0, -0.00120943, -3.95844, 0, 7.91822)
+
+[node name="StaticBody3D60" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(-0.000146597, 0, -3.56, 0, 1, 0, 0.333333, 0, -0.00108726, -3.75844, 0, 8.91822)
+
+[node name="StaticBody3D61" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(-0.000146597, 0, -3.37, 0, 1, 0, 0.333333, 0, -0.00102924, -3.65724, 0, 9.20057)
+
+[node name="StaticBody3D62" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(-0.000293194, 0, -2.57, 0, 1, 0, 0.666667, 0, -0.000784907, -4.05724, 0, 9.68192)
+
+[node name="StaticBody3D63" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(-7.32986e-05, 0, -0.2, 0, 1, 0, 0.166667, 0, -6.10822e-05, -5.4385, 0, 9.93203)
+
+[node name="StaticBody3D64" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(-0.000146597, 0, -1.98, 0, 1, 0, 0.333333, 0, -0.000604713, -3.76092, 0, 10.0153)
+
+[node name="StaticBody3D65" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(-0.000146597, 0, -1.19, 0, 1, 0, 0.333333, 0, -0.000363438, -3.36552, 0, 10.1819)
+
+[node name="StaticBody3D66" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(-0.000146597, 0, -0.4, 0, 1, 0, 0.333333, 0, -0.000122164, -2.9703, 0, 10.3486)
+
+[node name="StaticBody3D67" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(-0.00153927, 0, -1.2, 0, 1, 0, 3.5, 0, -0.000366493, -6.35444, 0, 6.69202)
+
+[node name="StaticBody3D68" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(-7.32986e-05, 0, -0.2, 0, 1, 0, 0.166667, 0, -6.10822e-05, -7.05104, 0, 7.34423)
+
+[node name="StaticBody3D69" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(-7.32986e-05, 0, -0.2, 0, 1, 0, 0.166667, 0, -6.10822e-05, -6.03792, 0, 8.50037)
+
+[node name="StaticBody3D70" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(-7.32986e-05, 0, -0.2, 0, 1, 0, 0.166667, 0, -6.10822e-05, -6.65124, 0, 4.85862)
+
+[node name="StaticBody3D71" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(-7.32986e-05, 0, -0.2, 0, 1, 0, 0.166667, 0, -6.10822e-05, -6.45124, 0, 4.02528)
+
+[node name="StaticBody3D72" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(-0.000366494, 0, -0.46, 0, 1, 0, 0.833333, 0, -0.000140489, -6.32232, 0, 4.52528)
+
+[node name="StaticBody3D73" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(-0.000293194, 0, -1.6, 0, 1, 0, 0.666667, 0, -0.000488657, -5.32936, 0, 4.60908)
+
+[node name="StaticBody3D74" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(-7.32986e-05, 0, -0.2, 0, 1, 0, 0.166667, 0, -6.10822e-05, -4.43048, 0, 4.52685)
+
+[node name="StaticBody3D75" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(-8.06284e-05, 0, -0.6, 0, 1, 0, 0.183333, 0, -0.000183247, -4.37452, 0, 4.7013)
+
+[node name="StaticBody3D76" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(-0.00102618, 0, -4.8, 0, 1, 0, 2.33333, 0, -0.00146597, -3.95844, 0, 5.93952)
+
+[node name="StaticBody3D77" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(-0.000989532, 0, -0.4, 0, 1, 0, 2.25, 0, -0.000122164, -1.35844, 0, 6.23142)
+
+[node name="StaticBody3D78" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(-0.000293194, 0, -1, 0, 1, 0, 0.666667, 0, -0.000305412, -1.95844, 0, 7.4269)
+
+[node name="StaticBody3D79" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(-0.000146597, 0, -0.4, 0, 1, 0, 0.333333, 0, -0.000122164, -1.97796, 0, 7.89033)
+
+[node name="StaticBody3D80" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(-0.000146597, 0, -0.4, 0, 1, 0, 0.333333, 0, -0.000122164, -1.77796, 0, 7.67792)
+
+[node name="StaticBody3D81" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(-0.000146597, 0, -0.4, 0, 1, 0, 0.333333, 0, -0.000122164, -1.57796, 0, 7.51167)
+
+[node name="StaticBody3D82" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(-0.000439792, 0, -0.8, 0, 1, 0, 1, 0, -0.000244328, -0.760472, 0, 6.2743)
+
+[node name="StaticBody3D83" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(-0.000439792, 0, -0.8, 0, 1, 0, 1, 0, -0.000244328, -0.560472, 0, 6.44097)
+
+[node name="StaticBody3D84" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(-0.000293194, 0, -0.8, 0, 1, 0, 0.666667, 0, -0.000244328, -0.309592, 0, 6.44097)
+
+[node name="StaticBody3D85" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(-0.000146597, 0, -1.6, 0, 1, 0, 0.333333, 0, -0.000488657, 0.847124, 0, 6.44097)
+
+[node name="StaticBody3D86" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(0.00763012, 0, -0.399928, 0, 1, 0, 0.333273, 0, 0.00635843, 1.46907, 0, 6.43998)
+
+[node name="StaticBody3D87" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(-1.42302, 0, -0.365728, 0, 1, 0, 0.609547, 0, -0.592923, -0.771566, 0, 6.84243)
+
+[node name="StaticBody3D88" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(-0.53363, 0, -0.274296, 0, 1, 0, 0.22858, 0, -0.444692, 0.32961, 0, 6.65113)
+
+[node name="StaticBody3D89" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(-0.53363, 0, -0.274296, 0, 1, 0, 0.22858, 0, -0.444692, 0.64774, 0, 6.70223)
+
+[node name="StaticBody3D90" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(-0.857472, 0, -0.308718, 0, 1, 0, 0.428775, 0, -0.428737, 1.05756, 0, 6.67815)
+
+[node name="herbe droit pente 71" parent="interrieur map" instance=ExtResource("7_ke8ag")]
+transform = Transform3D(0.126005, 0, -0.155315, 0, 1, 0, 0.129429, 0, 0.105004, -2.895, 0, 6.06225)
+
+[node name="herbe diagonale pente 78" parent="interrieur map" instance=ExtResource("10_y1o2v")]
+transform = Transform3D(0.126317, -0.000118497, -0.155062, -0.00129458, 0.999997, -0.00181881, 0.129218, 0.00035874, 0.105264, -2.7083, 0, 6.7831)
+
+[node name="herbe diagonale pente 79" parent="interrieur map" instance=ExtResource("11_wrmsh")]
+transform = Transform3D(0.126005, 0, -0.155315, 0, 1, 0, 0.129429, 0, 0.105004, -2.80218, 0, 6.42213)
+
+[node name="herbe diagonale pente 80" parent="interrieur map" instance=ExtResource("9_027ph")]
+transform = Transform3D(0.126005, 0, -0.155315, 0, 1, 0, 0.129429, 0, 0.105004, -3.0179, 0, 5.936)
+
+[node name="herbe diagonale pente 81" parent="interrieur map" instance=ExtResource("12_pd5ql")]
+transform = Transform3D(0.126005, 0, -0.155315, 0, 1, 0, 0.129429, 0, 0.105004, -3.14932, 0, 5.53648)
+
+[node name="herbe droit pente 72" parent="interrieur map" instance=ExtResource("7_ke8ag")]
+transform = Transform3D(0.126005, 0, -0.155315, 0, 1, 0, 0.129429, 0, 0.105004, -3.08922, 0, 5.5982)
+
+[node name="herbe droit pente 73" parent="interrieur map" instance=ExtResource("7_ke8ag")]
+transform = Transform3D(0.155315, 0, 0.126005, 0, 1, 0, -0.105004, 0, 0.129429, -4.83764, 0, 5.60877)
+
+[node name="herbe droit pente 74" parent="interrieur map" instance=ExtResource("3_pjir0")]
+transform = Transform3D(0.155315, 0, 0.126005, 0, 1, 0, -0.105004, 0, 0.129429, -3.82616, 0, 5.35322)
+
+[node name="herbe diagonale pente 82" parent="interrieur map" instance=ExtResource("10_y1o2v")]
+transform = Transform3D(0.155061, 0.000430488, 0.126316, -0.00129458, 0.999997, -0.00181881, -0.105264, 9.87473e-05, 0.129218, -3.97262, 0, 5.45318)
+
+[node name="herbe diagonale pente 83" parent="interrieur map" instance=ExtResource("11_wrmsh")]
+transform = Transform3D(0.155315, 0, 0.126005, 0, 1, 0, -0.105004, 0, 0.129429, -4.40578, 0, 5.5314)
+
+[node name="herbe diagonale pente 84" parent="interrieur map" instance=ExtResource("8_xdo8h")]
+transform = Transform3D(0.155315, 0, 0.126005, 0, 1, 0, -0.105004, 0, 0.129429, -3.52498, -1, 5.14807)
+
+[node name="herbe diagonale pente 85" parent="interrieur map" instance=ExtResource("9_027ph")]
+transform = Transform3D(0.155315, 0, 0.126005, 0, 1, 0, -0.105004, 0, 0.129429, -4.98912, 0, 5.71118)
+
+[node name="herbe diagonale pente 86" parent="interrieur map" instance=ExtResource("12_pd5ql")]
+transform = Transform3D(0.155315, 0, 0.126005, 0, 1, 0, -0.105004, 0, 0.129429, -5.46856, 0, 5.8207)
+
+[node name="herbe droit pente 75" parent="interrieur map" instance=ExtResource("7_ke8ag")]
+transform = Transform3D(0.155315, 0, 0.126005, 0, 1, 0, -0.105004, 0, 0.129429, -5.3945, 0, 5.77063)
+
+[node name="herbe coin pente 13" parent="interrieur map" instance=ExtResource("6_3y6il")]
+transform = Transform3D(-0.126005, 0, 0.155315, 0, 1, 0, -0.129429, 0, -0.105004, -5.39358, 0, 6.41387)
+
+[node name="StaticBody3D91" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(1.13405, 0, -1.24252, 0, 1, 0, 1.16486, 0, 0.840034, -4.07628, 1, 6.80878)
+
+[node name="StaticBody3D92" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(0.315012, 0, -0.155315, 0, 1, 0, 0.323573, 0, 0.105004, -3.80442, 1, 5.92122)
+
+[node name="StaticBody3D93" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(0.126005, 0, -0.155315, 0, 1, 0, 0.129429, 0, 0.105004, -3.73986, 1, 5.72342)
+
+[node name="StaticBody3D94" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(0.138606, 0, -0.497008, 0, 1, 0, 0.142372, 0, 0.336013, -5.08786, 1, 6.42952)
+
+[node name="herbe droit pente 76" parent="interrieur map" instance=ExtResource("7_ke8ag")]
+transform = Transform3D(-1.00804, 0, 0.155315, 0, 1, 0, -1.03543, 0, -0.105004, -4.98657, 0, 8.15043)
+
+[node name="herbe droit pente 77" parent="interrieur map" instance=ExtResource("3_pjir0")]
+transform = Transform3D(-0.126005, 0, 0.155315, 0, 1, 0, -0.129429, 0, -0.105004, -5.73624, 0, 6.85488)
+
+[node name="herbe diagonale pente 87" parent="interrieur map" instance=ExtResource("10_y1o2v")]
+transform = Transform3D(-0.126317, 0.000118497, 0.155062, -0.00129458, 0.999997, -0.00181881, -0.129218, -0.00035874, -0.105264, -5.6163, 0, 6.97693)
+
+[node name="herbe diagonale pente 88" parent="interrieur map" instance=ExtResource("11_wrmsh")]
+transform = Transform3D(-0.126005, 0, 0.155315, 0, 1, 0, -0.129429, 0, -0.105004, -5.52242, 0, 7.3379)
+
+[node name="StaticBody3D95" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(1.51138, 0, -0.186433, 0, 1, 0, 1.55361, 0, 0.125948, -4.71611, 1, 7.34925)
+
+[node name="StaticBody3D96" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(0.126005, 0, -0.155315, 0, 1, 0, 0.129429, 0, 0.105004, -5.24527, 1, 6.31268)
+
+[node name="herbe coin pente 14" parent="interrieur map" instance=ExtResource("4_oeyho")]
+transform = Transform3D(-0.153491, 0, -0.12822, 0, 1, 0, 0.10685, 0, -0.127909, -3.9166, -0.00141275, 8.71822)
+
+[node name="herbe diagonale pente 89" parent="interrieur map" instance=ExtResource("12_pd5ql")]
+transform = Transform3D(-0.126322, 0, 0.155057, 0, 1, 0, -0.129214, 0, -0.105268, -4.47365, 0, 8.67688)
+
+[node name="herbe diagonale pente 90" parent="interrieur map" instance=ExtResource("12_pd5ql")]
+transform = Transform3D(-0.141421, 0, -0.141421, 0, 1, 0, 0.117851, 0, -0.117851, -2.515, 0, 8.49406)
+
+[node name="herbe droit pente 78" parent="interrieur map" instance=ExtResource("7_ke8ag")]
+transform = Transform3D(-0.282843, 0, -0.141421, 0, 1, 0, 0.235702, 0, -0.117851, -2.65642, 0, 8.61191)
+
+[node name="herbe droit pente 79" parent="interrieur map" instance=ExtResource("3_pjir0")]
+transform = Transform3D(-0.141421, 0, -0.141421, 0, 1, 0, 0.117851, 0, -0.117851, -2.23216, 0, 8.25836)
+
+[node name="herbe diagonale pente 91" parent="interrieur map" instance=ExtResource("13_23ror")]
+transform = Transform3D(-0.141421, 0, -0.141421, 0, 1, 0, 0.117851, 0, -0.117851, -3.24621, 0, 8.86784)
+
+[node name="herbe droit pente 80" parent="interrieur map" instance=ExtResource("7_ke8ag")]
+transform = Transform3D(-0.141421, 0, -0.141421, 0, 1, 0, 0.117851, 0, -0.117851, -2.8306, 0, 8.75264)
+
+[node name="herbe droit pente 81" parent="interrieur map" instance=ExtResource("3_pjir0")]
+transform = Transform3D(-0.141421, 0, -0.141421, 0, 1, 0, 0.117851, 0, -0.117851, -3.52906, 0, 8.86784)
+
+[node name="herbe coin pente 15" parent="interrieur map" instance=ExtResource("4_oeyho")]
+transform = Transform3D(0.136696, 0, -0.145994, 0, 1, 0, 0.121662, 0, 0.113913, -2.37104, -0.0146523, 7.91312)
+
+[node name="herbe droit pente 82" parent="interrieur map" instance=ExtResource("3_pjir0")]
+transform = Transform3D(0.553913, 0, -0.177418, 0, 1, 0, 0.887091, 0, 0.0769323, -2.38662, 0, 7.24148)
+
+[node name="StaticBody3D97" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(0.378015, 0, -0.776574, 0, 1, 0, 0.388287, 0, 0.525021, -3.60279, 1, 7.98738)
+
+[node name="StaticBody3D98" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(0.126005, 0, -0.31063, 0, 1, 0, 0.129429, 0, 0.210009, -3.80705, 1, 8.43783)
+
+[node name="StaticBody3D99" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(0.169892, 0, -0.98886, 0, 1, 0, 0.141266, 0, 0.825865, -3.40742, 1, 8.27216)
+
+[node name="StaticBody3D100" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(0.164136, 0, -0.437747, 0, 1, 0, 0.145916, 0, 0.341949, -2.66241, 1, 7.89818)
+
+[node name="StaticBody3D101" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(0.171177, 0, -0.154203, 0, 1, 0, 0.140184, 0, 0.13076, -2.52395, 1, 8.00924)
+
+[node name="StaticBody3D102" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(0.171177, 0, -0.154203, 0, 1, 0, 0.140184, 0, 0.13076, -2.80274, 1, 8.00924)
+
+[node name="StaticBody3D103" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(0.213251, 0, 0.550547, 0, 1, 0, -0.0917578, 0, 0.888545, -2.72128, 1, 7.45907)
+
+[node name="StaticBody3D104" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(1.13405, 0, -1.24252, 0, 1, 0, 1.16486, 0, 0.840034, -3.66347, 1, 7.5035)
+
+[node name="herbe droit pente 83" parent="interrieur map" instance=ExtResource("7_ke8ag")]
+transform = Transform3D(0.193185, 0, -0.0517638, 0, 1, 0, 0.0431365, 0, 0.160988, 0.272134, -2, 4.81229)
+
+[node name="herbe droit pente 84" parent="interrieur map" instance=ExtResource("3_pjir0")]
+transform = Transform3D(0.193185, 0, -0.0517638, 0, 1, 0, 0.0431365, 0, 0.160988, 1.11418, -2, 5.34464)
+
+[node name="herbe diagonale pente 92" parent="interrieur map" instance=ExtResource("10_y1o2v")]
+transform = Transform3D(0.193289, 0.000156789, -0.0513761, -0.00129458, 0.999997, -0.00181881, 0.0428131, 0.000348388, 0.161074, 0.931083, -2, 5.30452)
+
+[node name="herbe diagonale pente 93" parent="interrieur map" instance=ExtResource("11_wrmsh")]
+transform = Transform3D(0.193185, 0, -0.0517638, 0, 1, 0, 0.0431365, 0, 0.160988, 0.600802, -2, 5.05822)
+
+[node name="herbe diagonale pente 94" parent="interrieur map" instance=ExtResource("9_027ph")]
+transform = Transform3D(0.193185, 0, -0.0517638, 0, 1, 0, 0.0431365, 0, 0.160988, 0.0837013, -2, 4.77021)
+
+[node name="herbe diagonale pente 95" parent="interrieur map" instance=ExtResource("12_pd5ql")]
+transform = Transform3D(0.193185, 0, -0.0517638, 0, 1, 0, 0.0431365, 0, 0.160988, -0.304126, -2, 4.51107)
+
+[node name="herbe droit pente 85" parent="interrieur map" instance=ExtResource("7_ke8ag")]
+transform = Transform3D(0.193185, 0, -0.0517638, 0, 1, 0, 0.0431365, 0, 0.160988, -0.212011, -2, 4.53164)
+
+[node name="herbe droit pente 86" parent="interrieur map" instance=ExtResource("7_ke8ag")]
+transform = Transform3D(-0.193185, 0, 0.0517638, 0, 1, 0, -0.0431365, 0, -0.160988, 0.438083, -2, 4.66369)
+
+[node name="herbe droit pente 87" parent="interrieur map" instance=ExtResource("3_pjir0")]
+transform = Transform3D(-0.193185, 0, 0.0517638, 0, 1, 0, -0.0431365, 0, -0.160988, -0.40396, -2, 4.13134)
+
+[node name="herbe diagonale pente 96" parent="interrieur map" instance=ExtResource("10_y1o2v")]
+transform = Transform3D(-0.193289, -0.000156789, 0.0513762, -0.00129458, 0.999997, -0.00181881, -0.0428131, -0.000348388, -0.161074, -0.220866, -2, 4.17146)
+
+[node name="herbe diagonale pente 97" parent="interrieur map" instance=ExtResource("11_wrmsh")]
+transform = Transform3D(-0.193185, 0, 0.0517638, 0, 1, 0, -0.0431365, 0, -0.160988, 0.109415, -2, 4.41776)
+
+[node name="herbe diagonale pente 98" parent="interrieur map" instance=ExtResource("9_027ph")]
+transform = Transform3D(-0.193185, 0, 0.0517638, 0, 1, 0, -0.0431365, 0, -0.160988, 0.626516, -2, 4.70577)
+
+[node name="herbe diagonale pente 99" parent="interrieur map" instance=ExtResource("12_pd5ql")]
+transform = Transform3D(-0.193185, 0, 0.0517638, 0, 1, 0, -0.0431365, 0, -0.160988, 1.01434, -2, 4.96491)
+
+[node name="herbe droit pente 88" parent="interrieur map" instance=ExtResource("7_ke8ag")]
+transform = Transform3D(-0.193185, 0, 0.0517638, 0, 1, 0, -0.0431365, 0, -0.160988, 0.922229, -2, 4.94434)
+
+[node name="eau plate3" parent="interrieur map" instance=ExtResource("2_wg8uv")]
+transform = Transform3D(6, 0, 0, 0, 1, 0, 0, 0, 3.66667, -0.56784, -2.0182, 4.55299)
+skeleton = NodePath("../..")
+
+[node name="herbe droit pente 89" parent="interrieur map" instance=ExtResource("7_ke8ag")]
+transform = Transform3D(0.191268, 0, -0.058451, 0, 1, 0, 0.0487092, 0, 0.15939, -1.49514, -2, 3.87326)
+
+[node name="herbe droit pente 90" parent="interrieur map" instance=ExtResource("3_pjir0")]
+transform = Transform3D(0.191268, 0, -0.058451, 0, 1, 0, 0.0487092, 0, 0.15939, -0.675824, -2, 4.42969)
+
+[node name="herbe diagonale pente 100" parent="interrieur map" instance=ExtResource("10_y1o2v")]
+transform = Transform3D(0.191385, 0.000142155, -0.0580671, -0.00129458, 0.999997, -0.00181881, 0.0483889, 0.000352721, 0.159487, -0.857133, -2, 4.38429)
+
+[node name="herbe diagonale pente 101" parent="interrieur map" instance=ExtResource("11_wrmsh")]
+transform = Transform3D(0.191268, 0, -0.058451, 0, 1, 0, 0.0487092, 0, 0.15939, -1.17694, -2, 4.12857)
+
+[node name="herbe diagonale pente 102" parent="interrieur map" instance=ExtResource("9_027ph")]
+transform = Transform3D(0.191268, 0, -0.058451, 0, 1, 0, 0.0487092, 0, 0.15939, -1.6817, -2, 3.82575)
+
+[node name="herbe diagonale pente 103" parent="interrieur map" instance=ExtResource("12_pd5ql")]
+transform = Transform3D(0.191268, 0, -0.058451, 0, 1, 0, 0.0487092, 0, 0.15939, -2.05848, -2, 3.55552)
+
+[node name="herbe droit pente 91" parent="interrieur map" instance=ExtResource("7_ke8ag")]
+transform = Transform3D(0.191268, 0, -0.058451, 0, 1, 0, 0.0487092, 0, 0.15939, -1.96728, -2, 3.57875)
+
+[node name="herbe droit pente 92" parent="interrieur map" instance=ExtResource("7_ke8ag")]
+transform = Transform3D(0.199999, 0, -0.000774929, 0, 1, 0, 0.000645774, 0, 0.166665, -3.44387, -2, 3.14617)
+
+[node name="herbe droit pente 93" parent="interrieur map" instance=ExtResource("3_pjir0")]
+transform = Transform3D(0.199999, 0, -0.000774929, 0, 1, 0, 0.000645774, 0, 0.166665, -2.46673, -2, 3.48193)
+
+[node name="herbe diagonale pente 104" parent="interrieur map" instance=ExtResource("10_y1o2v")]
+transform = Transform3D(0.2, 0.000258236, -0.000373772, -0.00129458, 0.999998, -0.0018188, 0.000311083, 0.000303536, 0.166666, -2.65605, -2, 3.48205)
+
+[node name="herbe diagonale pente 105" parent="interrieur map" instance=ExtResource("11_wrmsh")]
+transform = Transform3D(0.199999, 0, -0.000774929, 0, 1, 0, 0.000645774, 0, 0.166665, -3.05079, -2, 3.31411)
+
+[node name="herbe droit pente 95" parent="interrieur map" instance=ExtResource("7_ke8ag")]
+transform = Transform3D(-0.191158, 0, 0.0588114, 0, 1, 0, -0.0490095, 0, -0.159298, -1.34673, -2, 3.72001)
+
+[node name="herbe droit pente 96" parent="interrieur map" instance=ExtResource("3_pjir0")]
+transform = Transform3D(-0.191158, 0, 0.0588114, 0, 1, 0, -0.0490095, 0, -0.159298, -2.16479, -2, 3.16229)
+
+[node name="herbe diagonale pente 108" parent="interrieur map" instance=ExtResource("10_y1o2v")]
+transform = Transform3D(-0.191275, -0.000141357, 0.0584278, -0.00129458, 0.999997, -0.00181881, -0.0486895, -0.000352944, -0.159396, -1.98358, -2, 3.20798)
+
+[node name="herbe diagonale pente 109" parent="interrieur map" instance=ExtResource("11_wrmsh")]
+transform = Transform3D(-0.191158, 0, 0.0588114, 0, 1, 0, -0.0490095, 0, -0.159298, -1.66436, -2, 3.4642)
+
+[node name="herbe diagonale pente 110" parent="interrieur map" instance=ExtResource("9_027ph")]
+transform = Transform3D(-0.191158, 0, 0.0588114, 0, 1, 0, -0.0490095, 0, -0.159298, -1.16028, -2, 3.76781)
+
+[node name="herbe diagonale pente 111" parent="interrieur map" instance=ExtResource("12_pd5ql")]
+transform = Transform3D(-0.191158, 0, 0.0588114, 0, 1, 0, -0.0490095, 0, -0.159298, -0.784111, -2, 4.03863)
+
+[node name="herbe droit pente 97" parent="interrieur map" instance=ExtResource("7_ke8ag")]
+transform = Transform3D(-0.191158, 0, 0.0588114, 0, 1, 0, -0.0490095, 0, -0.159298, -0.875258, -2, 4.01526)
+
+[node name="eau plate4" parent="interrieur map" instance=ExtResource("2_wg8uv")]
+transform = Transform3D(6, 0, 0, 0, 1, 0, 0, 0, 3.66667, -4.36784, -2.0182, 2.38632)
+skeleton = NodePath("../..")
+
+[node name="eau plate5" parent="interrieur map" instance=ExtResource("2_wg8uv")]
+transform = Transform3D(6, 0, 0, 0, 1, 0, 0, 0, 3.66667, 1.63216, -2.0182, 5.55299)
+skeleton = NodePath("../..")
+
+[node name="herbe droit pente 98" parent="interrieur map" instance=ExtResource("3_pjir0")]
+transform = Transform3D(-1.19795, 0, 0.0116731, 0, 1, 0, -0.0583655, 0, -0.166383, -2.26841, -2, 3.18435)
+
+[node name="herbe diagonale pente 114" parent="interrieur map" instance=ExtResource("9_027ph")]
+transform = Transform3D(-0.197098, 0, -0.0339456, 0, 1, 0, 0.028288, 0, -0.164248, -3.56208, -2, 3.10581)
+
+[node name="herbe diagonale pente 115" parent="interrieur map" instance=ExtResource("12_pd5ql")]
+transform = Transform3D(-0.197098, 0, -0.0339456, 0, 1, 0, 0.028288, 0, -0.164248, -3.07964, -2, 3.20569)
+
+[node name="herbe droit pente 101" parent="interrieur map" instance=ExtResource("7_ke8ag")]
+transform = Transform3D(-0.197098, 0, -0.0339456, 0, 1, 0, 0.028288, 0, -0.164248, -3.17362, -2, 3.21918)
+
+[node name="herbe diagonale pente 106" parent="interrieur map" instance=ExtResource("12_pd5ql")]
+transform = Transform3D(0.2, 0, 0, 0, 1, 0, 0, 0, 0.166667, -3.83956, -2, 3.14542)
+
+[node name="herbe droit pente 94" parent="interrieur map" instance=ExtResource("7_ke8ag")]
+transform = Transform3D(0.2, 0, 0, 0, 1, 0, 0, 0, 0.166667, -3.63956, -2, 3.14542)
+
+[node name="herbe droit pente 100" parent="interrieur map" instance=ExtResource("3_pjir0")]
+transform = Transform3D(0.2, 0, 0, 0, 1, 0, 0, 0, 0.166667, -4.23956, -2, 3.14542)
+
+[node name="herbe diagonale pente 107" parent="interrieur map" instance=ExtResource("13_23ror")]
+transform = Transform3D(-0.2, 0, 1.74846e-08, 0, 1, 0, -1.45705e-08, 0, -0.166667, -4, -2, 2.96633)
+
+[node name="herbe coin pente 16" parent="interrieur map" instance=ExtResource("6_3y6il")]
+transform = Transform3D(-0.2, 0, 1.74846e-08, 0, 1, 0, -1.45705e-08, 0, -0.166667, -4.1853, -2, 2.30209)
+
+[node name="herbe droit pente 99" parent="interrieur map" instance=ExtResource("7_ke8ag")]
+transform = Transform3D(-0.193185, 0, 0.0517638, 0, 1, 0, -0.0431365, 0, -0.160988, -5.36192, -2, 2.2947)
+
+[node name="herbe droit pente 102" parent="interrieur map" instance=ExtResource("3_pjir0")]
+transform = Transform3D(-0.193185, 0, 0.0517638, 0, 1, 0, -0.0431365, 0, -0.160988, -6.20396, -2, 1.76235)
+
+[node name="herbe diagonale pente 112" parent="interrieur map" instance=ExtResource("9_027ph")]
+transform = Transform3D(-0.193185, 0, 0.0517638, 0, 1, 0, -0.0431365, 0, -0.160988, -5.17348, -2, 2.33678)
+
+[node name="herbe diagonale pente 113" parent="interrieur map" instance=ExtResource("10_y1o2v")]
+transform = Transform3D(-0.193289, -0.000156789, 0.0513762, -0.00129458, 0.999997, -0.00181881, -0.0428131, -0.000348388, -0.161074, -6.02087, -2, 1.80247)
+
+[node name="herbe diagonale pente 116" parent="interrieur map" instance=ExtResource("11_wrmsh")]
+transform = Transform3D(-0.193185, 0, 0.0517638, 0, 1, 0, -0.0431365, 0, -0.160988, -5.69059, -2, 2.04877)
+
+[node name="herbe diagonale pente 117" parent="interrieur map" instance=ExtResource("12_pd5ql")]
+transform = Transform3D(-0.193185, 0, 0.0517638, 0, 1, 0, -0.0431365, 0, -0.160988, -4.78566, -2, 2.59592)
+
+[node name="herbe droit pente 103" parent="interrieur map" instance=ExtResource("7_ke8ag")]
+transform = Transform3D(-0.193185, 0, 0.0517638, 0, 1, 0, -0.0431365, 0, -0.160988, -4.87777, -2, 2.57536)
+
+[node name="herbe droit pente 104" parent="interrieur map" instance=ExtResource("7_ke8ag")]
+transform = Transform3D(0.192983, 0, -0.0525119, 0, 1, 0, 0.04376, 0, 0.160819, -5.12986, -2, 2.60253)
+
+[node name="herbe droit pente 105" parent="interrieur map" instance=ExtResource("3_pjir0")]
+transform = Transform3D(0.192983, 0, -0.0525119, 0, 1, 0, 0.04376, 0, 0.160819, -4.2903, -2, 3.1376)
+
+[node name="herbe diagonale pente 118" parent="interrieur map" instance=ExtResource("10_y1o2v")]
+transform = Transform3D(0.193088, 0.000155164, -0.0521247, -0.00129458, 0.999998, -0.0018188, 0.0434369, 0.000348891, 0.160906, -4.4732, -2, 3.09688)
+
+[node name="herbe diagonale pente 119" parent="interrieur map" instance=ExtResource("11_wrmsh")]
+transform = Transform3D(0.192983, 0, -0.0525119, 0, 1, 0, 0.04376, 0, 0.160819, -4.80234, -2, 2.84952)
+
+[node name="herbe diagonale pente 120" parent="interrieur map" instance=ExtResource("12_pd5ql")]
+transform = Transform3D(0.193185, 0, -0.0517638, 0, 1, 0, 0.0431365, 0, 0.160988, -5.51184, -2, 2.51646)
+
+[node name="herbe droit pente 106" parent="interrieur map" instance=ExtResource("7_ke8ag")]
+transform = Transform3D(0.193185, 0, -0.0517638, 0, 1, 0, 0.0431365, 0, 0.160988, -5.31865, -2, 2.5596)
+
+[node name="herbe droit pente 107" parent="interrieur map" instance=ExtResource("3_pjir0")]
+transform = Transform3D(0.193185, 0, -0.0517638, 0, 1, 0, 0.0431365, 0, 0.160988, -5.89821, -2, 2.43019)
+
+[node name="herbe droit pente 108" parent="interrieur map" instance=ExtResource("7_ke8ag")]
+transform = Transform3D(0.192983, 0, -0.0525119, 0, 1, 0, 0.04376, 0, 0.160819, -6.92986, -2, 1.85218)
+
+[node name="herbe droit pente 109" parent="interrieur map" instance=ExtResource("3_pjir0")]
+transform = Transform3D(0.192983, 0, -0.0525119, 0, 1, 0, 0.04376, 0, 0.160819, -6.0903, -2, 2.38724)
+
+[node name="herbe diagonale pente 121" parent="interrieur map" instance=ExtResource("10_y1o2v")]
+transform = Transform3D(0.193088, 0.000155164, -0.0521247, -0.00129458, 0.999998, -0.0018188, 0.0434369, 0.000348891, 0.160906, -6.2732, -2, 2.34653)
+
+[node name="herbe diagonale pente 122" parent="interrieur map" instance=ExtResource("11_wrmsh")]
+transform = Transform3D(0.192983, 0, -0.0525119, 0, 1, 0, 0.04376, 0, 0.160819, -6.60234, -2, 2.09917)
+
+[node name="herbe diagonale pente 123" parent="interrieur map" instance=ExtResource("12_pd5ql")]
+transform = Transform3D(0.193185, 0, -0.0517638, 0, 1, 0, 0.0431365, 0, 0.160988, -7.31184, -2, 1.76611)
+
+[node name="herbe droit pente 110" parent="interrieur map" instance=ExtResource("7_ke8ag")]
+transform = Transform3D(0.193185, 0, -0.0517638, 0, 1, 0, 0.0431365, 0, 0.160988, -7.11866, -2, 1.80925)
+
+[node name="herbe droit pente 111" parent="interrieur map" instance=ExtResource("3_pjir0")]
+transform = Transform3D(0.193185, 0, -0.0517638, 0, 1, 0, 0.0431365, 0, 0.160988, -7.69821, -2, 1.67984)
+
+[node name="herbe droit pente 112" parent="interrieur map" instance=ExtResource("7_ke8ag")]
+transform = Transform3D(0.192983, 0, -0.0525119, 0, 1, 0, 0.04376, 0, 0.160819, -8.69737, -2, 1.10881)
+
+[node name="herbe droit pente 113" parent="interrieur map" instance=ExtResource("3_pjir0")]
+transform = Transform3D(0.192983, 0, -0.0525119, 0, 1, 0, 0.04376, 0, 0.160819, -7.85781, -2, 1.64388)
+
+[node name="herbe diagonale pente 124" parent="interrieur map" instance=ExtResource("10_y1o2v")]
+transform = Transform3D(0.193088, 0.000155164, -0.0521247, -0.00129458, 0.999998, -0.0018188, 0.0434369, 0.000348891, 0.160906, -8.04071, -2, 1.60317)
+
+[node name="herbe diagonale pente 125" parent="interrieur map" instance=ExtResource("11_wrmsh")]
+transform = Transform3D(0.192983, 0, -0.0525119, 0, 1, 0, 0.04376, 0, 0.160819, -8.36985, -2, 1.35581)
+
+[node name="herbe diagonale pente 126" parent="interrieur map" instance=ExtResource("12_pd5ql")]
+transform = Transform3D(0.193185, 0, -0.0517638, 0, 1, 0, 0.0431365, 0, 0.160988, -9.07935, -2, 1.02275)
+
+[node name="herbe droit pente 114" parent="interrieur map" instance=ExtResource("7_ke8ag")]
+transform = Transform3D(0.193185, 0, -0.0517638, 0, 1, 0, 0.0431365, 0, 0.160988, -8.88616, -2, 1.06588)
+
+[node name="herbe droit pente 115" parent="interrieur map" instance=ExtResource("3_pjir0")]
+transform = Transform3D(0.193185, 0, -0.0517638, 0, 1, 0, 0.0431365, 0, 0.160988, -9.46572, -2, 0.936473)
+
+[node name="herbe droit pente 116" parent="interrieur map" instance=ExtResource("7_ke8ag")]
+transform = Transform3D(0.183901, 0, -0.0786151, 0, 1, 0, 0.0655126, 0, 0.153251, -10.1266, -2, 0.361599)
+
+[node name="herbe diagonale pente 127" parent="interrieur map" instance=ExtResource("10_y1o2v")]
+transform = Transform3D(0.184059, 9.59649e-05, -0.0782459, -0.00129458, 0.999998, -0.0018188, 0.0652046, 0.000363385, 0.153382, -9.55798, -2, 0.926671)
+
+[node name="herbe diagonale pente 128" parent="interrieur map" instance=ExtResource("11_wrmsh")]
+transform = Transform3D(0.183901, 0, -0.0786151, 0, 1, 0, 0.0655126, 0, 0.153251, -9.84305, -2, 0.643862)
+
+[node name="herbe diagonale pente 129" parent="interrieur map" instance=ExtResource("12_pd5ql")]
+transform = Transform3D(0.184204, 0, -0.077902, 0, 1, 0, 0.0649183, 0, 0.153504, -10.4907, -2, 0.23247)
+
+[node name="herbe droit pente 117" parent="interrieur map" instance=ExtResource("7_ke8ag")]
+transform = Transform3D(0.184204, 0, -0.077902, 0, 1, 0, 0.0649183, 0, 0.153504, -10.3065, -2, 0.297388)
+
+[node name="herbe droit pente 118" parent="interrieur map" instance=ExtResource("3_pjir0")]
+transform = Transform3D(0.184204, 0, -0.077902, 0, 1, 0, 0.0649183, 0, 0.153504, -10.8591, -2, 0.102634)
+
+[node name="eau plate6" parent="interrieur map" instance=ExtResource("2_wg8uv")]
+transform = Transform3D(6, 0, 0, 0, 1, 0, 0, 0, 3.66667, -8.69622, -2.0182, 0.245169)
+skeleton = NodePath("../..")
+
+[node name="herbe coin pente 17" parent="interrieur map" instance=ExtResource("4_oeyho")]
+transform = Transform3D(-0.2, 0, 1.78814e-08, 0, 1, 0, -1.49012e-08, 0, -0.166667, -6.2217, -2, 1.43777)
+
+[node name="herbe diagonale pente 130" parent="interrieur map" instance=ExtResource("12_pd5ql")]
+transform = Transform3D(-0.173205, 0, 0.1, 0, 1, 0, -0.0833333, 0, -0.144338, -6.70954, -2, 1.53865)
+
+[node name="herbe droit pente 119" parent="interrieur map" instance=ExtResource("7_ke8ag")]
+transform = Transform3D(-1.38564, 0, 0.1, 0, 1, 0, -0.666667, 0, -0.144338, -6.88274, -2, 1.45531)
+
+[node name="herbe droit pente 120" parent="interrieur map" instance=ExtResource("3_pjir0")]
+transform = Transform3D(-0.193185, 0, 0.0517638, 0, 1, 0, -0.0431365, 0, -0.160988, -9.29822, -2, -0.00426316)
+
+[node name="herbe droit pente 121" parent="interrieur map" instance=ExtResource("7_ke8ag")]
+transform = Transform3D(-0.192983, 0, 0.052512, 0, 1, 0, -0.04376, 0, -0.160819, -8.29906, -2, 0.566759)
+
+[node name="herbe droit pente 122" parent="interrieur map" instance=ExtResource("3_pjir0")]
+transform = Transform3D(-0.192983, 0, 0.052512, 0, 1, 0, -0.04376, 0, -0.160819, -9.13862, -2, 0.0316937)
+
+[node name="herbe diagonale pente 131" parent="interrieur map" instance=ExtResource("10_y1o2v")]
+transform = Transform3D(-0.193088, -0.000155164, 0.0521247, -0.00129458, 0.999998, -0.0018188, -0.0434369, -0.000348891, -0.160906, -8.95571, -2, 0.0724057)
+
+[node name="herbe diagonale pente 132" parent="interrieur map" instance=ExtResource("11_wrmsh")]
+transform = Transform3D(-0.192983, 0, 0.052512, 0, 1, 0, -0.04376, 0, -0.160819, -8.62658, -2, 0.319765)
+
+[node name="herbe diagonale pente 133" parent="interrieur map" instance=ExtResource("12_pd5ql")]
+transform = Transform3D(-0.193185, 0, 0.0517638, 0, 1, 0, -0.0431365, 0, -0.160988, -7.91708, -2, 0.652827)
+
+[node name="herbe droit pente 123" parent="interrieur map" instance=ExtResource("7_ke8ag")]
+transform = Transform3D(-0.193185, 0, 0.0517638, 0, 1, 0, -0.0431365, 0, -0.160988, -8.11026, -2, 0.60969)
+
+[node name="herbe diagonale pente 134" parent="interrieur map" instance=ExtResource("13_23ror")]
+transform = Transform3D(-0.173205, 0, 0.1, 0, 1, 0, -0.0833333, 0, -0.144338, -7.73479, -2, 0.85291)
+
+[node name="herbe droit pente 124" parent="interrieur map" instance=ExtResource("3_pjir0")]
+transform = Transform3D(-0.193185, 0, 0.0517638, 0, 1, 0, -0.0431365, 0, -0.160988, -11.0588, -2, -0.744198)
+
+[node name="herbe droit pente 125" parent="interrieur map" instance=ExtResource("7_ke8ag")]
+transform = Transform3D(-0.192983, 0, 0.052512, 0, 1, 0, -0.04376, 0, -0.160819, -10.0596, -2, -0.173176)
+
+[node name="herbe droit pente 126" parent="interrieur map" instance=ExtResource("3_pjir0")]
+transform = Transform3D(-0.192983, 0, 0.052512, 0, 1, 0, -0.04376, 0, -0.160819, -10.8992, -2, -0.708241)
+
+[node name="herbe diagonale pente 135" parent="interrieur map" instance=ExtResource("10_y1o2v")]
+transform = Transform3D(-0.193088, -0.000155164, 0.0521247, -0.00129458, 0.999998, -0.0018188, -0.0434369, -0.000348891, -0.160906, -10.7163, -2, -0.667529)
+
+[node name="herbe diagonale pente 136" parent="interrieur map" instance=ExtResource("11_wrmsh")]
+transform = Transform3D(-0.192983, 0, 0.052512, 0, 1, 0, -0.04376, 0, -0.160819, -10.3871, -2, -0.42017)
+
+[node name="herbe diagonale pente 137" parent="interrieur map" instance=ExtResource("12_pd5ql")]
+transform = Transform3D(-0.193185, 0, 0.0517638, 0, 1, 0, -0.0431365, 0, -0.160988, -9.67762, -2, -0.0871077)
+
+[node name="herbe droit pente 127" parent="interrieur map" instance=ExtResource("7_ke8ag")]
+transform = Transform3D(-0.193185, 0, 0.0517638, 0, 1, 0, -0.0431365, 0, -0.160988, -9.8708, -2, -0.130244)
+
+[node name="herbe droit pente 128" parent="interrieur map" instance=ExtResource("7_ke8ag")]
+transform = Transform3D(-0.2, 0, 2.38419e-08, 0, 1, 0, -1.98682e-08, 0, -0.166667, 2.40842, -2, 5.36641)
+
+[node name="herbe droit pente 129" parent="interrieur map" instance=ExtResource("3_pjir0")]
+transform = Transform3D(-0.2, 0, 2.38419e-08, 0, 1, 0, -1.98682e-08, 0, -0.166667, 1.42973, -2, 5.03382)
+
+[node name="herbe diagonale pente 138" parent="interrieur map" instance=ExtResource("10_y1o2v")]
+transform = Transform3D(-0.199999, -0.00025965, -0.000401115, -0.00129458, 0.999997, -0.00181881, 0.000334668, -0.0003027, -0.166666, 1.61905, -2, 5.03308)
+
+[node name="herbe diagonale pente 139" parent="interrieur map" instance=ExtResource("11_wrmsh")]
+transform = Transform3D(-0.2, 0, 2.38419e-08, 0, 1, 0, -1.98682e-08, 0, -0.166667, 2.01457, -2, 5.19975)
+
+[node name="herbe diagonale pente 140" parent="interrieur map" instance=ExtResource("9_027ph")]
+transform = Transform3D(-0.2, 0, 2.38419e-08, 0, 1, 0, -1.98682e-08, 0, -0.166667, 2.6035, -2, 5.36641)
+
+[node name="herbe diagonale pente 141" parent="interrieur map" instance=ExtResource("12_pd5ql")]
+transform = Transform3D(-0.2, 0, 2.38419e-08, 0, 1, 0, -1.98682e-08, 0, -0.166667, 3.0586, -2, 5.53308)
+
+[node name="herbe droit pente 130" parent="interrieur map" instance=ExtResource("7_ke8ag")]
+transform = Transform3D(-0.2, 0, 2.38419e-08, 0, 1, 0, -1.98682e-08, 0, -0.166667, 2.96324, -2, 5.53308)
+
+[node name="herbe droit pente 131" parent="interrieur map" instance=ExtResource("7_ke8ag")]
+transform = Transform3D(-1.6, 0, 3.01992e-08, 0, 1, 0, -2.01328e-07, 0, -0.166667, 5.03033, -2, 5.8636)
+
+[node name="herbe droit pente 132" parent="interrieur map" instance=ExtResource("3_pjir0")]
+transform = Transform3D(-0.2, 0, 2.38419e-08, 0, 1, 0, -1.98682e-08, 0, -0.166667, 3.45164, -2, 5.531)
+
+[node name="herbe diagonale pente 142" parent="interrieur map" instance=ExtResource("10_y1o2v")]
+transform = Transform3D(-0.199999, -0.00025965, -0.000401115, -0.00129458, 0.999997, -0.00181881, 0.000334668, -0.0003027, -0.166666, 3.64096, -2, 5.53026)
+
+[node name="herbe diagonale pente 143" parent="interrieur map" instance=ExtResource("11_wrmsh")]
+transform = Transform3D(-0.2, 0, 2.38419e-08, 0, 1, 0, -1.98682e-08, 0, -0.166667, 4.03648, -2, 5.69693)
+
+[node name="herbe diagonale pente 144" parent="interrieur map" instance=ExtResource("9_027ph")]
+transform = Transform3D(-0.2, 0, 2.38419e-08, 0, 1, 0, -1.98682e-08, 0, -0.166667, 5.82541, -2, 5.8636)
+
+[node name="herbe diagonale pente 145" parent="interrieur map" instance=ExtResource("12_pd5ql")]
+transform = Transform3D(-0.2, 0, 2.38419e-08, 0, 1, 0, -1.98682e-08, 0, -0.166667, 6.28051, -2, 6.03026)
+
+[node name="herbe droit pente 133" parent="interrieur map" instance=ExtResource("7_ke8ag")]
+transform = Transform3D(-0.2, 0, 2.38419e-08, 0, 1, 0, -1.98682e-08, 0, -0.166667, 6.18514, -2, 6.03026)
+
+[node name="herbe droit pente 134" parent="interrieur map" instance=ExtResource("7_ke8ag")]
+transform = Transform3D(-0.2, 0, 2.38419e-08, 0, 1, 0, -1.98682e-08, 0, -0.166667, 2.40842, -2, 5.36641)
+
+[node name="herbe droit pente 135" parent="interrieur map" instance=ExtResource("3_pjir0")]
+transform = Transform3D(-0.2, 0, 2.38419e-08, 0, 1, 0, -1.98682e-08, 0, -0.166667, 1.42973, -2, 5.03382)
+
+[node name="herbe diagonale pente 146" parent="interrieur map" instance=ExtResource("10_y1o2v")]
+transform = Transform3D(-0.199999, -0.00025965, -0.000401115, -0.00129458, 0.999997, -0.00181881, 0.000334668, -0.0003027, -0.166666, 1.61905, -2, 5.03308)
+
+[node name="herbe diagonale pente 147" parent="interrieur map" instance=ExtResource("11_wrmsh")]
+transform = Transform3D(-0.2, 0, 2.38419e-08, 0, 1, 0, -1.98682e-08, 0, -0.166667, 2.01457, -2, 5.19975)
+
+[node name="herbe diagonale pente 148" parent="interrieur map" instance=ExtResource("9_027ph")]
+transform = Transform3D(-0.2, 0, 2.38419e-08, 0, 1, 0, -1.98682e-08, 0, -0.166667, 2.6035, -2, 5.36641)
+
+[node name="herbe diagonale pente 149" parent="interrieur map" instance=ExtResource("12_pd5ql")]
+transform = Transform3D(-0.2, 0, 2.38419e-08, 0, 1, 0, -1.98682e-08, 0, -0.166667, 3.0586, -2, 5.53308)
+
+[node name="herbe droit pente 136" parent="interrieur map" instance=ExtResource("7_ke8ag")]
+transform = Transform3D(-0.2, 0, 2.38419e-08, 0, 1, 0, -1.98682e-08, 0, -0.166667, 2.96324, -2, 5.53308)
+
+[node name="eau plate7" parent="interrieur map" instance=ExtResource("2_wg8uv")]
+transform = Transform3D(6, 0, 0, 0, 1, 0, 0, 0, 3.66667, 7.03216, -2.0182, 5.55299)
+skeleton = NodePath("../..")
+
+[node name="herbe droit pente 137" parent="interrieur map" instance=ExtResource("7_ke8ag")]
+transform = Transform3D(0.199894, 0, 0.00652637, 0, 1, 0, -0.00543864, 0, 0.166578, 2.06869, -2, 5.49166)
+
+[node name="herbe droit pente 138" parent="interrieur map" instance=ExtResource("3_pjir0")]
+transform = Transform3D(0.199894, 0, 0.00652637, 0, 1, 0, -0.00543864, 0, 0.166578, 3.05988, -2, 5.79746)
+
+[node name="herbe diagonale pente 150" parent="interrieur map" instance=ExtResource("10_y1o2v")]
+transform = Transform3D(0.19988, 0.000271365, 0.00692727, -0.00129458, 0.999997, -0.00181881, -0.00577313, 0.000295478, 0.166566, 2.8707, -2, 5.80335)
+
+[node name="herbe diagonale pente 151" parent="interrieur map" instance=ExtResource("11_wrmsh")]
+transform = Transform3D(0.199894, 0, 0.00652637, 0, 1, 0, -0.00543864, 0, 0.166578, 2.46886, -2, 5.64753)
+
+[node name="herbe diagonale pente 152" parent="interrieur map" instance=ExtResource("9_027ph")]
+transform = Transform3D(0.199894, 0, 0.00652637, 0, 1, 0, -0.00543864, 0, 0.166578, 1.87372, -2, 5.49696)
+
+[node name="herbe diagonale pente 153" parent="interrieur map" instance=ExtResource("12_pd5ql")]
+transform = Transform3D(0.199894, 0, 0.00652637, 0, 1, 0, -0.00543864, 0, 0.166578, 1.41233, -2, 5.34276)
+
+[node name="herbe droit pente 139" parent="interrieur map" instance=ExtResource("7_ke8ag")]
+transform = Transform3D(0.199894, 0, 0.00652637, 0, 1, 0, -0.00543864, 0, 0.166578, 1.50765, -2, 5.34017)
+
+[node name="herbe droit pente 140" parent="interrieur map" instance=ExtResource("7_ke8ag")]
+transform = Transform3D(0.199894, 0, 0.00652637, 0, 1, 0, -0.00543864, 0, 0.166578, 4.11152, -2, 5.93594)
+
+[node name="herbe droit pente 141" parent="interrieur map" instance=ExtResource("3_pjir0")]
+transform = Transform3D(0.199894, 0, 0.00652637, 0, 1, 0, -0.00543864, 0, 0.166578, 5.10271, -2, 6.24174)
+
+[node name="herbe diagonale pente 154" parent="interrieur map" instance=ExtResource("10_y1o2v")]
+transform = Transform3D(0.19988, 0.000271365, 0.00692727, -0.00129458, 0.999997, -0.00181881, -0.00577313, 0.000295478, 0.166566, 4.91353, -2, 6.24762)
+
+[node name="herbe diagonale pente 155" parent="interrieur map" instance=ExtResource("11_wrmsh")]
+transform = Transform3D(0.199894, 0, 0.00652637, 0, 1, 0, -0.00543864, 0, 0.166578, 4.51169, -2, 6.0918)
+
+[node name="herbe diagonale pente 156" parent="interrieur map" instance=ExtResource("9_027ph")]
+transform = Transform3D(0.199894, 0, 0.00652637, 0, 1, 0, -0.00543864, 0, 0.166578, 3.91655, -2, 5.94124)
+
+[node name="herbe diagonale pente 157" parent="interrieur map" instance=ExtResource("12_pd5ql")]
+transform = Transform3D(0.199894, 0, 0.00652637, 0, 1, 0, -0.00543864, 0, 0.166578, 3.45516, -2, 5.78704)
+
+[node name="herbe droit pente 142" parent="interrieur map" instance=ExtResource("7_ke8ag")]
+transform = Transform3D(0.199894, 0, 0.00652637, 0, 1, 0, -0.00543864, 0, 0.166578, 3.55048, -2, 5.78444)
+
+[node name="StaticBody3D105" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(0.858582, 0, -2.09588, 0, 1, 0, 0.698627, 0, 1.78871, -1.88085, -1, 9.531)
+
+[node name="StaticBody3D106" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(1.02853, 0, -1.54538, 0, 1, 0, 0.515128, 0, 2.14278, -2.04038, -1, 9.531)
+
+[node name="StaticBody3D107" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(0.952973, 0, -2.40983, 0, 1, 0, 1.07103, 0, 1.48902, -0.125634, -1, 7.80464)
+
+[node name="StaticBody3D108" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(0.526327, 0, -2.69603, 0, 1, 0, 0.898679, 0, 1.09651, 1.67269, -1, 7.00181)
+
+[node name="StaticBody3D109" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(0.18136, 0, -2.95025, 0, 1, 0, 0.819514, 0, 0.453399, 2.2351, -1, 7.02923)
+
+[node name="StaticBody3D110" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(0.105323, 0, -1.57516, 0, 1, 0, 0.492236, 0, 0.234051, 3.65654, -1, 6.8959)
+
+[node name="StaticBody3D111" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(0.0109005, 0, -0.999835, 0, 1, 0, 0.499918, 0, 0.0151396, 3.99765, -1, 6.76669)
+
+[node name="StaticBody3D112" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(0.0109005, 0, -0.999835, 0, 1, 0, 0.499918, 0, 0.0151396, 3.14686, -1, 6.62185)
+
+[node name="StaticBody3D113" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(0.0109005, 0, -0.999835, 0, 1, 0, 0.499918, 0, 0.0151396, 2.88056, -1, 6.45826)
+
+[node name="StaticBody3D114" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(0.0176006, 0, -1.59931, 0, 1, 0, 0.499785, 0, 0.0391125, 2.37495, -1, 6.3064)
+
+[node name="StaticBody3D115" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(0.0109005, 0, -0.999835, 0, 1, 0, 0.499918, 0, 0.0151396, 1.09633, -1, 6.17542)
+
+[node name="StaticBody3D116" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(0.0109005, 0, -0.999835, 0, 1, 0, 0.499918, 0, 0.0151396, 0.837508, -1, 6.0184)
+
+[node name="StaticBody3D117" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(-0.156131, 0, -0.96555, 0, 1, 0, 0.482775, 0, -0.216849, 0.615303, -1, 5.74989)
+
+[node name="StaticBody3D118" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(-0.156131, 0, -0.96555, 0, 1, 0, 0.482775, 0, -0.216849, -0.344982, -1, 5.53495)
+
+[node name="StaticBody3D119" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(-0.156131, 0, -0.96555, 0, 1, 0, 0.482775, 0, -0.216849, -0.890425, -1, 5.2389)
+
+[node name="StaticBody3D120" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(-0.156131, 0, -0.96555, 0, 1, 0, 0.482775, 0, -0.216849, -1.08515, -1, 5.02171)
+
+[node name="StaticBody3D121" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(-0.16844, 0, -0.959786, 0, 1, 0, 0.479893, 0, -0.233945, -1.23069, -1, 4.81106)
+
+[node name="StaticBody3D122" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(-0.178635, 0, -0.954652, 0, 1, 0, 0.477326, 0, -0.248104, -1.93418, -1, 4.63092)
+
+[node name="StaticBody3D123" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(-0.178635, 0, -0.954652, 0, 1, 0, 0.477326, 0, -0.248104, -2.67778, -1, 4.26022)
+
+[node name="StaticBody3D124" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(-0.178635, 0, -0.572791, 0, 1, 0, 0.477326, 0, -0.148863, -2.67354, -1, 4.09202)
+
+[node name="StaticBody3D125" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 0.833333, -3.43146, -1, 4.14351)
+
+[node name="StaticBody3D126" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(-0.178635, 0, -0.954652, 0, 1, 0, 0.477326, 0, -0.248104, -2.67778, -1, 4.26022)
+
+[node name="StaticBody3D127" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 0.833333, -4.93497, -1, 3.97689)
+
+[node name="StaticBody3D128" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 0.833333, -5.1347, -1, 3.81014)
+
+[node name="StaticBody3D129" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(1.92945, 0, -0.263267, 0, 1, 0, 0.438778, 0, 0.803936, -5.42885, -1, 3.56605)
+
+[node name="StaticBody3D130" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(1.92945, 0, -0.263267, 0, 1, 0, 0.438778, 0, 0.803936, -6.82845, -1, 3.07928)
+
+[node name="StaticBody3D131" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(1.92945, 0, -0.263267, 0, 1, 0, 0.438778, 0, 0.803936, -6.97351, -1, 2.87596)
+
+[node name="StaticBody3D132" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(1.92945, 0, -0.263267, 0, 1, 0, 0.438778, 0, 0.803936, -8.63118, -1, 2.32822)
+
+[node name="StaticBody3D133" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(1.92945, 0, -0.263267, 0, 1, 0, 0.438778, 0, 0.803936, -8.77151, -1, 2.12575)
+
+[node name="StaticBody3D134" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(0.964723, 0, -0.263267, 0, 1, 0, 0.219389, 0, 0.803936, -9.91597, -1, 1.69341)
+
+[node name="StaticBody3D135" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(0.771778, 0, -0.263267, 0, 1, 0, 0.175511, 0, 0.803936, -9.96304, -1, 1.51362)
+
+[node name="StaticBody3D136" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(0.732018, 0, -0.403402, 0, 1, 0, 0.268934, 0, 0.762519, -10.2161, -1, 1.41223)
+
+[node name="StaticBody3D137" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(0.709551, 0, -0.831398, 0, 1, 0, 0.307925, 0, 1.33041, -10.4572, -1, 1.7331)
+
+[node name="StaticBody3D138" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(0.590048, 0, 1.35056, 0, 1, 0, -0.450188, 0, 1.22927, -10.2359, -1, 2.66116)
+
+[node name="StaticBody3D139" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(0.674398, 0, 2.15167, 0, 1, 0, -0.358612, 0, 2.80999, -8.50437, -1, 4.36141)
+
+[node name="StaticBody3D140" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(0.733264, 0, 1.59941, 0, 1, 0, -0.266569, 0, 3.05526, -8.14568, -1, 4.74111)
+
+[node name="StaticBody3D141" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(0.793695, 0, 0.501194, 0, 1, 0, -0.0835324, 0, 3.30706, -7.6191, -1, 6.94041)
+
+[node name="StaticBody3D142" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(0.668124, 0, 1.15503, 0, 1, 0, -0.366676, 0, 1.46152, -6.86615, -1, 9.17481)
+
+[node name="StaticBody3D143" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(0.675507, 0, 2.14295, 0, 1, 0, -0.357159, 0, 2.81461, -5.72271, -1, 9.72839)
+
+[node name="StaticBody3D144" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(0.58668, 0, 2.03955, 0, 1, 0, -0.453234, 0, 1.83338, -5.61431, -1, 10.3898)
+
+[node name="StaticBody3D145" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(1.116, 0, 4.29949, 0, 1, 0, -0.955443, 0, 3.48751, -8.06686, -1, 3.63493)
+
+[node name="StaticBody3D146" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(0.791326, 0, -0.58744, 0, 1, 0, 0.0979067, 0, 3.29719, -7.28502, -1, 4.72343)
+
+[node name="StaticBody3D147" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(1.5912, 0, 0.373986, 0, 1, 0, -0.701223, 0, 0.589335, -7.81852, -1, -1.08416)
+
+[node name="StaticBody3D148" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(0.380017, 0, 0.671848, 0, 1, 0, -0.489889, 0, 0.361921, -8.86825, -1, -0.494884)
+
+[node name="StaticBody3D149" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(0.249554, 0, 0.333002, 0, 1, 0, -0.138751, 0, 0.415924, -8.73059, -1, -0.785928)
+
+[node name="StaticBody3D150" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(0.160706, 0, 0.77077, 0, 1, 0, -0.481731, 0, 0.178563, -8.84808, -1, -0.414869)
+
+[node name="StaticBody3D151" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(0.160706, 0, 1.54154, 0, 1, 0, -0.481731, 0, 0.357125, -7.7368, -1, -0.16489)
+
+[node name="StaticBody3D152" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(0.160706, 0, 0.77077, 0, 1, 0, -0.481731, 0, 0.178563, -7.22744, -1, 0.120396)
+
+[node name="StaticBody3D153" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(0.160706, 0, 0.77077, 0, 1, 0, -0.481731, 0, 0.178563, -7.08489, -1, 0.31508)
+
+[node name="StaticBody3D154" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(0.10016, 0, 1.03867, 0, 1, 0, -0.14426, 0, 0.500801, -6.96506, -1, 0.647782)
+
+[node name="StaticBody3D155" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(0.385558, 0, -0.13314, 0, 1, 0, 0.0887599, 0, 0.401623, -6.70752, -1, 0.52123)
+
+[node name="StaticBody3D156" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(-0.569385, 0, -0.252281, 0, 1, 0, 0.157675, 0, -0.63265, -6.87099, -1, 0.00398781)
+
+[node name="StaticBody3D157" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(-0.0190996, 0, 0.398172, 0, 1, 0, -0.165905, 0, -0.0318327, -6.65193, -1, 0.318307)
+
+[node name="StaticBody3D158" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(-0.569385, 0, -0.252281, 0, 1, 0, 0.157675, 0, -0.63265, -7.10733, -1, -0.581863)
+
+[node name="StaticBody3D159" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(-0.579112, 0, -0.209253, 0, 1, 0, 0.130783, 0, -0.643457, -7.13603, -1, -0.761102)
+
+[node name="StaticBody3D160" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(0.178115, 0, -0.98401, 0, 1, 0, 0.820008, 0, 0.148429, -7.75271, -1, -0.525608)
+
+[node name="StaticBody3D161" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(0.0515337, 0, 0.428494, 0, 1, 0, -0.0714156, 0, 0.214724, -6.18508, -1, 1.08806)
+
+[node name="StaticBody3D162" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(0.0972767, 0, 0.775983, 0, 1, 0, -0.323326, 0, 0.162128, -5.85561, -1, 1.29771)
+
+[node name="StaticBody3D163" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(0.199464, 0, 0.0292674, 0, 1, 0, -0.0121948, 0, 0.33244, -6.27687, -1, 1.17205)
+
+[node name="StaticBody3D164" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(0.104963, 0, 1.92991, 0, 1, 0, -0.321652, 0, 0.437347, -5.14459, -1, 1.57084)
+
+[node name="StaticBody3D165" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(0.104963, 0, 1.92991, 0, 1, 0, -0.321652, 0, 0.437347, -3.74296, -1, 2.05499)
+
+[node name="StaticBody3D166" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(0.104963, 0, 1.92991, 0, 1, 0, -0.321652, 0, 0.437347, -3.55045, -1, 2.27441)
+
+[node name="StaticBody3D167" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(-0.00143114, 0, 1.99999, 0, 1, 0, -0.333331, 0, -0.00596317, -3.09074, -1, 2.38111)
+
+[node name="StaticBody3D168" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(-0.0207949, 0, 1.9973, 0, 1, 0, -0.332883, 0, -0.0866456, -2.37313, -1, 2.44512)
+
+[node name="StaticBody3D169" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(-0.0429776, 0, 1.98842, 0, 1, 0, -0.331404, 0, -0.179073, -2.10426, -1, 2.53247)
+
+[node name="StaticBody3D170" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(0.0243498, 0, 1.99629, 0, 1, 0, -0.332715, 0, 0.101457, -1.87634, -1, 2.79097)
+
+[node name="StaticBody3D171" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(0.116541, 0, 1.91323, 0, 1, 0, -0.318872, 0, 0.485589, -0.970681, -1, 3.03531)
+
+[node name="StaticBody3D172" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(0.116541, 0, 1.91323, 0, 1, 0, -0.318872, 0, 0.485589, -0.0127867, -1, 3.03531)
+
+[node name="StaticBody3D173" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(0.116541, 0, 1.91323, 0, 1, 0, -0.318872, 0, 0.485589, -0.0127867, -1, 3.27876)
+
+[node name="StaticBody3D174" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(0.116541, 0, 1.91323, 0, 1, 0, -0.318872, 0, 0.485589, 0.284792, -1, 3.52801)
+
+[node name="StaticBody3D175" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(0.116541, 0, 1.91323, 0, 1, 0, -0.318872, 0, 0.485589, 0.468766, -1, 3.74931)
+
+[node name="StaticBody3D176" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(0.106754, 0, 1.92746, 0, 1, 0, -0.321243, 0, 0.444809, 0.607982, -1, 3.93535)
+
+[node name="StaticBody3D177" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(0.106754, 0, 0.963728, 0, 1, 0, -0.321243, 0, 0.222404, 1.57858, -1, 4.31854)
+
+[node name="StaticBody3D178" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(-0.000858695, 0, 1.99999, 0, 1, 0, -0.333332, 0, -0.00357779, 2.43027, -1, 4.61764)
+
+[node name="StaticBody3D179" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(0.103939, 0, 0.19313, 0, 1, 0, -0.321883, 0, 0.0433079, 1.38676, -1, 4.44547)
+
+[node name="StaticBody3D180" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(-0.000858695, 0, 1.99999, 0, 1, 0, -0.333332, 0, -0.00357779, 2.37948, -1, 4.61764)
+
+[node name="StaticBody3D181" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(-0.000858705, 0, 0.999998, 0, 1, 0, -0.333333, 0, -0.00178897, 3.40292, -1, 4.78333)
+
+[node name="StaticBody3D182" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(-0.000858705, 0, 0.999998, 0, 1, 0, -0.333333, 0, -0.00178897, 3.65549, -1, 4.94893)
+
+[node name="StaticBody3D183" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(-0.000858705, 0, 0.999998, 0, 1, 0, -0.333333, 0, -0.00178897, 3.85475, -1, 5.1173)
+
+[node name="StaticBody3D184" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(-0.399999, 0, -0.002061, 0, 1, 0, 0.000715623, 0, -0.799998, 4.29048, -1, 4.88272)
+
+[node name="StaticBody3D185" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(-0.000732986, 0, -2.6, 0, 1, 0, 1.66667, 0, -0.000794068, 3.00159, -1, 3.95653)
+
+[node name="StaticBody3D186" parent="interrieur map" instance=ExtResource("1_ojs6p")]
+transform = Transform3D(-0.000146597, 0, -0.2, 0, 1, 0, 0.333333, 0, -6.10822e-05, 1.65476, -1, 4.08917)

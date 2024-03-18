@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://djg0qasoto56d"
+path="res://.godot/imported/Cave_Prop_Railway_Hill_Gentle.obj-2c0ba6e3f4ceda6fcba3fc08229a7727.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Cave_Prop_Railway_Hill_Gentle.obj-2c0ba6e3f4ceda6fcba3fc08229a7727.mesh"]
+
+source_file="res://Assets/modular_terrain_collection/Cave_Prop_Railway_Hill_Gentle.obj"
+dest_files=["res://.godot/imported/Cave_Prop_Railway_Hill_Gentle.obj-2c0ba6e3f4ceda6fcba3fc08229a7727.mesh", "res://.godot/imported/Cave_Prop_Railway_Hill_Gentle.obj-2c0ba6e3f4ceda6fcba3fc08229a7727.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

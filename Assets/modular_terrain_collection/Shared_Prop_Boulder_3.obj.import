@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://c0hyo8fl5c5ls"
+path="res://.godot/imported/Shared_Prop_Boulder_3.obj-77d9253d9ce9acc08549d62aaddbbc6e.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Shared_Prop_Boulder_3.obj-77d9253d9ce9acc08549d62aaddbbc6e.mesh"]
+
+source_file="res://Assets/modular_terrain_collection/Shared_Prop_Boulder_3.obj"
+dest_files=["res://.godot/imported/Shared_Prop_Boulder_3.obj-77d9253d9ce9acc08549d62aaddbbc6e.mesh", "res://.godot/imported/Shared_Prop_Boulder_3.obj-77d9253d9ce9acc08549d62aaddbbc6e.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

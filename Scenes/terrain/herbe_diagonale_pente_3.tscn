@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://celyu3lgubt1m"]
+
+[ext_resource type="ArrayMesh" uid="uid://cokh5cvj1e6l7" path="res://Assets/modular_terrain_collection/Hilly_Terrain_Hill_Side_Shift_Sharp.obj" id="1_lr8ot"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_htren"]
+data = PackedVector3Array(0, 1.05, 0.85, -1, 1.05, 0.15, 0, 0.35, -0.15, 0, 0.35, -0.15, -1, 1.05, 0.15, -1, 0.35, -0.85, 0, 1.2, 1.35, -1, 1.2, 0.65, 0, 1.05, 0.85, 0, 1.05, 0.85, -1, 1.2, 0.65, -1, 1.05, 0.15, -1.5, 1.2, 0.5, -1, 1.2, 0.65, -1.5, 1.2, 1.5, 0, 1.2, 1.35, 0.5, 1.2, 1.5, -1.5, 1.2, 1.5, -1, 1.2, 0.65, 0, 1.2, 1.35, -1.5, 1.2, 1.5, -1, 1.2, 0.65, -1.5, 1.2, 0.5, -1, 1.05, 0.15, -1, 1.05, 0.15, -1.5, 1.2, 0.5, -1.5, 1.05, 0, 0, 1.05, 0.85, 0.5, 1.05, 1, 0, 1.2, 1.35, 0, 1.2, 1.35, 0.5, 1.05, 1, 0.5, 1.2, 1.5, -1, 1.05, 0.15, -1.5, 1.05, 0, -1, 0.35, -0.85, -1, 0.35, -0.85, -1.5, 1.05, 0, -1.5, 0.35, -1, -1, 0.35, -0.85, -1.5, 0.35, -1, -1, 0.2, -1.35, -1, 0.2, -1.35, -1.5, 0.35, -1, -1.5, 0.2, -1.5, 0, 0.35, -0.15, -1, 0.35, -0.85, 0, 0.2, -0.65, 0, 0.2, -0.65, -1, 0.35, -0.85, -1, 0.2, -1.35, 0, 0.2, -0.65, 0.5, 0.2, -0.5, 0, 0.35, -0.15, 0, 0.35, -0.15, 0.5, 0.2, -0.5, 0.5, 0.35, 0, 0, 0.35, -0.15, 0.5, 0.35, 0, 0, 1.05, 0.85, 0, 1.05, 0.85, 0.5, 0.35, 0, 0.5, 1.05, 1)
+
+[node name="herbe diagonale pente 3" type="StaticBody3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_lr8ot")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("ConcavePolygonShape3D_htren")

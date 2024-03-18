@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bg37ocfg2mn0o"
+path="res://.godot/imported/Hilly_Prop_Fence_Curve_3x3.obj-fb74c3d46f9ccea2bc46eef2f95fd2a0.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Hilly_Prop_Fence_Curve_3x3.obj-fb74c3d46f9ccea2bc46eef2f95fd2a0.mesh"]
+
+source_file="res://Assets/modular_terrain_collection/Hilly_Prop_Fence_Curve_3x3.obj"
+dest_files=["res://.godot/imported/Hilly_Prop_Fence_Curve_3x3.obj-fb74c3d46f9ccea2bc46eef2f95fd2a0.mesh", "res://.godot/imported/Hilly_Prop_Fence_Curve_3x3.obj-fb74c3d46f9ccea2bc46eef2f95fd2a0.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

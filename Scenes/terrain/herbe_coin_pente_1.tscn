@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://bdokk46e1r7yo"]
+
+[ext_resource type="ArrayMesh" uid="uid://c5ctj8kpkd4ap" path="res://Assets/modular_terrain_collection/Hilly_Terrain_Hill_Corner_Outer_2x2.obj" id="1_r55to"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_64m53"]
+data = PackedVector3Array(-0.067, 1.05, 0.25, -0.5, 1.2, 0.5, -0.25, 1.05, 0.067, -0.25, 1.05, 0.067, -0.5, 1.2, 0.5, -0.5, 1.05, 0, -0.5, 1.05, 0, -0.5, 0.35, -1, -0.25, 1.05, 0.067, 0.25, 0.35, -0.7991, -0.25, 1.05, 0.067, -0.5, 0.35, -1, -0.5, 0.35, -1, -0.5, 0.2, -1.5, 0.25, 0.35, -0.7991, 0.5, 0.2, -1.2321, 0.25, 0.35, -0.7991, -0.5, 0.2, -1.5, 0.25, 0.35, -0.7991, 0.5, 0.2, -1.2321, 0.799, 0.35, -0.25, 1.232, 0.2, -0.5, 0.799, 0.35, -0.25, 0.5, 0.2, -1.2321, 0.799, 0.35, -0.25, 1.232, 0.2, -0.5, 1, 0.35, 0.5, 1.5, 0.2, 0.5, 1, 0.35, 0.5, 1.232, 0.2, -0.5, -0.067, 1.05, 0.25, 0.799, 0.35, -0.25, 0, 1.05, 0.5, 1, 0.35, 0.5, 0, 1.05, 0.5, 0.799, 0.35, -0.25, -0.25, 1.05, 0.067, 0.25, 0.35, -0.7991, -0.067, 1.05, 0.25, 0.799, 0.35, -0.25, -0.067, 1.05, 0.25, 0.25, 0.35, -0.7991, 0, 1.05, 0.5, -0.5, 1.2, 0.5, -0.067, 1.05, 0.25)
+
+[node name="herbe coin creux 1" type="StaticBody3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_r55to")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("ConcavePolygonShape3D_64m53")

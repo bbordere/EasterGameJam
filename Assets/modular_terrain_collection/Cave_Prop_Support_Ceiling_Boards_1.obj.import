@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://belo31mc85qfr"
+path="res://.godot/imported/Cave_Prop_Support_Ceiling_Boards_1.obj-0252cbc7a0ee10f13f9627c1cd7fea14.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Cave_Prop_Support_Ceiling_Boards_1.obj-0252cbc7a0ee10f13f9627c1cd7fea14.mesh"]
+
+source_file="res://Assets/modular_terrain_collection/Cave_Prop_Support_Ceiling_Boards_1.obj"
+dest_files=["res://.godot/imported/Cave_Prop_Support_Ceiling_Boards_1.obj-0252cbc7a0ee10f13f9627c1cd7fea14.mesh", "res://.godot/imported/Cave_Prop_Support_Ceiling_Boards_1.obj-0252cbc7a0ee10f13f9627c1cd7fea14.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://d34ink04fxd8b"]
+
+[ext_resource type="ArrayMesh" uid="uid://c65p805ym7asf" path="res://Assets/modular_terrain_collection/Hilly_Terrain_Hill_Side_Overlap_Side.obj" id="1_ph1yg"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_48bxb"]
+data = PackedVector3Array(0, 1.2, 1, 0, 1.35, 1.5, -1, 1.9, 1, -1, 1.9, 1, 0, 1.35, 1.5, -1, 2.05, 1.5, 0.5, 1.05, 1, 0.5, 1.2, 1.5, 0, 1.2, 1, 0, 1.2, 1, 0.5, 1.2, 1.5, 0, 1.35, 1.5, 0.5, 0.35, 0, 0.5, 1.05, 1, 0, 0.5, 0, 0, 0.5, 0, 0.5, 1.05, 1, 0, 1.2, 1, 0.5, 0.2, -0.5, 0.5, 0.35, 0, 0, 0.35, -0.5, 0, 0.35, -0.5, 0.5, 0.35, 0, 0, 0.5, 0, 0, 0.35, -0.5, 0, 0.5, 0, -1, 1.05, -0.5, -1, 1.05, -0.5, 0, 0.5, 0, -1, 1.2, 0, -1, 1.05, -0.5, -1, 1.2, 0, -1.5, 1.2, -0.5, -1.5, 1.2, -0.5, -1, 1.2, 0, -1.5, 1.35, 0, -1, 1.2, 0, -1, 1.9, 1, -1.5, 1.35, 0, -1.5, 1.35, 0, -1, 1.9, 1, -1.5, 2.05, 1, -1, 1.9, 1, -1, 2.05, 1.5, -1.5, 2.05, 1, -1.5, 2.05, 1, -1, 2.05, 1.5, -1.5, 2.2, 1.5, 0, 0.5, 0, 0, 1.2, 1, -1, 1.2, 0, -1, 1.2, 0, 0, 1.2, 1, -1, 1.9, 1)
+
+[node name="herbe diagonale pente 1" type="StaticBody3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_ph1yg")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("ConcavePolygonShape3D_48bxb")
