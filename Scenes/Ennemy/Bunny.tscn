@@ -901,10 +901,6 @@ script = ExtResource("6_uuxwy")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" index="0"]
 shape = SubResource("CylinderShape3D_6b68e")
 
-[node name="NavigationAgent3D" parent="." index="8"]
-avoidance_enabled = true
-use_3d_avoidance = true
-
 [node name="FaceDirection" parent="." index="9"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.697047, 0)
 

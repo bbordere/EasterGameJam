@@ -35,3 +35,5 @@ wait_time = 3.0
 [node name="FaceDirection" type="Node3D" parent="."]
 
 [node name="Hurt" type="AnimationPlayer" parent="."]
+
+[connection signal="velocity_computed" from="NavigationAgent3D" to="." method="_on_navigation_agent_3d_velocity_computed"]

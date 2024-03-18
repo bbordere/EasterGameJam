@@ -20,19 +20,18 @@ func chooseRandomDir():
 	target.y = 0;
 	target.z = randi_range(-20, 20);
 	target += owner.global_position;
+	navAgent.set_target_position(target);
 	
 	
 func update(delta: float) -> void:
 	var next = navAgent.get_next_path_position();
-	navAgent.set_target_position(target);
-	
+
 	SafeLookAt.safe_look_at(owner.get_node("FaceDirection"), next);
 	owner.rotation.y = lerp_angle(owner.rotation.y, owner.get_node("FaceDirection").global_rotation.y, 5 * delta)
 
 	var vel = (next - owner.global_transform.origin).normalized() * owner.SPEED;
 	owner.velocity = vel;
 
-	
 	if owner.playerDetected:
 		owner.get_node("Timer").stop();
 		state_machine.transition_to("Chasing", {"Attack": "Fireball" if owner is Bell else "Melee"});

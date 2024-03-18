@@ -20,6 +20,9 @@ var canDash = true;
 @export var weaponBobAmount: float = 0.02;
 @export var weaponBobFreq: float = 0.02;
 
+var BasketScene = preload("res://Scenes/Basket.tscn")
+var basketInstance = null;
+
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
@@ -57,7 +60,7 @@ func weaponBob(vel, delta):
 
 func dash(direction):
 	canDash = false
-	var unsignedDir = Vector2(abs(direction.x), abs(direction.z));;
+	var unsignedDir = Vector2(abs(direction.x), abs(direction.z));
 	if unsignedDir.x < 0.1 and unsignedDir.y < 0.1:
 		return;
 	if (unsignedDir.x > unsignedDir.y):
@@ -69,6 +72,14 @@ func dash(direction):
 	$DashCooldown.start();
 	
 func _physics_process(delta):
+	if Input.is_action_just_pressed("ui_left"):
+		basketInstance = BasketScene.instantiate();
+		basketInstance.position = global_position;
+		basketInstance.transform.basis = global_transform.basis;
+		get_tree().root.add_child(basketInstance);
+		SafeLookAt.safe_look_at(basketInstance, Globals.playerReference.global_position);
+
+	
 	if not is_on_floor():
 		if Input.is_action_just_pressed("ui_accept") and Globals.skills["double_jump"] and canSecondJump:
 			velocity.y = JUMP_VELOCITY
@@ -85,11 +96,11 @@ func _physics_process(delta):
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var input_dir = Input.get_vector("left", "right", "forward", "backward")
-	direction = lerp(direction, (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized(), 
-						delta * LERP_SPEED);
-	
 	if Input.is_action_just_pressed("dash") and Globals.skills["dash"] and canDash:
 		dash(direction)
+	direction = lerp(direction, (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized(), 
+						delta * LERP_SPEED);
+
 	extraVel = lerp(extraVel, Vector3.ZERO, 0.1)
 	$Head/Camera3D.set_fov(lerp($Head/Camera3D.fov, 90.0, 0.1));
 	
