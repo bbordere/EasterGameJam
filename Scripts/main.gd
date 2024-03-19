@@ -12,4 +12,3 @@ func _process(delta):
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE);
 	if Input.is_key_pressed(KEY_F2):
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED);
-	# Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED);

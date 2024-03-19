@@ -34,7 +34,7 @@ filter_ledge_spans = true
 script = ExtResource("1_awjpl")
 
 [node name="Player" parent="." instance=ExtResource("1_a7t0e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.7964, 2.9351, 15.8491)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.7964, 1.02583, -11.1659)
 
 [node name="Env" type="Node3D" parent="."]
 
