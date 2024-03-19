@@ -45,6 +45,7 @@ var target_rot : Vector3
 var target_pos : Vector3
 var current_time : float
 var canShoot = true;
+var isTerminator = false;
 
 func _ready():
 	randomize();
@@ -53,7 +54,7 @@ func _ready():
 	def_pos = position;
 
 func _physics_process(delta):
-	if Input.is_action_just_pressed("fire") and Globals.ammo != 0 and canShoot:
+	if Input.is_action_just_pressed("fire") and (Globals.ammo != 0 or isTerminator) and canShoot:
 		canShoot = false;
 		$Timer.start();
 		for pellet in range(pelletsNumber):
@@ -63,8 +64,9 @@ func _physics_process(delta):
 			instance.rotation.x += randf_range(0, 0.2);
 			instance.rotation.y += randf_range(-0.2, 0.2);
 			get_tree().root.add_child(instance);
-		Globals.ammo -= 1;
-		Globals.updateAmmoLabel.emit();
+		if !isTerminator:
+			Globals.ammo -= 1;
+			Globals.updateAmmoLabel.emit();
 		apply_recoil();
 		
 		

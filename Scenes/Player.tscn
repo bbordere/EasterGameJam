@@ -284,5 +284,10 @@ shape = SubResource("CapsuleShape3D_rfnln")
 [node name="DashCooldown" type="Timer" parent="."]
 wait_time = 2.0
 
+[node name="StunCooldown" type="Timer" parent="."]
+wait_time = 10.0
+autostart = true
+
 [connection signal="timeout" from="Head/Weapon/Timer" to="Head/Weapon" method="_on_timer_timeout"]
 [connection signal="timeout" from="DashCooldown" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="StunCooldown" to="." method="_on_stun_cooldown_timeout"]
