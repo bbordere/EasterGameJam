@@ -3,6 +3,7 @@ extends CharacterBody3D
 class_name Dummy
 
 var hp = 100;
+var scorePoints = 0;
 
 var SPEED = 3.0
 
@@ -58,3 +59,4 @@ func _process(delta):
 		$AnimationPlayer.play("death");
 		await get_tree().create_timer(0.1).timeout;
 		queue_free()
+		Globals.addScore.emit(scorePoints);

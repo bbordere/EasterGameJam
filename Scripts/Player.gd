@@ -6,7 +6,6 @@ var speed = Globals.DEFAULT_SPEED;
 const JUMP_VELOCITY = 4.5
 const LERP_SPEED = 10.0
 
-var mouseSensi = 0.2
 var direction = Vector3.ZERO
 var extraVel := Vector3.ZERO
 var inputMouse := Vector2.ZERO
@@ -56,7 +55,7 @@ func weaponSpeedBuff():
 	$Head/Weapon/Timer.wait_time = 0.6;
 	$Head/Weapon.isTerminator = false;
 	
-	
+
 func dmgBuff():
 	Globals.setMultiplier.emit(3);
 	await get_tree().create_timer(randi_range(10, 20)).timeout
@@ -76,8 +75,8 @@ func catchEgg(catchStatus):
 
 func _input(event):
 	if event is InputEventMouseMotion:
-		rotate_y(deg_to_rad(-event.relative.x * mouseSensi))
-		$Head.rotate_x(deg_to_rad(-event.relative.y * mouseSensi))
+		rotate_y(deg_to_rad(-event.relative.x * Globals.mouseSensi));
+		$Head.rotate_x(deg_to_rad(-event.relative.y * Globals.mouseSensi));
 		$Head.rotation.x = clamp($Head.rotation.x, deg_to_rad(-89), deg_to_rad(89));
 		inputMouse = event.relative;
 

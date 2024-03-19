@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bur43nicmr273"]
+[gd_scene load_steps=16 format=3 uid="uid://bur43nicmr273"]
 
 [ext_resource type="PackedScene" uid="uid://dsug45yib05j4" path="res://Scenes/Player.tscn" id="1_a7t0e"]
 [ext_resource type="Script" path="res://Scripts/main.gd" id="1_awjpl"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://iusk221uwkve" path="res://Scenes/Hud.tscn" id="7_ndr64"]
 [ext_resource type="Material" uid="uid://dujago537ks2f" path="res://Materials/Eggs/1.tres" id="7_ohfkw"]
 [ext_resource type="Material" uid="uid://blb04aqpx3hbo" path="res://Materials/Eggs/3.tres" id="9_r0vuf"]
+[ext_resource type="PackedScene" uid="uid://byvt64gmyy23m" path="res://Scenes/Hen.tscn" id="12_yuokd"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ps8ey"]
 
@@ -109,3 +110,6 @@ material = ExtResource("7_ohfkw")
 [node name="Egg4" parent="." instance=ExtResource("7_dlu2j")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.06425, 6.51678)
 material = ExtResource("9_r0vuf")
+
+[node name="Hen" parent="." instance=ExtResource("12_yuokd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.54599, 1.51456, -1.08832)

@@ -13,8 +13,6 @@ var isStunned = false;
 
 @export var material: Material;
 
-
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	if Engine.is_editor_hint():
@@ -23,7 +21,6 @@ func _ready():
 	$AnimationPlayer.stop()
 
 	$"Sphère".set_surface_override_material (0, material);
-
 	await get_tree().create_timer(randf_range(0.2, 0.4)).timeout
 	$AnimationPlayer.play("default");
 	chooseRandomDir();
