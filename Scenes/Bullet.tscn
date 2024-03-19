@@ -8,15 +8,17 @@ height = 2.0
 is_hemisphere = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_duipj"]
+shading_mode = 0
 albedo_color = Color(0.780392, 0.611765, 0.427451, 1)
-emission = Color(0.407843, 0.521569, 0.603922, 1)
-emission_energy_multiplier = 0.67
+grow_amount = 10.0
 
 [node name="Bullet" type="Node3D"]
 script = ExtResource("1_bnj41")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.1, 0, 0, 0, 4.5482e-09, -0.1, 0, -0.104051, -4.37114e-09, 0, 0, 0)
+cast_shadow = 0
+gi_mode = 0
 mesh = SubResource("SphereMesh_y1ae6")
 surface_material_override/0 = SubResource("StandardMaterial3D_duipj")
 

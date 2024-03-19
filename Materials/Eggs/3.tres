@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://blb04aqpx3hbo"]
+
+[ext_resource type="Texture2D" uid="uid://hbxowufiq7lq" path="res://Assets/Textures/Eggs/3.png" id="1_hkub2"]
+
+[resource]
+albedo_texture = ExtResource("1_hkub2")
+texture_filter = 0

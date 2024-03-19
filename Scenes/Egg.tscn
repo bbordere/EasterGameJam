@@ -1,19 +1,15 @@
-[gd_scene load_steps=13 format=3 uid="uid://ct41ick1xdaqd"]
+[gd_scene load_steps=12 format=3 uid="uid://ct41ick1xdaqd"]
 
 [ext_resource type="Script" path="res://Scripts/Egg.gd" id="2_a07li"]
-[ext_resource type="Texture2D" uid="uid://ccbd0plxeywb4" path="res://Assets/Textures/Egg_EggColor.png" id="3_rmeft"]
+[ext_resource type="Material" uid="uid://dtcfn0ho8mk1k" path="res://Materials/Basket.tres" id="3_c1kcr"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_7ov5m"]
 height = 1.09348
 radius = 0.710802
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i217t"]
-albedo_texture = ExtResource("3_rmeft")
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6knfa"]
 resource_name = "Material.001"
 cull_mode = 2
-albedo_texture = ExtResource("3_rmeft")
 roughness = 0.5
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_t03fh"]
@@ -164,30 +160,32 @@ script = ExtResource("2_a07li")
 
 [node name="Area3D" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.145269, 0)
+visible = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
 shape = SubResource("CylinderShape3D_7ov5m")
 
 [node name="Sphère" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0, 0)
-material_override = SubResource("StandardMaterial3D_i217t")
 mesh = SubResource("ArrayMesh_q43eo")
 skeleton = NodePath("")
 
 [node name="Torus" type="CSGTorus3D" parent="Sphère"]
 transform = Transform3D(2.55524, 0, 0, 0, 2.49883, 0, 0, 0, 2.55399, 0, 0, 0)
 visible = false
+material_override = ExtResource("3_c1kcr")
 inner_radius = 0.56875
 outer_radius = 0.427263
+sides = 20
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_kim2r")
 }
-autoplay = "default"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.13544, 0)
+visible = false
 shape = SubResource("CapsuleShape3D_2j7me")
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]

@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://wgcwgmmul2kt"]
+[gd_scene load_steps=4 format=3 uid="uid://wgcwgmmul2kt"]
 
 [ext_resource type="Script" path="res://Scripts/Basket.gd" id="1_0v8dg"]
+[ext_resource type="Material" uid="uid://dtcfn0ho8mk1k" path="res://Materials/Basket.tres" id="2_eao1y"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_j81ya"]
 height = 0.523634
@@ -10,6 +11,8 @@ radius = 1.03006
 script = ExtResource("1_0v8dg")
 
 [node name="CSGTorus3D" type="CSGTorus3D" parent="."]
+sides = 20
+material = ExtResource("2_eao1y")
 
 [node name="Area3D" type="Area3D" parent="."]
 

@@ -1,10 +1,14 @@
-[gd_scene load_steps=11 format=3 uid="uid://bur43nicmr273"]
+[gd_scene load_steps=15 format=3 uid="uid://bur43nicmr273"]
 
 [ext_resource type="PackedScene" uid="uid://dsug45yib05j4" path="res://Scenes/Player.tscn" id="1_a7t0e"]
 [ext_resource type="Script" path="res://Scripts/main.gd" id="1_awjpl"]
 [ext_resource type="PackedScene" uid="uid://dh7u8fkosls11" path="res://Scenes/AmmoBox.tscn" id="2_y1o2f"]
+[ext_resource type="Material" uid="uid://7uek31lw32ld" path="res://Materials/Eggs/0.tres" id="6_ybwia"]
+[ext_resource type="Material" uid="uid://dwr5a7hs2sebj" path="res://Materials/Eggs/2.tres" id="7_cx0c4"]
 [ext_resource type="PackedScene" uid="uid://ct41ick1xdaqd" path="res://Scenes/Egg.tscn" id="7_dlu2j"]
 [ext_resource type="PackedScene" uid="uid://iusk221uwkve" path="res://Scenes/Hud.tscn" id="7_ndr64"]
+[ext_resource type="Material" uid="uid://dujago537ks2f" path="res://Materials/Eggs/1.tres" id="7_ohfkw"]
+[ext_resource type="Material" uid="uid://blb04aqpx3hbo" path="res://Materials/Eggs/3.tres" id="9_r0vuf"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ps8ey"]
 
@@ -29,7 +33,7 @@ filter_ledge_spans = true
 script = ExtResource("1_awjpl")
 
 [node name="Player" parent="." instance=ExtResource("1_a7t0e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.9351, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.7964, 2.9351, 15.8491)
 
 [node name="Env" type="Node3D" parent="."]
 
@@ -38,6 +42,7 @@ environment = SubResource("Environment_g62dl")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Env"]
 transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433012, -554.403, 15.1439, 295.356)
+light_energy = 0.5
 shadow_enabled = true
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
@@ -87,16 +92,20 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.0438, 1, 2.51577)
 [node name="AmmoBox5" parent="NavigationRegion3D/Level" instance=ExtResource("2_y1o2f")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.3977, 1, 20.8021)
 
-[node name="Egg" parent="." instance=ExtResource("7_dlu2j")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.988623, 5.27001, -21.3576)
-
-[node name="Egg30" parent="." instance=ExtResource("7_dlu2j")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.97675, 0.685108, 24.8253)
-
-[node name="Egg31" parent="." instance=ExtResource("7_dlu2j")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.04524, 0.685108, -3.07789)
-
-[node name="Egg32" parent="." instance=ExtResource("7_dlu2j")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.4468, 0.685108, 15.1746)
-
 [node name="Hud" parent="." instance=ExtResource("7_ndr64")]
+
+[node name="Egg" parent="." instance=ExtResource("7_dlu2j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.10613, 4.09179)
+material = ExtResource("6_ybwia")
+
+[node name="Egg3" parent="." instance=ExtResource("7_dlu2j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.10613, 5.41464)
+material = ExtResource("7_cx0c4")
+
+[node name="Egg2" parent="." instance=ExtResource("7_dlu2j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.06425, 2.77329)
+material = ExtResource("7_ohfkw")
+
+[node name="Egg4" parent="." instance=ExtResource("7_dlu2j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.06425, 6.51678)
+material = ExtResource("9_r0vuf")

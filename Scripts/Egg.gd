@@ -1,3 +1,5 @@
+@tool
+
 extends CharacterBody3D
 
 class_name Egg
@@ -9,10 +11,19 @@ var isStunned = false;
 
 @export var type: NamedEnum
 
+@export var material: Material;
+
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	if Engine.is_editor_hint():
+		return;
+
 	$AnimationPlayer.stop()
+
+	$"Sphère".set_surface_override_material (0, material);
+
 	await get_tree().create_timer(randf_range(0.2, 0.4)).timeout
 	$AnimationPlayer.play("default");
 	chooseRandomDir();
@@ -36,6 +47,10 @@ func stun():
 	isStunned = false;
 	
 func _process(delta):
+	if Engine.is_editor_hint():
+		$"Sphère".set_surface_override_material (0, material);
+		return;
+
 	if isStunned:
 		return;
 	if $NavigationAgent3D.is_navigation_finished():
