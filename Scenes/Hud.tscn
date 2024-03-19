@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://iusk221uwkve"]
+[gd_scene load_steps=7 format=3 uid="uid://iusk221uwkve"]
 
 [ext_resource type="Script" path="res://Scripts/Hud.gd" id="1_ccm71"]
 [ext_resource type="Texture2D" uid="uid://bxqd72evivsks" path="res://Assets/HUD/shotgun_shell.PNG" id="2_6e4ph"]
 [ext_resource type="Texture2D" uid="uid://cuyyx3lkfy4d5" path="res://Assets/HUD/Heartpoly.png" id="3_chvyx"]
 [ext_resource type="Texture2D" uid="uid://b0me7tin45pgb" path="res://Assets/HUD/Egg1.png" id="4_axyci"]
+[ext_resource type="Texture2D" uid="uid://ch8j65mgojohx" path="res://Assets/HUD/viseur-removebg-preview.png" id="5_qv7jm"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hxctc"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -84,6 +85,7 @@ offset_top = -23.0
 offset_right = 26.0
 grow_horizontal = 2
 grow_vertical = 0
+text = "Health 100"
 
 [node name="TextureRect3" type="TextureRect" parent="Hud/Panel"]
 layout_mode = 1
@@ -98,4 +100,34 @@ offset_bottom = 18.0
 grow_horizontal = 0
 grow_vertical = 2
 texture = ExtResource("4_axyci")
+expand_mode = 1
+
+[node name="Egg" type="Label" parent="Hud/Panel"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -46.0
+offset_top = -5.0
+offset_right = 2.0
+offset_bottom = 18.0
+grow_horizontal = 0
+grow_vertical = 2
+text = "0"
+
+[node name="TextureRect" type="TextureRect" parent="Hud"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -13.5
+offset_right = 25.0
+offset_bottom = 13.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_qv7jm")
 expand_mode = 1

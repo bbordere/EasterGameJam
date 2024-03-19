@@ -13,7 +13,7 @@ signal giveAmmo(number);
 signal giveEgg(number);
 signal updateAmmoLabel;
 signal updateHealthLabel;
-signal updateEggTextureRect;
+signal updateEggLabel;
 signal setMultiplier(value);
 
 func _ready():
@@ -31,7 +31,7 @@ func giveAmmoFunc(number: int):
 func giveEggFunc(number: int):
 #	mettre l id plutot de l egg 
 	egg += number;
-	Globals.updateEggTextureRect.emit()
+	Globals.updateEggLabel.emit()
 
 func _process(_delta):
 	pass
