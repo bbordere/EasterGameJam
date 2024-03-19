@@ -2,7 +2,7 @@ extends CharacterBody3D
 
 class_name Player
 
-const SPEED = 5.0
+var speed = Globals.DEFAULT_SPEED;
 const JUMP_VELOCITY = 4.5
 const LERP_SPEED = 10.0
 
@@ -13,6 +13,8 @@ var inputMouse := Vector2.ZERO
 var defaultWeaponPos := Vector3.ZERO
 var canSecondJump = false;
 var canDash = true;
+var canStun = true;
+var isRunning = false;
 
 @export var camTiltAmount: float = 0.05;
 @export var weaponTiltAmount: float = 0.1;
@@ -28,8 +30,49 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
 func _ready():
 	Globals.playerReference = self;
+	Globals.catchEgg.connect(catchEgg);
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED);
 	defaultWeaponPos = $Head/Weapon.position;
+
+func speedBuff():
+	if isRunning:
+		return;
+	speed = 10;
+	isRunning = true;
+	var tween = get_tree().create_tween()
+	tween.tween_property($Head/Camera3D, "fov", 120, 0.1);
+	weaponBobFreq = 0.04;
+	weaponBobAmount = 0.04;
+	await get_tree().create_timer(randi_range(10, 20)).timeout
+	isRunning = false;
+	weaponBobAmount = 0.02;
+	weaponBobFreq = 0.02;
+	speed = Globals.DEFAULT_SPEED;
+	
+func weaponSpeedBuff():
+	$Head/Weapon/Timer.wait_time = 0.2;
+	$Head/Weapon.isTerminator = true;
+	await get_tree().create_timer(randi_range(5, 10)).timeout
+	$Head/Weapon/Timer.wait_time = 0.6;
+	$Head/Weapon.isTerminator = false;
+	
+	
+func dmgBuff():
+	Globals.setMultiplier.emit(3);
+	await get_tree().create_timer(randi_range(10, 20)).timeout
+	Globals.setMultiplier.emit(1);
+	
+func scoreBuff():
+	Globals.setMultiplier.emit(2);
+	await get_tree().create_timer(randi_range(10, 20)).timeout
+	Globals.setMultiplier.emit(1);
+
+func catchEgg(catchStatus):
+	if catchStatus:
+		canStun = true;
+	var buffsFct = [speedBuff, weaponSpeedBuff, dmgBuff, scoreBuff];
+	var buff = randi_range(0, 1);
+	buffsFct[buff].call();
 
 func _input(event):
 	if event is InputEventMouseMotion:
@@ -67,17 +110,19 @@ func dash(direction):
 		extraVel.x += sign(direction.x) * 40;
 	else:
 		extraVel.z += sign(direction.z) * 40;
-	var tween = get_tree().create_tween()
-	tween.tween_property($Head/Camera3D, "fov", 95, 0.1);
+	if $Head/Camera3D.fov < 100:
+		var tween = get_tree().create_tween()
+		tween.tween_property($Head/Camera3D, "fov", 95, 0.1);
 	$DashCooldown.start();
 	
 func _physics_process(delta):
-	if Input.is_action_just_pressed("ui_left"):
+	if Input.is_action_just_pressed("stun") and canStun:
+		canStun = false;
 		basketInstance = BasketScene.instantiate();
-		basketInstance.position = global_position;
-		basketInstance.transform.basis = global_transform.basis;
+		basketInstance.position = position;
+		basketInstance.position.y += 0.4;
+		basketInstance.transform.basis = $Head.global_transform.basis;
 		get_tree().root.add_child(basketInstance);
-		SafeLookAt.safe_look_at(basketInstance, Globals.playerReference.global_position);
 
 	
 	if not is_on_floor():
@@ -102,15 +147,16 @@ func _physics_process(delta):
 						delta * LERP_SPEED);
 
 	extraVel = lerp(extraVel, Vector3.ZERO, 0.1)
-	$Head/Camera3D.set_fov(lerp($Head/Camera3D.fov, 90.0, 0.1));
+	if !isRunning:
+		$Head/Camera3D.set_fov(lerp($Head/Camera3D.fov, Globals.DEFAULT_FOV, 0.1));
 	
 	if direction:
-		velocity.x = direction.x * SPEED
-		velocity.z = direction.z * SPEED
+		velocity.x = direction.x * speed
+		velocity.z = direction.z * speed
 		velocity += extraVel;
 	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-		velocity.z = move_toward(velocity.z, 0, SPEED)
+		velocity.x = move_toward(velocity.x, 0, speed)
+		velocity.z = move_toward(velocity.z, 0, speed)
 	move_and_slide()
 	camTilt(input_dir, delta);
 	weaponTilt(input_dir, delta);
@@ -130,3 +176,6 @@ func knock(pos, strength):
 
 func _on_timer_timeout():
 	canDash = true;
+
+func _on_stun_cooldown_timeout():
+	canStun = true;

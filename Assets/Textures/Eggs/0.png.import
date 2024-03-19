@@ -2,17 +2,18 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dqqj81sa7ftjs"
-path.s3tc="res://.godot/imported/Circle03.png-ad76dc4891bc5a4169591d8e7ea162ec.s3tc.ctex"
+uid="uid://ccbd0plxeywb4"
+path.s3tc="res://.godot/imported/0.png-e9d09649bd3bd639a8cc1470d3d6d210.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={}
 
 [deps]
 
-source_file="res://Assets/Vfx/Explosion/Circle03.png"
-dest_files=["res://.godot/imported/Circle03.png-ad76dc4891bc5a4169591d8e7ea162ec.s3tc.ctex"]
+source_file="res://Assets/Textures/Eggs/0.png"
+dest_files=["res://.godot/imported/0.png-e9d09649bd3bd639a8cc1470d3d6d210.s3tc.ctex"]
 
 [params]
 

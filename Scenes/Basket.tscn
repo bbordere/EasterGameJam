@@ -1,8 +1,27 @@
-[gd_scene load_steps=2 format=3 uid="uid://wgcwgmmul2kt"]
+[gd_scene load_steps=4 format=3 uid="uid://wgcwgmmul2kt"]
 
 [ext_resource type="Script" path="res://Scripts/Basket.gd" id="1_0v8dg"]
+[ext_resource type="Material" uid="uid://dtcfn0ho8mk1k" path="res://Materials/Basket.tres" id="2_eao1y"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_j81ya"]
+height = 0.523634
+radius = 1.03006
 
 [node name="Basket" type="Node3D"]
 script = ExtResource("1_0v8dg")
 
 [node name="CSGTorus3D" type="CSGTorus3D" parent="."]
+sides = 20
+material = ExtResource("2_eao1y")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("CylinderShape3D_j81ya")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+autostart = true
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
