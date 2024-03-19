@@ -29,6 +29,5 @@ func _on_back_button_button_up():
 	$Menu/MarginContainer3/VBoxContainer/BackButton.visible = false;
 
 
-func _on_sensitivity_h_slider_value_changed(value):
-	$Background/World/Player.mouseSensi = value;
-	print("value = ", value, "mouseSensi", $Background/World/Player.mouseSensi);
+func _on_sensitivity_h_slider_value_changed(value: float):
+	Globals.mouseSensi = value;
