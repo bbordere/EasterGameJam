@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://dwdn5orthq83s"]
+
+[ext_resource type="ArrayMesh" uid="uid://c1qjs0ty5bmpk" path="res://Assets/modular_terrain_collection/Cliff_Terrain_Corner_Outer_3x3_Mid.obj" id="1_y3teq"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_tgigh"]
+data = PackedVector3Array(0.6733, 1, 0.9176, 0.6733, 0, 0.9176, 0.5, 1, 1.5, 0.5, 1, 1.5, 0.6733, 0, 0.9176, 0.5, 0, 1.5, 0.232, 1, 0.5, 0.232, 0, 0.5, 0.6733, 1, 0.9176, 0.6733, 1, 0.9176, 0.232, 0, 0.5, 0.6733, 0, 0.9176, 0.091, 1, -0.091, 0.091, 0, -0.091, 0.232, 1, 0.5, 0.232, 1, 0.5, 0.091, 0, -0.091, 0.232, 0, 0.5, -0.5, 1, -0.2321, -0.5, 0, -0.2321, 0.091, 1, -0.091, 0.091, 1, -0.091, -0.5, 0, -0.2321, 0.091, 0, -0.091, -0.9369, 1, -0.6784, -0.9369, 0, -0.6784, -0.5, 1, -0.2321, -0.5, 1, -0.2321, -0.9369, 0, -0.6784, -0.5, 0, -0.2321, -0.9369, 0, -0.6784, -0.9369, 1, -0.6784, -1.5, 0, -0.5, -1.5, 0, -0.5, -0.9369, 1, -0.6784, -1.5, 1, -0.5)
+
+[node name="fallaise coin 15" type="StaticBody3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_y3teq")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("ConcavePolygonShape3D_tgigh")

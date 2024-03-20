@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://ypi27ukuk5nq"]
+
+[ext_resource type="ArrayMesh" uid="uid://uiiwmnhgw6yk" path="res://Assets/modular_terrain_collection/Cave_Prop_Railway_Straight_1.obj" id="1_2fja8"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ilch6"]
+points = PackedVector3Array(-0.900059, 0.0499951, -0.5, -0.955266, 0, -0.375, -1, 0, -0.369421, -0.900059, 0.124995, -0.5, -0.100039, 0.0499951, -0.5, 0, 0, -0.375, -1, 0.0624902, -0.369421, -1, 0, 0.374902, -0.875098, 0.15, -0.5, -0.100039, 0.124995, -0.5, 0, 0.0624902, -0.375, 0, 0, -0.125, -1, 0.0624902, 0.374902, -0.900059, 0.0499951, 0.499902, -9.78708e-05, 0, 0.374902, -0.25, 0.0499951, 0.5, -0.875098, 0.15, 0.499902, -0.775059, 0.15, -0.5, -0.125098, 0.149985, -0.5, 0, 0.0624902, -0.125, -0.900059, 0.124995, 0.499902, -9.78708e-05, 0.0624902, 0.374902, -0.100039, 0.0499951, 0.5, -0.25, 0.124995, 0.5, -0.225039, 0.149985, 0.5, -0.775059, 0.15, 0.499902, -0.125098, 0.149985, 0.5, -0.100039, 0.124995, 0.5)
+
+[node name="props cave 7" type="StaticBody3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_2fja8")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("ConvexPolygonShape3D_ilch6")
