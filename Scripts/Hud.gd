@@ -6,6 +6,8 @@ func _ready():
 	Globals.updateAmmoLabel.connect(updateAmmo);
 	Globals.updateHealthLabel.connect(updateHealth);
 	Globals.updateEggLabel.connect(updateEgg);
+	Globals.setScoreMultiplier.connect(updateScore)
+	Globals.addScore.connect(updateMultiplier)
 
 func updateAmmo():
 	$Hud/Panel/Ammo.text = str(Globals.ammo);
@@ -16,6 +18,9 @@ func updateHealth():
 func updateEgg():
 	$Hud/Panel/Egg.text = str(Globals.egg);
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+func updateScore():
+	$Hud/Score.text = "Score : " + str(Globals.score)
+
+func updateMultiplier():
+	$Hud/Multiplier.text = "X " + str(Globals.scoreMultiplier)
+
