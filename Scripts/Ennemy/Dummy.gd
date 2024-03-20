@@ -2,16 +2,25 @@ extends CharacterBody3D
 
 class_name Dummy
 
-var hp = 100;
+var defaultHp = 100;
+
+var hp = defaultHp;
 var scorePoints = 0;
+var instance = null;
 
 var SPEED = 3.0
+var startingPos = Vector3.ZERO;
 
 var playerDetected = false;
 var canAttack = false;
+var isDisabled = false;
+var outOfRange = false;
+
+var ammoScene = preload("res://Scenes/AmmoBox.tscn");
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	startingPos = global_position;
 	add_to_group("ennemies");
 	$Hp.text = "HP: " + str(hp);
 	$StateMachine.connect("switch", updateState);
@@ -55,8 +64,39 @@ func _on_area_3d_body_exited(body):
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if (hp == 0):
-		$AnimationPlayer.play("death");
-		await get_tree().create_timer(0.1).timeout;
-		queue_free()
+	if outOfRange:
+		return;
+	if (hp == 0 and !isDisabled):
+		#$AnimationPlayer.play("death");
+		hp = defaultHp;
 		Globals.addScore.emit(scorePoints);
+		await get_tree().create_timer(0.1).timeout;
+		visible = false;
+		isDisabled = true;
+		var r = randi_range(0, 3);
+		if (r == 2):
+			instance = ammoScene.instantiate();
+			instance.global_position = global_position;
+			get_tree().root.add_child(instance);
+		global_position = startingPos;
+		await get_tree().create_timer(5).timeout;
+		reset();
+		visible = true;
+		isDisabled = false;
+
+func reset():
+	$AnimationPlayer.play("RESET");
+
+func enable():
+	pass
+
+func disable():
+	pass
+
+func _on_disable_timeout():
+	if global_position.distance_to(Globals.playerReference.global_position) > 65:
+		outOfRange = true;
+		disable();
+	else:
+		outOfRange = false;
+		enable();

@@ -161,6 +161,7 @@ script = ExtResource("2_a07li")
 [node name="Area3D" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.145269, 0)
 visible = false
+monitorable = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
 shape = SubResource("CylinderShape3D_7ov5m")
@@ -192,4 +193,13 @@ shape = SubResource("CapsuleShape3D_2j7me")
 
 [node name="FaceDirection" type="Node3D" parent="."]
 
+[node name="StuckTimer" type="Timer" parent="."]
+autostart = true
+
+[node name="Respawn" type="Timer" parent="."]
+wait_time = 10.0
+one_shot = true
+
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="timeout" from="StuckTimer" to="." method="_on_stuck_timer_timeout"]
+[connection signal="timeout" from="Respawn" to="." method="_on_respawn_timeout"]

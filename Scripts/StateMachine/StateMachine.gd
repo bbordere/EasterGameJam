@@ -20,9 +20,13 @@ func _unhandled_input(event: InputEvent) -> void:
 	state.handle_input(event)
 
 func _process(delta: float) -> void:
+	if owner.isDisabled:
+		return;
 	state.update(delta)
 
 func _physics_process(delta: float) -> void:
+	if owner.isDisabled:
+		return;
 	state.physics_update(delta)
 
 func transition_to(target_state_name: String, msg: Dictionary = {}) -> void:

@@ -1,6 +1,6 @@
 extends Node
 
-var ammo = 0;
+var ammo = 20;
 var health = 100;
 var dmgMultiplier = 1.0;
 var egg = 0;
@@ -25,12 +25,15 @@ signal setScoreMultiplier(value);
 signal catchEgg(stunStatus);
 signal addScore(value);
 
+var timer = null;
+
 func _ready():
 	giveAmmo.connect(giveAmmoFunc);
 	giveEgg.connect(giveEggFunc);
 	setMultiplier.connect(setMultiplierFunc);
 	setScoreMultiplier.connect(setScoreMultiplierFunc);
 	addScore.connect(addScoreFunc);
+	timer = get_tree().create_timer(180);
 
 func setMultiplierFunc(value):
 	dmgMultiplier = value;

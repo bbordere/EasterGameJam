@@ -10,6 +10,7 @@ var direction = Vector3.ZERO
 var extraVel := Vector3.ZERO
 var inputMouse := Vector2.ZERO
 var defaultWeaponPos := Vector3.ZERO
+var startingPos := Vector3.ZERO
 var canSecondJump = false;
 var canDash = true;
 var canStun = true;
@@ -32,6 +33,7 @@ func _ready():
 	Globals.catchEgg.connect(catchEgg);
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED);
 	defaultWeaponPos = $Head/Weapon.position;
+	startingPos = global_position;
 
 func speedBuff():
 	if isRunning:
@@ -51,9 +53,15 @@ func speedBuff():
 func weaponSpeedBuff():
 	$Head/Weapon/Timer.wait_time = 0.2;
 	$Head/Weapon.isTerminator = true;
+	$Rage.visible = true;
+	$AnimationPlayer.play("rage");
+	
 	await get_tree().create_timer(randi_range(5, 10)).timeout
+	$AnimationPlayer.play("unrage");
+	await get_tree().create_timer(0.2).timeout
 	$Head/Weapon/Timer.wait_time = 0.6;
 	$Head/Weapon.isTerminator = false;
+	$Rage.visible = false;
 	
 
 func dmgBuff():
@@ -105,16 +113,25 @@ func dash(direction):
 	var unsignedDir = Vector2(abs(direction.x), abs(direction.z));
 	if unsignedDir.x < 0.1 and unsignedDir.y < 0.1:
 		return;
-	if (unsignedDir.x > unsignedDir.y):
-		extraVel.x += sign(direction.x) * 40;
-	else:
-		extraVel.z += sign(direction.z) * 40;
+	var forward : Vector3 = -global_transform.basis.z.normalized()
+	extraVel = forward * 50;
 	if $Head/Camera3D.fov < 100:
 		var tween = get_tree().create_tween()
-		tween.tween_property($Head/Camera3D, "fov", 95, 0.1);
+		tween.tween_property($Head/Camera3D, "fov", 100, 0.1);
 	$DashCooldown.start();
 	
 func _physics_process(delta):
+	if Globals.health == 0:
+		$Blackout.visible = true;
+		$AnimationPlayer.play("blackout");
+		global_position = startingPos;
+		await get_tree().create_timer(0.3).timeout
+		$Blackout.visible = false;
+		
+		Globals.score -= 1500;
+		Globals.health = 100;
+		Globals.ammo = 20;
+		
 	if Input.is_action_just_pressed("stun") and canStun:
 		canStun = false;
 		basketInstance = BasketScene.instantiate();
@@ -166,6 +183,7 @@ func takeDmg(amount):
 	$Head/Camera3D.shake();
 	Globals.updateHealthLabel.emit();
 	Globals.health -= amount;
+	Globals.health = max(Globals.health, 0);
 
 func knock(pos, strength):
 	var dir = pos.direction_to(global_position);

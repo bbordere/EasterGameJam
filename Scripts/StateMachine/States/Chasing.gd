@@ -11,6 +11,8 @@ func enter(_msg:={}) -> void:
 		attackName = _msg["Attack"];
 
 func physics_update(delta: float) -> void:
+	if owner.outOfRange:
+		return;
 	if !owner.playerDetected:
 		state_machine.transition_to("Idle");
 		return

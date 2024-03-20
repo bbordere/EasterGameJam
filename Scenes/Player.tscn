@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://dsug45yib05j4"]
+[gd_scene load_steps=26 format=3 uid="uid://dsug45yib05j4"]
 
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="1_4as02"]
 [ext_resource type="Script" path="res://Scripts/PlayerCamera.gd" id="2_2votu"]
@@ -245,6 +245,90 @@ _data = {
 radius = 0.537278
 height = 2.48858
 
+[sub_resource type="Animation" id="Animation_6gtcu"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Blackout/ColorRect:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Rage/ColorRect:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.313726, 0, 0, 0.235294)]
+}
+
+[sub_resource type="Animation" id="Animation_nevh4"]
+resource_name = "blackout"
+length = 0.3
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Blackout/ColorRect:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_2ot35"]
+resource_name = "rage"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Rage/ColorRect:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.313726, 0, 0, 0), Color(0.313726, 0, 0, 0.235294)]
+}
+
+[sub_resource type="Animation" id="Animation_x4ilx"]
+resource_name = "unrage"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Rage/ColorRect:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.313726, 0, 0, 0.235294), Color(0.313726, 0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_61n1c"]
+_data = {
+"RESET": SubResource("Animation_6gtcu"),
+"blackout": SubResource("Animation_nevh4"),
+"rage": SubResource("Animation_2ot35"),
+"unrage": SubResource("Animation_x4ilx")
+}
+
 [node name="Player" type="CharacterBody3D"]
 script = ExtResource("1_4as02")
 camTiltAmount = 0.02
@@ -312,13 +396,39 @@ bus = &"Sfx"
 shape = SubResource("CapsuleShape3D_rfnln")
 
 [node name="DashCooldown" type="Timer" parent="."]
-wait_time = 2.0
 
 [node name="StunCooldown" type="Timer" parent="."]
 wait_time = 10.0
 autostart = true
 
 [node name="Hud" parent="." instance=ExtResource("8_0f5jo")]
+
+[node name="Blackout" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="Blackout"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Rage" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="Rage"]
+self_modulate = Color(0.313726, 0, 0, 0.235294)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_61n1c")
+}
 
 [connection signal="timeout" from="Head/Weapon/Timer" to="Head/Weapon" method="_on_timer_timeout"]
 [connection signal="timeout" from="DashCooldown" to="." method="_on_timer_timeout"]

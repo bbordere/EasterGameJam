@@ -898,6 +898,9 @@ script = ExtResource("5_0euw4")
 [node name="Melee" type="Node" parent="StateMachine" index="2"]
 script = ExtResource("6_uuxwy")
 
+[node name="Area3D" parent="." index="7"]
+monitorable = false
+
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" index="0"]
 shape = SubResource("CylinderShape3D_6b68e")
 

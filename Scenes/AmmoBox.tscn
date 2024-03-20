@@ -1,7 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://dh7u8fkosls11"]
+[gd_scene load_steps=8 format=3 uid="uid://dh7u8fkosls11"]
 
 [ext_resource type="Script" path="res://Scripts/AmmoBox.gd" id="1_22h3i"]
-[ext_resource type="PackedScene" path="res://Assets/Models/ShotgunShell.glb" id="2_0y6t4"]
+[ext_resource type="PackedScene" uid="uid://c1bk374iv4frl" path="res://Assets/Models/ShotgunShell.glb" id="2_0y6t4"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_csjm3"]
 height = 0.925469
@@ -69,7 +69,10 @@ _data = {
 "rotation": SubResource("Animation_mido5")
 }
 
-[node name="AmmoBox" type="Node3D"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_napar"]
+size = Vector3(0.927979, 0.394531, 1)
+
+[node name="AmmoBox" type="CharacterBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 script = ExtResource("1_22h3i")
 
@@ -86,5 +89,9 @@ autoplay = "rotation"
 
 [node name="ShotgunShell" parent="." instance=ExtResource("2_0y6t4")]
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0209961, 0)
+shape = SubResource("BoxShape3D_napar")
 
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

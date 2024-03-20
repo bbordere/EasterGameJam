@@ -31,6 +31,7 @@ render_mode unshaded;
 
 
 uniform float gradient_width : hint_range(0.0, 1.0) = 0.2; // Largeur de la zone de dégradé (entre 0 et 1)
+
 uniform vec4 light_blue_color  = vec4(0.4, 0.6, 1.0, 1.0); // Couleur bleu clair
 uniform vec4 dark_blue_color = vec4(0.0, 0.0, 0.5, 1.0); // Couleur bleu foncé
 

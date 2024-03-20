@@ -36,4 +36,9 @@ wait_time = 3.0
 
 [node name="Hurt" type="AnimationPlayer" parent="."]
 
+[node name="Disable" type="Timer" parent="."]
+wait_time = 0.5
+autostart = true
+
 [connection signal="velocity_computed" from="NavigationAgent3D" to="." method="_on_navigation_agent_3d_velocity_computed"]
+[connection signal="timeout" from="Disable" to="." method="_on_disable_timeout"]

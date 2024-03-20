@@ -24,6 +24,8 @@ func chooseRandomDir():
 	
 	
 func update(delta: float) -> void:
+	if owner.outOfRange:
+		return;
 	var next = navAgent.get_next_path_position();
 
 	SafeLookAt.safe_look_at(owner.get_node("FaceDirection"), next);

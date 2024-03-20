@@ -434,15 +434,18 @@ script = ExtResource("4_3hgw5")
 [node name="Fireball" type="Node" parent="StateMachine" index="2"]
 script = ExtResource("6_8j3fn")
 
+[node name="Area3D" parent="." index="7"]
+monitorable = false
+
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.33746, 0)
 shape = SubResource("CylinderShape3D_i4yby")
 
 [node name="NavigationAgent3D" parent="." index="8"]
 path_height_offset = -2.0
-use_3d_avoidance = true
 
 [node name="ShootingRange" type="Area3D" parent="." index="10"]
+monitorable = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="ShootingRange" index="0"]
 shape = SubResource("CylinderShape3D_hev68")
