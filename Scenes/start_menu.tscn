@@ -115,39 +115,79 @@ horizontal_alignment = 1
 layout_mode = 2
 theme_override_constants/margin_top = 150
 
-[node name="VolumeMusicLabel2" type="Label" parent="Menu/MarginContainerSettings/VBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="Menu/MarginContainerSettings/VBoxContainer"]
+clip_contents = true
 layout_mode = 2
-text = "Volume music: "
+size_flags_vertical = 3
+texture = ExtResource("4_480ar")
 
-[node name="VolumeMusicHSlider" type="HSlider" parent="Menu/MarginContainerSettings/VBoxContainer"]
+[node name="SensitivityLabel" type="Label" parent="Menu/MarginContainerSettings/VBoxContainer/TextureRect"]
+z_index = 1
 layout_mode = 2
+offset_left = 14.4124
+offset_top = 184.0
+offset_right = 622.412
+offset_bottom = 207.0
+text = "Mouse sensitivity:"
+
+[node name="SensitivityHSlider" type="HSlider" parent="Menu/MarginContainerSettings/VBoxContainer/TextureRect"]
+z_index = 1
+layout_mode = 2
+offset_left = 16.0
+offset_top = 225.0
+offset_right = 583.0
+offset_bottom = 241.0
+min_value = 0.1
 max_value = 1.0
-step = 0.001
-value = 1.0
-script = ExtResource("4_i402n")
+step = 0.01
+value = 0.2
 
-[node name="VolumeEffectLabel" type="Label" parent="Menu/MarginContainerSettings/VBoxContainer"]
+[node name="VolumeEffectHSlider" type="HSlider" parent="Menu/MarginContainerSettings/VBoxContainer/TextureRect"]
+z_index = 1
 layout_mode = 2
-text = "Volume effect: "
-
-[node name="VolumeEffectHSlider" type="HSlider" parent="Menu/MarginContainerSettings/VBoxContainer"]
-layout_mode = 2
+offset_left = 16.4148
+offset_top = 149.0
+offset_right = 583.415
+offset_bottom = 165.0
 max_value = 1.0
 step = 0.001
 value = 1.0
 script = ExtResource("4_i402n")
 busName = "Sfx"
 
-[node name="SensitivityLabel" type="Label" parent="Menu/MarginContainerSettings/VBoxContainer"]
+[node name="VolumeEffectLabel" type="Label" parent="Menu/MarginContainerSettings/VBoxContainer/TextureRect"]
+z_index = 1
 layout_mode = 2
-text = "Mouse sensitivity:"
+offset_left = 16.4148
+offset_top = 110.0
+offset_right = 624.415
+offset_bottom = 133.0
+text = "Volume effect: "
 
-[node name="SensitivityHSlider" type="HSlider" parent="Menu/MarginContainerSettings/VBoxContainer"]
+[node name="VolumeMusicHSlider" type="HSlider" parent="Menu/MarginContainerSettings/VBoxContainer/TextureRect"]
+z_index = 1
 layout_mode = 2
-min_value = 0.1
+offset_left = 19.4183
+offset_top = 76.0
+offset_right = 584.418
+offset_bottom = 92.0
 max_value = 1.0
-step = 0.01
-value = 0.2
+step = 0.001
+value = 1.0
+script = ExtResource("4_i402n")
+
+[node name="VolumeMusicLabel2" type="Label" parent="Menu/MarginContainerSettings/VBoxContainer/TextureRect"]
+z_index = 1
+layout_mode = 2
+offset_left = 14.4124
+offset_top = 43.0
+offset_right = 622.412
+offset_bottom = 66.0
+text = "Volume music: "
+
+[node name="MarginContainer3" type="MarginContainer" parent="Menu/MarginContainerSettings/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 150
 
 [node name="MarginContainerHow" type="MarginContainer" parent="Menu"]
 layout_mode = 1
@@ -229,5 +269,5 @@ text = "Back"
 [connection signal="button_up" from="Menu/MarginContainer/VBoxContainer/StartButton" to="." method="_on_start_button_button_up"]
 [connection signal="button_up" from="Menu/MarginContainer/VBoxContainer/SettingsButton" to="." method="_on_settings_button_button_up"]
 [connection signal="button_up" from="Menu/MarginContainer/VBoxContainer/HowToPlay" to="." method="_on_how_to_play_button_up"]
-[connection signal="value_changed" from="Menu/MarginContainerSettings/VBoxContainer/SensitivityHSlider" to="." method="_on_sensitivity_h_slider_value_changed"]
+[connection signal="value_changed" from="Menu/MarginContainerSettings/VBoxContainer/TextureRect/SensitivityHSlider" to="." method="_on_sensitivity_h_slider_value_changed"]
 [connection signal="button_up" from="Menu/MarginContainerBack/VBoxContainer/BackButton" to="." method="_on_back_button_button_up"]
