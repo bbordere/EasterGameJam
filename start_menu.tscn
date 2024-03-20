@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://djmnmcdi7q0qx"]
 
-[ext_resource type="FontFile" uid="uid://klgu5lm1jtxw" path="res://easter-egg/EasterEgg.ttf" id="1_3ms75"]
+[ext_resource type="FontFile" uid="uid://klgu5lm1jtxw" path="res://fonts/EasterEgg.ttf" id="1_3ms75"]
 [ext_resource type="PackedScene" uid="uid://bur43nicmr273" path="res://Scenes/test.tscn" id="2_eitv7"]
 
 [sub_resource type="Theme" id="Theme_ij2i5"]
