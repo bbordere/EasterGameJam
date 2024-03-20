@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://b4tlumg4h0wrc"]
+
+[ext_resource type="ArrayMesh" uid="uid://7of37stoj3c5" path="res://Assets/modular_terrain_collection/Cave_Prop_Support_Wall_Boards_3.obj" id="1_8vb3y"]
+
+[node name="props cave 8" type="StaticBody3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_8vb3y")

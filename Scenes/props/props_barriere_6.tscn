@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://dmil31wfjv0pj"]
+
+[ext_resource type="ArrayMesh" uid="uid://s1o1mhtfur0a" path="res://Assets/modular_terrain_collection/Hilly_Prop_Fence_Post_1.obj" id="1_mb8ng"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_gpkam"]
+points = PackedVector3Array(-0.417463, 0.707959, 0.425, -0.595051, 0.0309147, 0.425, -0.550631, 0.0197883, 0.425, -0.554791, -0.00981271, 0.575317, -0.566816, 0.723727, 0.575317, -0.434577, 0.00224093, 0.575317, -0.404145, 0.727174, 0.571001, -0.566816, 0.723727, 0.418987, -0.434577, 0.00224093, 0.418987, -0.602913, 0.110498, 0.575317, -0.602913, 0.110498, 0.418987, -0.405109, 0.723659, 0.446555, -0.448321, 0.747587, 0.572834, -0.595474, 0.0293725, 0.569628, -0.553208, 0.748552, 0.57303, -0.450764, 0.730212, 0.425, -0.446603, -0.00981271, 0.575317, -0.406681, 0.684728, 0.425243, -0.550631, 0.730212, 0.425, -0.416355, 0.723668, 0.435289)
+
+[node name="props barriere 6" type="StaticBody3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_mb8ng")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("ConvexPolygonShape3D_gpkam")

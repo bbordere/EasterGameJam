@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://ciu7pp8tydlng"]
+
+[ext_resource type="ArrayMesh" uid="uid://dmtjm3xfst6fc" path="res://Assets/modular_terrain_collection/Hilly_Prop_Grass_Clump_2.obj" id="1_n35gp"]
+
+[node name="herbe 2" type="MeshInstance3D"]
+mesh = ExtResource("1_n35gp")

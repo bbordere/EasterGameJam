@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bkjwxq53q42c8"]
+
+[ext_resource type="ArrayMesh" uid="uid://8kwkdbewpuuc" path="res://Assets/modular_terrain_collection/Hilly_Prop_Mushroom_2.obj" id="1_mym5t"]
+
+[node name="mushroom 2" type="MeshInstance3D"]
+mesh = ExtResource("1_mym5t")

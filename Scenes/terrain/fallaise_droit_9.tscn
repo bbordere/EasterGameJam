@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://cjk2g4alhm4hs"]
+
+[ext_resource type="ArrayMesh" uid="uid://ciiphtvog7xfy" path="res://Assets/modular_terrain_collection/Cliff_Terrain_Side_Mid.obj" id="1_ipbuv"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_q04a3"]
+data = PackedVector3Array(-0.25, 0, 0, -0.25, 1, 0, -0.5, 1, -0.5, -0.5, 0, -0.5, -0.25, 0, 0, -0.5, 1, -0.5, -0.25, 1, 0, -0.25, 0, 0, -0.5, 1, 0.5, -0.5, 1, 0.5, -0.25, 0, 0, -0.5, 0, 0.5)
+
+[node name="fallaise droit 9" type="StaticBody3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_ipbuv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("ConcavePolygonShape3D_q04a3")
