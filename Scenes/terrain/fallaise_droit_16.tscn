@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cw162kvjyfvh3"]
+
+[ext_resource type="ArrayMesh" uid="uid://bevx1h7rjmhw4" path="res://Assets/modular_terrain_collection/Cliff_Terrain_Waterfall_Water_Mid_Edge.obj" id="1_33my8"]
+
+[node name="fallaise droit 16" type="StaticBody3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_33my8")

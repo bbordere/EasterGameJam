@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://kmcf33t02sdm"]
+
+[ext_resource type="ArrayMesh" uid="uid://cx4dfemn4fjqs" path="res://Assets/modular_terrain_collection/Hilly_Prop_Fence_Gate_1.obj" id="1_eeo05"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_occsu"]
+points = PackedVector3Array(0.62489, 0.9, 0.549995, 0.625, 0.899912, 0.549995, 0.62489, 0.9, 0.44998, 0.549897, 0.9, 0.625, 0.625, 0.899912, 0.44998, 0.625, 0, 0.549995, 0.549897, 0.9, 0.375, 0.549897, 0, 0.624976, 0.449907, 0.9, 0.625, 0.625, 0, 0.44998, 0.549897, 0, 0.375, 0.449907, 0.9, 0.375, 0.449907, 0, 0.624976, 0.374914, 0.9, 0.549995, -0.462559, 0.849961, 0.5625, -0.370277, 0.695262, 0.569988, 0.449907, 0, 0.375, 0.374914, 0.9, 0.44998, -0.365982, 0.671124, 0.429987, -0.462559, 0.849961, 0.4375, 0.287478, 0, 0.5625, -0.462559, 0.0509201, 0.5625, -0.5, 0.849961, 0.524985, 0.287478, 0, 0.4375, -0.462559, 0.0509201, 0.4375, -0.5, 0.849961, 0.47499, 0.249927, 0, 0.524985, -0.5, 0.0509201, 0.524985, 0.249927, 0, 0.47499, -0.5, 0.0509201, 0.47499)
+
+[node name="props barriere 4" type="StaticBody3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_eeo05")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("ConvexPolygonShape3D_occsu")

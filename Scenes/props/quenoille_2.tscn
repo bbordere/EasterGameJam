@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://5nbiejad60tp"]
+
+[ext_resource type="ArrayMesh" uid="uid://c5hq3or134wh6" path="res://Assets/modular_terrain_collection/Hilly_Prop_Cattail_2.obj" id="1_ljwkd"]
+
+[node name="quenoille 2" type="MeshInstance3D"]
+mesh = ExtResource("1_ljwkd")

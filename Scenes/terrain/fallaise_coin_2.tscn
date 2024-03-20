@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://b811aosbt0pdd"]
+
+[ext_resource type="ArrayMesh" uid="uid://c4vg6mi6dwcdw" path="res://Assets/modular_terrain_collection/Cliff_Terrain_Corner_Inner_1x1_Mid.obj" id="1_qog1w"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_3ou23"]
+data = PackedVector3Array(-0.366, 0, 0, -0.366, 1, 0, -0.5, 1, -0.5, -0.5, 0, -0.5, -0.366, 0, 0, -0.5, 1, -0.5, -0.366, 1, 0, -0.366, 0, 0, 0, 1, 0.366, 0, 1, 0.366, -0.366, 0, 0, 0, 0, 0.366, 0, 1, 0.366, 0, 0, 0.366, 0.5, 1, 0.5, 0.5, 1, 0.5, 0, 0, 0.366, 0.5, 0, 0.5)
+
+[node name="fallaise coin 2" type="StaticBody3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(5, 0, 0, 0, 8, 0, 0, 0, 5, 0, 0, 0)
+mesh = ExtResource("1_qog1w")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(5, 0, 0, 0, 8, 0, 0, 0, 5, 0, 0, 0)
+shape = SubResource("ConcavePolygonShape3D_3ou23")

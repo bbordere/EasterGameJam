@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://burqb2288i025"]
+
+[ext_resource type="ArrayMesh" uid="uid://ixm3slq1xkg5" path="res://Assets/modular_terrain_collection/Cliff_Terrain_Waterfall_Mid.obj" id="1_mltnr"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_txwfk"]
+data = PackedVector3Array(-0.5, 0, -0.5, -0.1, 0, 0, -0.5, 1, -0.5, -0.5, 1, -0.5, -0.1, 0, 0, -0.1, 1, 0, -0.1, 0, 0, 0, 0, 0.5, -0.1, 1, 0, -0.1, 1, 0, 0, 0, 0.5, 0, 1, 0.5, 0, 0, 0.5, 0.6, 0, 1, 0, 1, 0.5, 0, 1, 0.5, 0.6, 0, 1, 0.6, 1, 1, 0.5, 1, 1.5, 0.6, 1, 1, 0.6, 0, 1, 0.5, 0, 1.5, 0.5, 1, 1.5, 0.6, 0, 1)
+
+[node name="fallaise droit 13" type="StaticBody3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_mltnr")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("ConcavePolygonShape3D_txwfk")

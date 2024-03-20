@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://dsv60rs7bk5o5"]
+
+[ext_resource type="ArrayMesh" uid="uid://bk8urvmsnkwtl" path="res://Assets/modular_terrain_collection/Beach_Prop_Docks_Straight.obj" id="1_aqtlv"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_bsq8y"]
+points = PackedVector3Array(0.5, 1, 0.22498, 0.5, 0.94998, 0.22498, 0.5, 1, 0.0249413, -0.5, 1, 0.22498, 0.499902, 0.999976, 0.474902, 0.499902, 0.94998, 0.474902, 0.44998, 0.80856, 0.603553, 0.5, 0.94998, -0.475029, -0.5, 1, 0.0249413, 0.5, 0.999976, -0.475029, -0.5, 0.999976, 0.474902, 0.391347, 0.94998, 0.603553, 0.44998, 0.89142, 0.603553, 0.349941, 0.84999, 0.65, 0.391347, 0.75, 0.603553, 0.44998, 0.80856, -0.60368, -0.5, 0.999976, -0.475029, 0.44998, 0.89142, -0.60368, 0.391347, 0.94998, -0.60368, -0.5, 0.94998, 0.474902, -0.450078, 0.89142, 0.603553, -0.391445, 0.94998, 0.603553, -0.350039, 0.84999, 0.65, -0.391445, 0.75, 0.603553, 0.391347, 0.75, -0.60368, 0.349941, 0.84999, -0.65, -0.391445, 0.94998, -0.60368, -0.450078, 0.89142, -0.60368, -0.5, 0.94998, -0.475029, -0.450078, 0.80856, 0.603553, -0.391445, 0.75, -0.60368, -0.350039, 0.84999, -0.65, -0.450078, 0.80856, -0.60368)
+
+[node name="dock droit" type="StaticBody3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_aqtlv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("ConvexPolygonShape3D_bsq8y")

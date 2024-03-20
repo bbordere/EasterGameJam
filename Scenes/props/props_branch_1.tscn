@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bbta6vyxwuoc1"]
+
+[ext_resource type="ArrayMesh" uid="uid://c2hj4ggcbfxiy" path="res://Assets/modular_terrain_collection/Hilly_Prop_Branch_1.obj" id="1_hf1ym"]
+
+[node name="props branch 1" type="StaticBody3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_hf1ym")

@@ -57,6 +57,7 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("fire") and (Globals.ammo != 0 or isTerminator) and canShoot:
 		canShoot = false;
 		$Timer.start();
+		$AudioStreamPlayer3D.play();
 		for pellet in range(pelletsNumber):
 			instance = bulletScene.instantiate();
 			instance.position = $RayCast3D.global_position;
