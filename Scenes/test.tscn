@@ -13,12 +13,12 @@
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ps8ey"]
 
-[sub_resource type="Sky" id="Sky_7vgns"]
+[sub_resource type="Sky" id="Sky_tw7kq"]
 sky_material = SubResource("ProceduralSkyMaterial_ps8ey")
 
 [sub_resource type="Environment" id="Environment_g62dl"]
 background_mode = 2
-sky = SubResource("Sky_7vgns")
+sky = SubResource("Sky_tw7kq")
 tonemap_white = 4.14
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_42qyd"]

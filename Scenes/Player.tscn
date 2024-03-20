@@ -1,10 +1,22 @@
-[gd_scene load_steps=16 format=3 uid="uid://dsug45yib05j4"]
+[gd_scene load_steps=21 format=3 uid="uid://dsug45yib05j4"]
 
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="1_4as02"]
 [ext_resource type="Script" path="res://Scripts/PlayerCamera.gd" id="2_2votu"]
 [ext_resource type="Script" path="res://Scripts/Shotgun.gd" id="2_kar17"]
 [ext_resource type="Curve" uid="uid://do1f70qwy47ac" path="res://Curves/WeaponCurve.tres" id="4_f8a5q"]
 [ext_resource type="Shader" path="res://Shaders/Shotgun.gdshader" id="4_haimj"]
+[ext_resource type="AudioStream" uid="uid://f7tmmo2m380v" path="res://Assets/Audios/shotgun-firing-3-14483.mp3" id="6_nps8k"]
+[ext_resource type="Shader" path="res://Shaders/Depth.gdshader" id="7_p7dlx"]
+[ext_resource type="PackedScene" uid="uid://iusk221uwkve" path="res://Scenes/Hud.tscn" id="8_0f5jo"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_m2ddg"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_tg2a3"]
+render_priority = 0
+shader = ExtResource("7_p7dlx")
+shader_parameter/gradient_width = 0.856
+shader_parameter/light_blue_color = Vector4(0.4, 0.6, 1, 1)
+shader_parameter/dark_blue_color = Vector4(0, 0, 0.5, 1)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_cma7x"]
 resource_name = "Wood"
@@ -230,7 +242,7 @@ _data = {
 }
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_rfnln"]
-radius = 0.851141
+radius = 0.537278
 height = 2.48858
 
 [node name="Player" type="CharacterBody3D"]
@@ -241,9 +253,18 @@ weaponSwayAmount = 0.01
 [node name="Head" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.767389, 0.862072)
 
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Head"]
+transform = Transform3D(1000, 0, 0, 0, 1000, 0, 0, 0, 1, 0, 285.43, -48)
+layers = 2
+cast_shadow = 0
+gi_mode = 0
+mesh = SubResource("QuadMesh_m2ddg")
+surface_material_override/0 = SubResource("ShaderMaterial_tg2a3")
+
 [node name="Camera3D" type="Camera3D" parent="Head"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.279758)
 fov = 90.0
+far = 50.0
 script = ExtResource("2_2votu")
 
 [node name="Weapon" type="Node3D" parent="Head"]
@@ -279,6 +300,12 @@ target_position = Vector3(0, 0, -1)
 [node name="Timer" type="Timer" parent="Head/Weapon"]
 wait_time = 0.6
 
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Head/Weapon"]
+transform = Transform3D(4.99999, -5.36442e-07, 0, 0, 3.33334, 0, 0, 0, 3.33333, -1.57573, 0.219855, -2.05465)
+stream = ExtResource("6_nps8k")
+volume_db = -25.0
+pitch_scale = 2.0
+
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("CapsuleShape3D_rfnln")
 
@@ -288,6 +315,8 @@ wait_time = 2.0
 [node name="StunCooldown" type="Timer" parent="."]
 wait_time = 10.0
 autostart = true
+
+[node name="Hud" parent="." instance=ExtResource("8_0f5jo")]
 
 [connection signal="timeout" from="Head/Weapon/Timer" to="Head/Weapon" method="_on_timer_timeout"]
 [connection signal="timeout" from="DashCooldown" to="." method="_on_timer_timeout"]
