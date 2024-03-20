@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://c4ltfljqwnkkf"]
+
+[ext_resource type="ArrayMesh" uid="uid://bxmr0grmaatcs" path="res://Assets/modular_terrain_collection/Beach_Prop_Coconut_1.obj" id="1_etl0g"]
+
+[node name="coconuts" type="StaticBody3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_etl0g")
