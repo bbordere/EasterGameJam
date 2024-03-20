@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="EasterGameJam"
-run/main_scene="res://Scenes/map.tscn"
+run/main_scene="res://Scenes/start_menu.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 Globals="*res://Scripts/Globals.gd"
 SafeLookAt="*res://Scripts/Utils/SafeLookAt.gd"
+MusicManager="*res://Scenes/MusicManager.tscn"
 
 [display]
 

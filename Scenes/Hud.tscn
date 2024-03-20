@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://iusk221uwkve"]
+[gd_scene load_steps=8 format=3 uid="uid://iusk221uwkve"]
 
 [ext_resource type="Script" path="res://Scripts/Hud.gd" id="1_ccm71"]
 [ext_resource type="Texture2D" uid="uid://bxqd72evivsks" path="res://Assets/HUD/shotgun_shell.PNG" id="2_6e4ph"]
 [ext_resource type="Texture2D" uid="uid://cuyyx3lkfy4d5" path="res://Assets/HUD/Heartpoly.png" id="3_chvyx"]
 [ext_resource type="Texture2D" uid="uid://b0me7tin45pgb" path="res://Assets/HUD/Egg1.png" id="4_axyci"]
 [ext_resource type="Texture2D" uid="uid://ch8j65mgojohx" path="res://Assets/HUD/viseur-removebg-preview.png" id="5_qv7jm"]
+[ext_resource type="Script" path="res://Scripts/Label.gd" id="6_tg4pa"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hxctc"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -131,3 +132,9 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("5_qv7jm")
 expand_mode = 1
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+script = ExtResource("6_tg4pa")

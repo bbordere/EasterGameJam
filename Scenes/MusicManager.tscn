@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://deqnt8ahi2klj"]
+
+[ext_resource type="AudioStream" uid="uid://ca3u54e34kno2" path="res://Assets/Audios/Musics/easter-is-coming-146181.mp3" id="1_8x403"]
+[ext_resource type="Script" path="res://Scripts/MusicManager.gd" id="1_rebub"]
+[ext_resource type="AudioStream" uid="uid://d1l3suydqjo87" path="res://Assets/Audios/Musics/woodland-bunnies-157690.mp3" id="2_ef7n5"]
+[ext_resource type="AudioStream" uid="uid://dbg6g07a3dfj8" path="res://Assets/Audios/Musics/the-first-days-of-spring-188392.mp3" id="3_lsi7x"]
+
+[node name="MusicManager" type="Node"]
+script = ExtResource("1_rebub")
+
+[node name="Music1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_8x403")
+bus = &"Music"
+
+[node name="Music2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_ef7n5")
+bus = &"Music"
+
+[node name="Music3" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_lsi7x")
+bus = &"Music"
