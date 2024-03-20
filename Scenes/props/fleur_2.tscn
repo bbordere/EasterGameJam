@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://d2r4g7dn2x5e"]
 
-[ext_resource type="ArrayMesh" uid="uid://dh04k3xt6qt2t" path="res://Assets/modular_terrain_collection/Hilly_Prop_Flower_Lily_Blue.obj" id="1_twlvv"]
+[ext_resource type="ArrayMesh" uid="uid://cr0wifix2g7g3" path="res://Assets/modular_terrain_collection/Hilly_Prop_Flower_Lily_Pink.obj" id="1_eo5ug"]
 
 [node name="fleur 2" type="MeshInstance3D"]
-mesh = ExtResource("1_twlvv")
+mesh = ExtResource("1_eo5ug")
