@@ -9,6 +9,7 @@ data = PackedVector3Array(0.1697, 1.05, -1.1168, 0.1314, 1.15, -1.0244, -0.5, 1.
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
+cast_shadow = 2
 mesh = ExtResource("1_m5k78")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
