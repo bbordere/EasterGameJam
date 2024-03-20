@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cwxjfa3838lfx"]
+
+[ext_resource type="ArrayMesh" uid="uid://d0vbyc2af4li1" path="res://Assets/modular_terrain_collection/Hilly_Prop_Flower_Daisy.obj" id="1_nlvre"]
+
+[node name="fleur 1" type="MeshInstance3D"]
+mesh = ExtResource("1_nlvre")
