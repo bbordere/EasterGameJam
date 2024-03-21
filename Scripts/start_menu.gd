@@ -4,6 +4,7 @@ extends CanvasLayer
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE);
+	$Background/SubViewportContainer/SubViewport.size = DisplayServer.screen_get_size();
 	$Background/World/Player.visible = false;
 	$Background/World/Player.speed = 0;
 	$Menu/MarginContainerSettings.visible = false;

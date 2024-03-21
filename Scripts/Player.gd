@@ -29,6 +29,7 @@ var basketInstance = null;
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
 func _ready():
+	randomize();
 	Globals.playerReference = self;
 	Globals.catchEgg.connect(catchEgg);
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED);
@@ -70,15 +71,17 @@ func dmgBuff():
 	Globals.setMultiplier.emit(1);
 	
 func scoreBuff():
-	Globals.setMultiplier.emit(2);
+	var multi = Globals.scoreMultiplier;
+	Globals.setMultiplier.emit(multi * 2);
 	await get_tree().create_timer(randi_range(10, 20)).timeout
-	Globals.setMultiplier.emit(1);
+	Globals.setMultiplier.emit(multi);
 
 func catchEgg(catchStatus):
 	if catchStatus:
 		canStun = true;
 	var buffsFct = [speedBuff, weaponSpeedBuff, dmgBuff, scoreBuff];
-	var buff = randi_range(0, 1);
+	var buff = randi_range(0, 3);
+	print(buff);
 	buffsFct[buff].call();
 
 func _input(event):

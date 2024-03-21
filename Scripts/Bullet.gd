@@ -1,6 +1,6 @@
 extends Node3D
 
-const SPEED = 60;
+const SPEED = 90;
 
 var vfxScene = preload("res://Scenes/ExplosionParticles.tscn");
 

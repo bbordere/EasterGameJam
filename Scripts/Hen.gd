@@ -27,7 +27,7 @@ func chooseRandomDir():
 
 	
 func _process(delta):
-	$Label3D.text = str(hp);
+	$Label3D.text = "Hp: " + str(hp);
 	isDead = hp == 0;
 	if $NavigationAgent3D.is_navigation_finished() and !isDead:
 		chooseRandomDir();
