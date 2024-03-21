@@ -7566,7 +7566,7 @@ transform = Transform3D(2.5, 0, 0, 0, 1, 0, 0, 0, 2.5, 10.8858, -1, 20.0036)
 transform = Transform3D(-2.5, 0, -3.77489e-07, 0, 1, 0, 3.77489e-07, 0, -2.5, 10.8858, -1, 28.9747)
 
 [node name="dock droit" parent="NavigationRegion3D/pathfinding/route" instance=ExtResource("36_mj6ss")]
-transform = Transform3D(2.5, 0, 0, 0, 2, 0, 0, 0, 2.5, 10.8849, -2.04562, 22.5549)
+transform = Transform3D(2.5, 0, 0, 0, 2, 0, 0, 0, 2.5, 10.8849, -2.074, 22.5549)
 
 [node name="dock droit2" parent="NavigationRegion3D/pathfinding/route" instance=ExtResource("36_mj6ss")]
 transform = Transform3D(2.5, 0, 0, 0, 2, 0, 0, 0, 2.5, 10.8849, -2.04562, 25.1414)

@@ -15,6 +15,7 @@ var skills = {"dash": true, "double_jump": true, "super_dmg": true};
 
 var playerReference = null;
 var isPlayerDisabled = true;
+var canDash = true;
 
 signal giveAmmo(number);
 signal giveEgg(number);

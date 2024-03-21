@@ -12,7 +12,6 @@ var inputMouse := Vector2.ZERO
 var defaultWeaponPos := Vector3.ZERO
 var startingPos := Vector3.ZERO
 var canSecondJump = false;
-var canDash = true;
 var canStun = true;
 var isRunning = false;
 
@@ -35,6 +34,7 @@ func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED);
 	defaultWeaponPos = $Head/Weapon.position;
 	startingPos = global_position;
+	Globals.canDash = true;
 
 func speedBuff():
 	if isRunning:
@@ -112,7 +112,7 @@ func weaponBob(vel, delta):
 		$Head/Weapon.position.x = lerp($Head/Weapon.position.x, defaultWeaponPos.x, 10 * delta)
 
 func dash(direction):
-	canDash = false
+	Globals.canDash = false
 	var unsignedDir = Vector2(abs(direction.x), abs(direction.z));
 	if unsignedDir.x < 0.1 and unsignedDir.y < 0.1:
 		return;
@@ -165,7 +165,7 @@ func _physics_process(delta):
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var input_dir = Input.get_vector("left", "right", "forward", "backward")
-	if Input.is_action_just_pressed("dash") and Globals.skills["dash"] and canDash:
+	if Input.is_action_just_pressed("dash") and Globals.skills["dash"] and Globals.canDash:
 		dash(direction)
 	direction = lerp(direction, (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized(), 
 						delta * LERP_SPEED);
@@ -200,7 +200,7 @@ func knock(pos, strength):
 	extraVel.z += dir.z;
 
 func _on_timer_timeout():
-	canDash = true;
+	Globals.canDash = true;
 
 func _on_stun_cooldown_timeout():
 	canStun = true;

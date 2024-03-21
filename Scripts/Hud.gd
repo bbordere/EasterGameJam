@@ -43,5 +43,5 @@ func _on_button_button_up():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED);
 	$TextureRect.visible = false;
 	get_tree().change_scene_to_file("res://Scenes/map.tscn");
+	Globals.canDash = true;
 
-	
