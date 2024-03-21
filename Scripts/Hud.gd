@@ -8,6 +8,7 @@ func _ready():
 	Globals.updateEggLabel.connect(updateEgg);
 	Globals.setScoreMultiplier.connect(updateMultiplier);
 	Globals.addScore.connect(updateScore);
+	$TextureRect.visible = false;
 
 func _process(delta):
 	$Hud/Timer.text = "%d:%02d" % [floor($Timer.time_left / 60), int($Timer.time_left) % 60]
@@ -26,6 +27,17 @@ func updateScore(value):
 
 func updateMultiplier(value):
 	$Hud/Multiplier.text = "x " + str(Globals.scoreMultiplier);
-
+	
 func _on_timer_timeout():
-	pass # Replace with function body.
+	$TextureRect.visible = true;
+	$Hud/Viseur.visible = false;
+	$TextureRect/Score.text = "You score is: " + str(int(Globals.score))
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE);
+	Globals.score = 0;
+
+func _on_button_button_up():
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED);
+	$TextureRect.visible = false;
+	get_tree().change_scene_to_file("res://Scenes/map.tscn");
+
+	
