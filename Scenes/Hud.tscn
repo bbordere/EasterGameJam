@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://iusk221uwkve"]
+[gd_scene load_steps=9 format=3 uid="uid://iusk221uwkve"]
 
 [ext_resource type="Script" path="res://Scripts/Hud.gd" id="1_ccm71"]
 [ext_resource type="Texture2D" uid="uid://bxqd72evivsks" path="res://Assets/HUD/shotgun_shell.PNG" id="2_6e4ph"]
@@ -10,8 +10,6 @@
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hxctc"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
-
-[sub_resource type="FontVariation" id="FontVariation_s6iat"]
 
 [node name="Hud" type="Control"]
 layout_mode = 3
@@ -76,10 +74,10 @@ layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_left = 34.0
-offset_top = -12.0
-offset_right = 72.0
-offset_bottom = 13.0
+offset_left = 31.0
+offset_top = -9.0
+offset_right = 69.0
+offset_bottom = 16.0
 grow_vertical = 2
 texture = ExtResource("2_6e4ph")
 expand_mode = 1
@@ -93,7 +91,10 @@ offset_top = -11.0
 offset_right = 34.0
 offset_bottom = 12.0
 grow_vertical = 2
-text = " 0"
+theme_override_font_sizes/font_size = 20
+text = "1
+"
+horizontal_alignment = 1
 
 [node name="TextureRect2" type="TextureRect" parent="Hud/Panel"]
 layout_mode = 1
@@ -103,9 +104,9 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = 29.0
-offset_top = -31.0
+offset_top = -28.0
 offset_right = 58.0
-offset_bottom = -2.0
+offset_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 0
 texture = ExtResource("3_chvyx")
@@ -118,14 +119,15 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -1.0
-offset_top = -29.0
-offset_right = 51.0
-offset_bottom = -6.0
+offset_left = -15.0
+offset_top = -28.0
+offset_right = 37.0
 grow_horizontal = 2
 grow_vertical = 0
+theme_override_font_sizes/font_size = 20
 text = "100
 "
+horizontal_alignment = 1
 
 [node name="TextureRect3" type="TextureRect" parent="Hud/Panel"]
 layout_mode = 1
@@ -149,13 +151,16 @@ anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -46.0
-offset_top = -5.0
-offset_right = 2.0
+offset_left = -62.0
+offset_top = -10.0
+offset_right = -14.0
 offset_bottom = 18.0
 grow_horizontal = 0
 grow_vertical = 2
-text = "0"
+theme_override_font_sizes/font_size = 20
+text = "10
+"
+horizontal_alignment = 1
 
 [node name="Viseur" type="TextureRect" parent="Hud"]
 anchors_preset = 8
@@ -173,7 +178,7 @@ texture = ExtResource("5_qv7jm")
 expand_mode = 1
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 6.265
+wait_time = 180.0
 one_shot = true
 autostart = true
 
@@ -194,21 +199,18 @@ grow_vertical = 2
 size_flags_vertical = 3
 texture = ExtResource("7_cjbke")
 
-[node name="Score" type="RichTextLabel" parent="TextureRect"]
+[node name="Score" type="Label" parent="TextureRect"]
 layout_mode = 1
-anchors_preset = 14
-anchor_top = 0.5
+anchors_preset = 10
 anchor_right = 1.0
-anchor_bottom = 0.5
-offset_left = 200.0
-offset_top = -136.0
-offset_right = -183.0
-offset_bottom = -105.0
+offset_left = 92.0
+offset_right = -92.0
+offset_bottom = 71.0
 grow_horizontal = 2
-grow_vertical = 2
-theme_override_fonts/normal_font = SubResource("FontVariation_s6iat")
-text = "You score is: "
-fit_content = true
+theme_override_font_sizes/font_size = 32
+text = "Score: "
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Button" type="Button" parent="TextureRect"]
 layout_mode = 1

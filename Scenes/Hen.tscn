@@ -5,9 +5,8 @@
 [ext_resource type="AudioStream" uid="uid://45o8f4uua2xl" path="res://Assets/Audios/chicken-56092.mp3" id="3_gmpl5"]
 [ext_resource type="AudioStream" uid="uid://c6agpa55n25cf" path="res://Assets/Audios/die3.mp3" id="4_fbuk2"]
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_myr77"]
-radius = 0.477065
-height = 1.42215
+[sub_resource type="BoxShape3D" id="BoxShape3D_o1py3"]
+size = Vector3(0.772461, 1.5719, 1.23376)
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_n4uuh"]
 radius = 1.41465
@@ -55,14 +54,13 @@ _data = {
 script = ExtResource("1_md15o")
 
 [node name="Hen" parent="." instance=ExtResource("1_4vjn7")]
-transform = Transform3D(-0.02, 0, 5.07036e-08, 0, 0.02, 0, -5.07036e-08, 0, -0.02, 0, 0, 0)
+transform = Transform3D(-0.02, 0, 5.07036e-08, 0, 0.02, 0, -5.07036e-08, 0, -0.02, 0, -0.0290604, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.079882, 0)
-shape = SubResource("CapsuleShape3D_myr77")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0124642, 0.0827026)
+shape = SubResource("BoxShape3D_o1py3")
 
 [node name="Area3D" type="Area3D" parent="."]
-visible = false
 monitoring = false
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="Area3D"]
@@ -71,6 +69,7 @@ shape = SubResource("CylinderShape3D_n4uuh")
 [node name="FaceDirection" type="Node3D" parent="."]
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+path_height_offset = -0.5
 
 [node name="Label3D" type="Label3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.910407, 0)
@@ -92,5 +91,10 @@ bus = &"Sfx"
 stream = ExtResource("4_fbuk2")
 bus = &"Sfx"
 
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.2
+autostart = true
+
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
 [connection signal="finished" from="AudioStreamPlayer3D" to="." method="_on_audio_stream_player_3d_finished"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

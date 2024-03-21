@@ -1,6 +1,7 @@
-[gd_scene load_steps=13 format=3 uid="uid://ct41ick1xdaqd"]
+[gd_scene load_steps=14 format=3 uid="uid://ct41ick1xdaqd"]
 
 [ext_resource type="Script" path="res://Scripts/Egg.gd" id="2_a07li"]
+[ext_resource type="AudioStream" uid="uid://bkitd2jru4dnj" path="res://Assets/Audios/sound_jump-90516.mp3" id="3_5c7bc"]
 [ext_resource type="Material" uid="uid://dtcfn0ho8mk1k" path="res://Materials/Basket.tres" id="3_c1kcr"]
 [ext_resource type="AudioStream" uid="uid://c5ixicgx0tevp" path="res://Assets/Audios/332629__treasuresounds__item-pickup.ogg" id="3_god0b"]
 
@@ -205,6 +206,18 @@ one_shot = true
 stream = ExtResource("3_god0b")
 bus = &"Sfx"
 
+[node name="StepTimer" type="Timer" parent="."]
+wait_time = 0.2
+autostart = true
+
+[node name="Steps" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("3_5c7bc")
+volume_db = -45.0
+unit_size = 5.0
+pitch_scale = 2.0
+bus = &"Sfx"
+
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
 [connection signal="timeout" from="StuckTimer" to="." method="_on_stuck_timer_timeout"]
 [connection signal="timeout" from="Respawn" to="." method="_on_respawn_timeout"]
+[connection signal="timeout" from="StepTimer" to="." method="_on_step_timer_timeout"]

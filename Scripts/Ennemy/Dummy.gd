@@ -21,12 +21,13 @@ var ammoScene = preload("res://Scenes/AmmoBox.tscn");
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	init();
+	hp = defaultHp;
 	sounds = $Sounds.get_children();
 	startingPos = global_position;
 	add_to_group("ennemies");
 	$Hp.text = "HP: " + str(hp);
 	$StateMachine.connect("switch", updateState);
-	init();
 	
 func init():
 	pass
@@ -64,28 +65,36 @@ func _on_area_3d_body_exited(body):
 	if body is Player:
 		playerDetected = false;
 
+func respawn():
+	reset();
+	hp = defaultHp;
+	global_position = startingPos;
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if outOfRange:
 		return;
 	if (hp == 0 and !isDisabled):
-		hp = defaultHp;
+		isDisabled = true;
 		Globals.addScore.emit(scorePoints);
 		var r = randi_range(0, len(sounds) - 1);
 		sounds[r].play();
 		await get_tree().create_timer(0.1).timeout;
 		visible = false;
-		isDisabled = true;
-		r = randi_range(0, 3);
-		if (r == 2):
+		disable();
+		r = randi_range(0, 2);
+		if (r >= 1):
 			instance = ammoScene.instantiate();
 			get_tree().root.add_child(instance);
 			instance.global_position = global_position;
 		global_position = startingPos;
-		await get_tree().create_timer(5).timeout;
+		await get_tree().create_timer(10).timeout;
+		hp = defaultHp;
+		$Hp.text = "HP: " + str(hp)
 		reset();
-		visible = true;
+		enable();
 		isDisabled = false;
+		visible = true;
 
 func reset():
 	$AnimationPlayer.play("RESET");
@@ -97,9 +106,10 @@ func disable():
 	pass
 
 func _on_disable_timeout():
-	if global_position.distance_to(Globals.playerReference.global_position) > 65:
+	var dist = global_position.distance_to(Globals.playerReference.global_position);
+	if dist > 65 and !outOfRange:
 		outOfRange = true;
 		disable();
-	else:
+	elif dist <= 65 and outOfRange:
 		outOfRange = false;
 		enable();

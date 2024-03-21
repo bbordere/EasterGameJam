@@ -14,6 +14,7 @@ const DEFAULT_SPEED = 5.0;
 var skills = {"dash": true, "double_jump": true, "super_dmg": true};
 
 var playerReference = null;
+var isPlayerDisabled = true;
 
 signal giveAmmo(number);
 signal giveEgg(number);
@@ -45,8 +46,8 @@ func giveAmmoFunc(number: int):
 func giveEggFunc(number: int):
 	egg += number;
 	Globals.updateEggLabel.emit()
+	addScore.emit(1200);
 	setScoreMultiplier.emit(scoreMultiplier + 0.25);
-	addScoreFunc(1200);
 	
 func addScoreFunc(value):
 	score += value * scoreMultiplier;

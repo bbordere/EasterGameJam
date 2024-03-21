@@ -5,6 +5,7 @@ class_name Hen
 var target = Vector3.ZERO;
 var hp = 30;
 var isDead = false;
+var cachePos = Vector3.ZERO;
 
 const SPEED = 10;
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
@@ -18,10 +19,10 @@ func takeDamage(num):
 	hp = max(hp, 0);
 
 func chooseRandomDir():
-	target.x = randi_range(-20, 20);
+	target.x = randi_range(-30, 30);
 	target.y = 0;
-	target.z = randi_range(-20, 20);
-	target += owner.global_position;
+	target.z = randi_range(-30, 30);
+	target += global_position;
 	$NavigationAgent3D.set_target_position(target);
 
 	
@@ -57,3 +58,18 @@ func _on_area_3d_body_entered(body):
 
 func _on_audio_stream_player_3d_finished():
 	$AudioStreamPlayer3D.play();
+
+func approxEqual(v1, v2):
+	v1 = snapped(v1, Vector3(0.1, 0.1, 0.1));
+	v2 = snapped(v2, Vector3(0.1, 0.1, 0.1));
+	return (v1.is_equal_approx(v2));
+	
+
+func _on_timer_timeout():
+	if cachePos == Vector3.ZERO:
+		cachePos = global_position;
+		return ;
+	if approxEqual(cachePos, global_position):
+		chooseRandomDir();
+	cachePos = global_position;
+	

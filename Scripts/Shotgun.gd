@@ -54,7 +54,8 @@ func _ready():
 	def_pos = position;
 
 func _physics_process(delta):
-	if Input.is_action_just_pressed("fire") and (Globals.ammo != 0 or isTerminator) and canShoot:
+	if Input.is_action_just_pressed("fire") and (Globals.ammo != 0 or isTerminator) \
+							and canShoot and !Globals.isPlayerDisabled:
 		canShoot = false;
 		$Timer.start();
 		$AudioStreamPlayer3D.play();

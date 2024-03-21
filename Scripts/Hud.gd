@@ -29,13 +29,17 @@ func updateMultiplier(value):
 	$Hud/Multiplier.text = "x " + str(Globals.scoreMultiplier);
 	
 func _on_timer_timeout():
+	Globals.playerReference.get_node("Rage").visible = false;
+	Globals.isPlayerDisabled = true;
 	$TextureRect.visible = true;
 	$Hud/Viseur.visible = false;
-	$TextureRect/Score.text = "You score is: " + str(int(Globals.score))
+	$TextureRect/Score.text = "Score: " + str(int(Globals.score))
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE);
 	Globals.score = 0;
+	Globals.scoreMultiplier = 1;
 
 func _on_button_button_up():
+	Globals.isPlayerDisabled = false;
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED);
 	$TextureRect.visible = false;
 	get_tree().change_scene_to_file("res://Scenes/map.tscn");

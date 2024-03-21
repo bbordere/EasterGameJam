@@ -5,6 +5,7 @@ class_name Bell
 var canShoot = true;
 
 func init():
+	defaultHp = 60;
 	scorePoints = 750;
 	$NavigationAgent3D.path_height_offset = randf_range(-2.3, -1.8);
 

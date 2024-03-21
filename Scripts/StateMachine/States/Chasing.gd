@@ -1,6 +1,6 @@
 extends State
 
-@export var CHASE_SPEED = 4;
+@export var CHASE_SPEED = 6;
 
 var attackName = ""
 
@@ -13,7 +13,7 @@ func enter(_msg:={}) -> void:
 func physics_update(delta: float) -> void:
 	if owner.outOfRange:
 		return;
-	if !owner.playerDetected:
+	if !owner.playerDetected or Globals.isPlayerDisabled:
 		state_machine.transition_to("Idle");
 		return
 	SafeLookAt.safe_look_at(owner.get_node("FaceDirection"), owner.get_node("NavigationAgent3D").get_next_path_position());

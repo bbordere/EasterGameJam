@@ -1,9 +1,10 @@
-[gd_scene load_steps=55 format=3 uid="uid://quc5qhdjutnm"]
+[gd_scene load_steps=56 format=3 uid="uid://quc5qhdjutnm"]
 
 [ext_resource type="PackedScene" uid="uid://bijwsd848sp4n" path="res://Scenes/Ennemy/Dummy.tscn" id="1_sp3kb"]
 [ext_resource type="Script" path="res://Scripts/Ennemy/Bunny.gd" id="2_skdby"]
 [ext_resource type="Script" path="res://Scripts/StateMachine/States/Idle.gd" id="4_ci8a2"]
 [ext_resource type="Script" path="res://Scripts/StateMachine/States/Chasing.gd" id="5_0euw4"]
+[ext_resource type="AudioStream" uid="uid://dlmwcfnywbeal" path="res://Assets/Audios/431204__bunnyluvvid__rabbit-thump-on-soil-edited.wav" id="6_tvh4d"]
 [ext_resource type="Script" path="res://Scripts/StateMachine/States/Melee.gd" id="6_uuxwy"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bd20g"]
@@ -726,7 +727,7 @@ _data = {
 }
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_0qupk"]
-size = Vector3(1.00989, 1.87561, 1.20648)
+size = Vector3(1.00989, 1.7923, 1.20648)
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_6b68e"]
 height = 7.90959
@@ -883,7 +884,7 @@ libraries = {
 }
 
 [node name="CollisionShape3D" parent="." index="4"]
-transform = Transform3D(0.933461, 0, -0.358678, 0, 1, 0, 0.358678, 0, 0.933461, -0.0370575, 0.240043, 0.208722)
+transform = Transform3D(0.933461, 0, -0.358678, 0, 1, 0, 0.358678, 0, 0.933461, -0.0370575, 0.281699, 0.208722)
 shape = SubResource("BoxShape3D_0qupk")
 
 [node name="StateMachine" parent="." index="5"]
@@ -904,6 +905,9 @@ monitorable = false
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" index="0"]
 shape = SubResource("CylinderShape3D_6b68e")
 
+[node name="NavigationAgent3D" parent="." index="8"]
+path_height_offset = -0.2
+
 [node name="FaceDirection" parent="." index="9"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.697047, 0)
 
@@ -915,5 +919,16 @@ libraries = {
 "": SubResource("AnimationLibrary_0jhqd")
 }
 
+[node name="Steps" type="AudioStreamPlayer3D" parent="." index="14"]
+stream = ExtResource("6_tvh4d")
+volume_db = -40.0
+unit_size = 5.0
+bus = &"Sfx"
+
+[node name="StepsTimer" type="Timer" parent="." index="15"]
+wait_time = 0.4
+autostart = true
+
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
 [connection signal="body_exited" from="Area3D" to="." method="_on_area_3d_body_exited"]
+[connection signal="timeout" from="StepsTimer" to="." method="_on_steps_timer_timeout"]

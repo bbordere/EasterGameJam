@@ -8,7 +8,7 @@ var collider = null;
 
 func init():
 	scorePoints = 500;
-	SPEED = 3;
+	SPEED = 5;
 	randomize()
 	await get_tree().create_timer(randf_range(0.2, 0.8)).timeout;
 	$AnimationPlayer.play("walk");
@@ -17,7 +17,7 @@ func attack():
 	if (!collider):
 		return;
 	await get_tree().create_timer(0.1).timeout;
-	if (!collider):
+	if (!collider or not collider is Player):
 		return;
 	collider.takeDmg(4);
 	collider.knock(global_position, 15);
@@ -57,3 +57,7 @@ func reset():
 	$AnimationPlayer.play("RESET");
 	$AnimationPlayer.play("walk");
 
+
+func _on_steps_timer_timeout():
+	$Steps.pitch_scale = randf_range(1, 2);
+	$Steps.play()

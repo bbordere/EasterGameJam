@@ -82,7 +82,7 @@ func catchEgg(catchStatus):
 	buffsFct[buff].call();
 
 func _input(event):
-	if event is InputEventMouseMotion:
+	if event is InputEventMouseMotion and !Globals.isPlayerDisabled:
 		rotate_y(deg_to_rad(-event.relative.x * Globals.mouseSensi));
 		$Head.rotate_x(deg_to_rad(-event.relative.y * Globals.mouseSensi));
 		$Head.rotation.x = clamp($Head.rotation.x, deg_to_rad(-89), deg_to_rad(89));
@@ -121,6 +121,8 @@ func dash(direction):
 	$DashCooldown.start();
 	
 func _physics_process(delta):
+	if Globals.isPlayerDisabled:
+		return;
 	if Globals.health == 0:
 		Globals.health = 100;
 		$Blackout.visible = true;
@@ -133,7 +135,7 @@ func _physics_process(delta):
 		Globals.ammo = 20;
 		Globals.updateHealthLabel.emit();
 		Globals.updateAmmoLabel.emit();
-		
+
 		
 	if Input.is_action_just_pressed("stun") and canStun:
 		canStun = false;

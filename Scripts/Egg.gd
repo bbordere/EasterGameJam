@@ -83,30 +83,41 @@ func enable():
 	isDisabled = false;
 
 func _on_area_3d_body_entered(body):
-	if body is Player:
+	if body is Player and !Globals.isPlayerDisabled:
 		Globals.catchEgg.emit(isStunned);
 		Globals.giveEgg.emit(1);
 		$AudioStreamPlayer3D.play();
 		reset();
 
+func approxEqual(v1, v2):
+	v1 = snapped(v1, Vector3(0.1, 0.1, 0.1));
+	v2 = snapped(v2, Vector3(0.1, 0.1, 0.1));
+	return (v1.is_equal_approx(v2));
+
 func _on_stuck_timer_timeout():
-	if global_position.distance_to(Globals.playerReference.global_position) > 40:
+	var dist = global_position.distance_to(Globals.playerReference.global_position);
+	if dist > 40 and !isDisabled:
 		$Area3D.set_deferred("monitoring", false);
 		$CollisionShape3D.set_deferred("disabled", true);
-		isStunned = true;
+		isDisabled = true;
 		$AnimationPlayer.stop();
-	else:
+	elif dist <= 40 and isDisabled:
 		$Area3D.set_deferred("monitoring", true);
-		isStunned = false;
+		isDisabled = false;
 		$CollisionShape3D.set_deferred("disabled", false);
 		$AnimationPlayer.play("default");
 
 	if cachePos == Vector3.ZERO:
 		cachePos = global_position;
 		return ;
-	cachePos = global_position;
-	if cachePos.is_equal_approx(global_position):
+	if approxEqual(cachePos, global_position):
 		chooseRandomDir();
+	cachePos = global_position;
 
 func _on_respawn_timeout():
 	enable();
+
+
+func _on_step_timer_timeout():
+	$Steps.pitch_scale = randf_range(3, 4);
+	$Steps.play();
