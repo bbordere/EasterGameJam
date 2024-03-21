@@ -11,11 +11,10 @@ func _ready():
 	randomize();
 	i = randi_range(0, len(songs) - 1);
 
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
 	if !curSong or !curSong.playing:
 		curSong = songs[i];
 		curSong.play();
 		i += 1;
-		
+		i = i % (len(songs) - 1);

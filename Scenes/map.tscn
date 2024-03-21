@@ -1,4 +1,4 @@
-[gd_scene load_steps=139 format=3 uid="uid://bh4nypdpojopx"]
+[gd_scene load_steps=140 format=3 uid="uid://bh4nypdpojopx"]
 
 [ext_resource type="PackedScene" uid="uid://hysch75a4omb" path="res://Scenes/terrain/herbe_plate.tscn" id="1_ojs6p"]
 [ext_resource type="PackedScene" uid="uid://ciicetwuu60xs" path="res://Scenes/terrain/eau_plate.tscn" id="2_wg8uv"]
@@ -134,6 +134,7 @@
 [ext_resource type="Material" uid="uid://blb04aqpx3hbo" path="res://Materials/Eggs/3.tres" id="127_75llo"]
 [ext_resource type="PackedScene" uid="uid://ct41ick1xdaqd" path="res://Scenes/Egg.tscn" id="128_vrp50"]
 [ext_resource type="Material" uid="uid://dwr5a7hs2sebj" path="res://Materials/Eggs/2.tres" id="129_3jtrc"]
+[ext_resource type="PackedScene" uid="uid://byvt64gmyy23m" path="res://Scenes/Hen.tscn" id="135_w0fct"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_8trt1"]
 
@@ -7575,3 +7576,6 @@ transform = Transform3D(2.5, 0, 0, 0, 2, 0, 0, 0, 2.5, 10.8849, -2.04562, 25.141
 
 [node name="dock droit3" parent="NavigationRegion3D/pathfinding/route" instance=ExtResource("36_mj6ss")]
 transform = Transform3D(2.5, 0, 0, 0, 2, 0, 0, 0, 2.5, 10.8849, -2.04562, 26.3601)
+
+[node name="Hen" parent="." instance=ExtResource("135_w0fct")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.6861, 1.10303, 6.85657)

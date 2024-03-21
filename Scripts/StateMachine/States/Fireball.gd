@@ -10,6 +10,7 @@ func enter(_msg := {}) -> void:
 		return;
 	owner.canShoot = false;
 	owner.get_node("FireCooldown").start();
+	owner.playSound();
 	instance = fireballScene.instantiate();
 	instance.position = owner.global_position;
 	instance.transform.basis = owner.global_transform.basis;

@@ -1,7 +1,8 @@
-[gd_scene load_steps=12 format=3 uid="uid://ct41ick1xdaqd"]
+[gd_scene load_steps=13 format=3 uid="uid://ct41ick1xdaqd"]
 
 [ext_resource type="Script" path="res://Scripts/Egg.gd" id="2_a07li"]
 [ext_resource type="Material" uid="uid://dtcfn0ho8mk1k" path="res://Materials/Basket.tres" id="3_c1kcr"]
+[ext_resource type="AudioStream" uid="uid://c5ixicgx0tevp" path="res://Assets/Audios/332629__treasuresounds__item-pickup.ogg" id="3_god0b"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_7ov5m"]
 height = 1.09348
@@ -199,6 +200,10 @@ autostart = true
 [node name="Respawn" type="Timer" parent="."]
 wait_time = 10.0
 one_shot = true
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("3_god0b")
+bus = &"Sfx"
 
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
 [connection signal="timeout" from="StuckTimer" to="." method="_on_stuck_timer_timeout"]

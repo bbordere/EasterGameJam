@@ -36,6 +36,8 @@ func _on_shooting_range_body_entered(body):
 	if body is Player:
 		canAttack = true;
 
+func playSound():
+	$AudioStreamPlayer3D.play();
 
 func _on_shooting_range_body_exited(body):
 	if body is Player:

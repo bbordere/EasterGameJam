@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://5ggsxra5hs5d"]
+[gd_scene load_steps=33 format=3 uid="uid://5ggsxra5hs5d"]
 
 [ext_resource type="PackedScene" uid="uid://bijwsd848sp4n" path="res://Scenes/Ennemy/Dummy.tscn" id="1_pohho"]
 [ext_resource type="Script" path="res://Scripts/Ennemy/Bell.gd" id="2_af5nd"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://70kftu4016p3" path="res://Assets/Textures/Bell_Matériau.png" id="3_g2dj7"]
 [ext_resource type="Script" path="res://Scripts/StateMachine/States/Chasing.gd" id="4_3hgw5"]
 [ext_resource type="Script" path="res://Scripts/StateMachine/States/Fireball.gd" id="6_8j3fn"]
+[ext_resource type="AudioStream" uid="uid://cwtis7sag22ei" path="res://Assets/Audios/little-whoosh-2-6301.mp3" id="7_pvf07"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6b7bv"]
 resource_name = "Matériau"
@@ -460,6 +461,11 @@ target_position = Vector3(0, 0, -1)
 libraries = {
 "": SubResource("AnimationLibrary_lc8vx")
 }
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." index="15"]
+stream = ExtResource("7_pvf07")
+pitch_scale = 4.0
+bus = &"Sfx"
 
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
 [connection signal="body_exited" from="Area3D" to="." method="_on_area_3d_body_exited"]

@@ -122,15 +122,18 @@ func dash(direction):
 	
 func _physics_process(delta):
 	if Globals.health == 0:
+		Globals.health = 100;
 		$Blackout.visible = true;
 		$AnimationPlayer.play("blackout");
 		global_position = startingPos;
 		await get_tree().create_timer(0.3).timeout
 		$Blackout.visible = false;
-		
-		Globals.score -= 1500;
-		Globals.health = 100;
+		Globals.setScoreMultiplier.emit(1);
+		Globals.addScore.emit(-1500);
 		Globals.ammo = 20;
+		Globals.updateHealthLabel.emit();
+		Globals.updateAmmoLabel.emit();
+		
 		
 	if Input.is_action_just_pressed("stun") and canStun:
 		canStun = false;
@@ -181,9 +184,9 @@ func _physics_process(delta):
 
 func takeDmg(amount):
 	$Head/Camera3D.shake();
-	Globals.updateHealthLabel.emit();
 	Globals.health -= amount;
 	Globals.health = max(Globals.health, 0);
+	Globals.updateHealthLabel.emit();
 
 func knock(pos, strength):
 	var dir = pos.direction_to(global_position);

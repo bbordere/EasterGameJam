@@ -25,15 +25,12 @@ signal setScoreMultiplier(value);
 signal catchEgg(stunStatus);
 signal addScore(value);
 
-var timer = null;
-
 func _ready():
 	giveAmmo.connect(giveAmmoFunc);
 	giveEgg.connect(giveEggFunc);
 	setMultiplier.connect(setMultiplierFunc);
 	setScoreMultiplier.connect(setScoreMultiplierFunc);
 	addScore.connect(addScoreFunc);
-	timer = get_tree().create_timer(180);
 
 func setMultiplierFunc(value):
 	dmgMultiplier = value;
@@ -46,14 +43,11 @@ func giveAmmoFunc(number: int):
 	Globals.updateAmmoLabel.emit()
 
 func giveEggFunc(number: int):
-#	mettre l id plutot de l egg 
 	egg += number;
 	Globals.updateEggLabel.emit()
+	setScoreMultiplier.emit(scoreMultiplier + 0.25);
 	addScoreFunc(1200);
 	
 func addScoreFunc(value):
 	score += value * scoreMultiplier;
-
-func _process(_delta):
-	pass
-	#print("ammo: ", ammo, ", health: ", health, ", fps: ", Engine.get_frames_per_second());
+	score = max(score, 0);

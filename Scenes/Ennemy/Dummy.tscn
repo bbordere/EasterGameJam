@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://bijwsd848sp4n"]
+[gd_scene load_steps=6 format=3 uid="uid://bijwsd848sp4n"]
 
 [ext_resource type="Script" path="res://Scripts/Ennemy/Dummy.gd" id="1_du8uq"]
 [ext_resource type="Script" path="res://Scripts/StateMachine/StateMachine.gd" id="2_ackph"]
+[ext_resource type="AudioStream" uid="uid://cxx5kbv2tq7wq" path="res://Assets/Audios/die1.mp3" id="3_rwgcd"]
+[ext_resource type="AudioStream" uid="uid://cj0nhhx24w68s" path="res://Assets/Audios/die2.mp3" id="4_7bky7"]
+[ext_resource type="AudioStream" uid="uid://c6agpa55n25cf" path="res://Assets/Audios/die3.mp3" id="5_mnn4n"]
 
 [node name="Dummy" type="CharacterBody3D"]
 script = ExtResource("1_du8uq")
@@ -39,6 +42,20 @@ wait_time = 3.0
 [node name="Disable" type="Timer" parent="."]
 wait_time = 0.5
 autostart = true
+
+[node name="Sounds" type="Node" parent="."]
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer" parent="Sounds"]
+stream = ExtResource("3_rwgcd")
+bus = &"Sfx"
+
+[node name="AudioStreamPlayer3D2" type="AudioStreamPlayer" parent="Sounds"]
+stream = ExtResource("4_7bky7")
+bus = &"Sfx"
+
+[node name="AudioStreamPlayer3D3" type="AudioStreamPlayer" parent="Sounds"]
+stream = ExtResource("5_mnn4n")
+bus = &"Sfx"
 
 [connection signal="velocity_computed" from="NavigationAgent3D" to="." method="_on_navigation_agent_3d_velocity_computed"]
 [connection signal="timeout" from="Disable" to="." method="_on_disable_timeout"]

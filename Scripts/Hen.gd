@@ -50,4 +50,10 @@ func _process(delta):
 func _on_area_3d_body_entered(body):
 	if body is Player:
 		Globals.addScore.emit(2000);
+		$DieSound.play();
+		await get_tree().create_timer(0.2).timeout
 		queue_free();
+
+
+func _on_audio_stream_player_3d_finished():
+	$AudioStreamPlayer3D.play();

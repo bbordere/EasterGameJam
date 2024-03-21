@@ -1,7 +1,7 @@
 extends Camera3D
 
 @export var period = 0.1
-@export var magnitude = 0.01
+@export var magnitude = 0.03
 
 func shake():
 	var initial_transform = self.transform 
@@ -13,7 +13,7 @@ func shake():
 							0.0)
 
 		self.transform.origin = initial_transform.origin + offset
-		elapsed_time += 0.025
+		elapsed_time += 0.01
 		#await get_tree().process_frame
 		await get_tree().create_timer(0.025).timeout;
 

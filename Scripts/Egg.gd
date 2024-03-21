@@ -85,8 +85,8 @@ func enable():
 func _on_area_3d_body_entered(body):
 	if body is Player:
 		Globals.catchEgg.emit(isStunned);
-		Globals.skills[skills[type]] = true;
 		Globals.giveEgg.emit(1);
+		$AudioStreamPlayer3D.play();
 		reset();
 
 func _on_stuck_timer_timeout():

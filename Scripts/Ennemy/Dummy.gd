@@ -15,11 +15,13 @@ var playerDetected = false;
 var canAttack = false;
 var isDisabled = false;
 var outOfRange = false;
+var sounds = [];
 
 var ammoScene = preload("res://Scenes/AmmoBox.tscn");
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	sounds = $Sounds.get_children();
 	startingPos = global_position;
 	add_to_group("ennemies");
 	$Hp.text = "HP: " + str(hp);
@@ -67,17 +69,18 @@ func _process(delta):
 	if outOfRange:
 		return;
 	if (hp == 0 and !isDisabled):
-		#$AnimationPlayer.play("death");
 		hp = defaultHp;
 		Globals.addScore.emit(scorePoints);
+		var r = randi_range(0, len(sounds) - 1);
+		sounds[r].play();
 		await get_tree().create_timer(0.1).timeout;
 		visible = false;
 		isDisabled = true;
-		var r = randi_range(0, 3);
+		r = randi_range(0, 3);
 		if (r == 2):
 			instance = ammoScene.instantiate();
-			instance.global_position = global_position;
 			get_tree().root.add_child(instance);
+			instance.global_position = global_position;
 		global_position = startingPos;
 		await get_tree().create_timer(5).timeout;
 		reset();
