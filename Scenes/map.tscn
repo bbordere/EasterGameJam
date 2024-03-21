@@ -613,7 +613,7 @@ shadow_opacity = 0.77
 transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 18.5303, 2.37225, -21.8618)
 
 [node name="Bell3" parent="ennemy/bell" instance=ExtResource("123_7lwe5")]
-transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 10.5303, 2.37225, -6.86176)
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 23.5303, 2.37225, 16.1382)
 
 [node name="Bell5" parent="ennemy/bell" instance=ExtResource("123_7lwe5")]
 transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -10.4697, 2.37225, 19.1382)
@@ -622,22 +622,22 @@ transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -10.4697, 2.37225, 19.1
 transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -11.4697, 2.37225, -15.8618)
 
 [node name="Bell8" parent="ennemy/bell" instance=ExtResource("123_7lwe5")]
-transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -31.4697, 2.37225, 0.138236)
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -50.4697, 2.37225, -14.8618)
 
 [node name="Bell9" parent="ennemy/bell" instance=ExtResource("123_7lwe5")]
-transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -61.4697, 2.37225, 6.13824)
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -79.4697, 2.37225, 17.1382)
 
 [node name="Bell11" parent="ennemy/bell" instance=ExtResource("123_7lwe5")]
-transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -27.4697, 2.37225, 32.1382)
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -48.4697, 2.37225, 17.1382)
 
 [node name="Bell12" parent="ennemy/bell" instance=ExtResource("123_7lwe5")]
 transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 5.53033, 2.37225, 39.1382)
 
 [node name="Bell14" parent="ennemy/bell" instance=ExtResource("123_7lwe5")]
-transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -44.4697, 2.37225, 44.1382)
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -35.4697, 2.37225, 44.1382)
 
 [node name="Bell15" parent="ennemy/bell" instance=ExtResource("123_7lwe5")]
-transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -75.4697, 2.37225, 44.1382)
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -77.4697, 2.37225, 61.1382)
 
 [node name="Bell17" parent="ennemy/bell" instance=ExtResource("123_7lwe5")]
 transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -108.47, 2.37225, 46.1382)
@@ -645,11 +645,8 @@ transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -108.47, 2.37225, 46.13
 [node name="Bell18" parent="ennemy/bell" instance=ExtResource("123_7lwe5")]
 transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -121.47, 2.37225, 71.1382)
 
-[node name="Bell20" parent="ennemy/bell" instance=ExtResource("123_7lwe5")]
-transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -82.4697, 2.37225, 64.1382)
-
 [node name="Bell21" parent="ennemy/bell" instance=ExtResource("123_7lwe5")]
-transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -56.4697, 2.37225, 77.1382)
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -87.4697, 2.37225, 86.1382)
 
 [node name="Bell22" parent="ennemy/bell" instance=ExtResource("123_7lwe5")]
 transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, -38.4697, 2.37225, 85.1382)
@@ -712,7 +709,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 133, 2.98023e-08, -100)
 material = ExtResource("125_pdw5e")
 
 [node name="Egg4" parent="egg" instance=ExtResource("128_vrp50")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 137, 2.98023e-08, -73)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 122, 2.98023e-08, -59)
 material = ExtResource("127_75llo")
 
 [node name="Egg7" parent="egg" instance=ExtResource("128_vrp50")]
@@ -728,24 +725,28 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 150, 1, -49)
 material = ExtResource("129_3jtrc")
 
 [node name="Egg13" parent="egg" instance=ExtResource("128_vrp50")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 120, 2.98023e-08, -29)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 101, 2.98023e-08, -19)
 material = ExtResource("124_sh5c4")
 
 [node name="Egg15" parent="egg" instance=ExtResource("128_vrp50")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 101, 1, -46)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27, 1, -53)
 material = ExtResource("129_3jtrc")
 
 [node name="Egg17" parent="egg" instance=ExtResource("128_vrp50")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 67, -8.9407e-08, -61)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, -1, -1)
 material = ExtResource("124_sh5c4")
 
 [node name="Egg21" parent="egg" instance=ExtResource("128_vrp50")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 66, 1, -12)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 54, 1, -12)
 material = ExtResource("125_pdw5e")
 
 [node name="Egg24" parent="egg" instance=ExtResource("128_vrp50")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 56, -8.9407e-08, 34)
 material = ExtResource("124_sh5c4")
+
+[node name="Egg5" parent="egg" instance=ExtResource("128_vrp50")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, 2.98023e-08, 12)
+material = ExtResource("127_75llo")
 
 [node name="Player" parent="." instance=ExtResource("35_rmplu")]
 transform = Transform3D(-0.5, 0, 0.866025, 0, 1, 0, -0.866025, 0, -0.5, 46.9757, 0.814846, -20.342)
@@ -7578,4 +7579,4 @@ transform = Transform3D(2.5, 0, 0, 0, 2, 0, 0, 0, 2.5, 10.8849, -2.04562, 25.141
 transform = Transform3D(2.5, 0, 0, 0, 2, 0, 0, 0, 2.5, 10.8849, -2.04562, 26.3601)
 
 [node name="Hen" parent="." instance=ExtResource("135_w0fct")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.6861, 1.10303, 6.85657)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -47.6861, 0.10303, 42.8566)
